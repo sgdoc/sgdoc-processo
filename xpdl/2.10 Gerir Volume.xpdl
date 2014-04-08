@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Id="20e53d8e-63e9-468a-89dc-381ee766788d" Name="2.10 Gerir Volume" xmlns="http://www.wfmc.org/2009/XPDL2.2">
+  <PackageHeader>
+    <XPDLVersion>2.2</XPDLVersion>
+    <Vendor>Bizagi Process Modeler.</Vendor>
+    <Created>2014-01-14T14:28:58.7006499-02:00</Created>
+    <ModificationDate>2014-03-27T15:01:49.053769-03:00</ModificationDate>
+    <Description>2.10 Gerir Volume</Description>
+    <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Gerir Volume&lt;/span&gt;&lt;/p&gt;</Documentation>
+  </PackageHeader>
+  <RedefinableHeader>
+    <Author>ICMBio e Telebras</Author>
+    <Version>1.0</Version>
+    <Countrykey>CO</Countrykey>
+  </RedefinableHeader>
+  <ExternalPackages />
+  <Participants>
+    <Participant Id="f5a3074f-d9d1-445e-aeec-34be974e44c0" Name="Área responsável pela Gestão de Informação">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Área_responsável_pela_Gestão_de_Informação" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="5ea1a7f8-9ef8-45a0-9fd6-151d9e914b07" Name="Todas as áreas">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Todas_as_áreas" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="adba3236-b20b-4809-8299-865159eafd24" Name="Protocolo">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Protocolo" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="e7c0121e-f266-406b-bf70-f277ea1cccad" Name="Administrador do Sistema">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Administrador_do_Sistema" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="c19b98ae-4dfd-4d8b-8bf4-d54f743f0cc3" Name="Arquivo">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Arquivo" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="3f1f0837-2be1-4933-b7e4-aaa3ff2823d9" Name="Sistema">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Sistema" />
+      </ExtendedAttributes>
+    </Participant>
+  </Participants>
+  <Pools>
+    <Pool Id="ccd40627-7c40-4b08-b502-1b00f8a15380" Name="Gerir Volume" Process="0f9804f3-876e-4a0e-bbe8-9f197ced1b7c" BoundaryVisible="false">
+      <Lanes />
+      <NodeGraphicsInfos>
+        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="350" Width="700" BorderColor="-16777216" FillColor="-1">
+          <Coordinates XCoordinate="0" YCoordinate="0" />
+        </NodeGraphicsInfo>
+      </NodeGraphicsInfos>
+    </Pool>
+    <Pool Id="dfa1a289-16ed-49c4-a27a-d14beada29e8" Name="Gerir Volumes" Process="2aa514ce-fcc8-4374-b136-05724501f742" BoundaryVisible="true">
+      <Lanes>
+        <Lane Id="4d7a93c6-c04c-428a-88fa-e865ff8e89bf" Name="Todas as áreas" ParentPool="dfa1a289-16ed-49c4-a27a-d14beada29e8">
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="315" Width="1228" BorderColor="-11513776" FillColor="-1">
+              <Coordinates XCoordinate="50" YCoordinate="0" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Lane>
+      </Lanes>
+      <NodeGraphicsInfos>
+        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="315" Width="1278" BorderColor="-16777216" FillColor="-1">
+          <Coordinates XCoordinate="116" YCoordinate="204" />
+        </NodeGraphicsInfo>
+      </NodeGraphicsInfos>
+    </Pool>
+  </Pools>
+  <Associations />
+  <Artifacts />
+  <WorkflowProcesses>
+    <WorkflowProcess Id="0f9804f3-876e-4a0e-bbe8-9f197ced1b7c" Name="Main Process">
+      <ProcessHeader>
+        <Created>2014-04-08T09:41:47.1881351-03:00</Created>
+        <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Gerir Volume&lt;/span&gt;&lt;/p&gt;</Description>
+      </ProcessHeader>
+      <RedefinableHeader>
+        <Author />
+        <Version />
+        <Countrykey>CO</Countrykey>
+      </RedefinableHeader>
+      <ActivitySets />
+      <DataInputOutputs />
+      <ExtendedAttributes />
+    </WorkflowProcess>
+    <WorkflowProcess Id="2aa514ce-fcc8-4374-b136-05724501f742" Name="Gerir Volumes">
+      <ProcessHeader>
+        <Created>2014-04-08T09:41:47.1881351-03:00</Created>
+        <Description />
+      </ProcessHeader>
+      <RedefinableHeader>
+        <Author />
+        <Version />
+        <Countrykey>CO</Countrykey>
+      </RedefinableHeader>
+      <ActivitySets />
+      <DataInputOutputs />
+      <Activities>
+        <Activity Id="ae0946ed-5f03-43c7-aac6-df1a57071489" Name="Selecionar o processo disponível na área de trabalho">
+          <Description />
+          <Implementation>
+            <Task>
+              <TaskUser Implementation="Unspecified" />
+            </Task>
+          </Implementation>
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="73" Width="108" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="321" YCoordinate="319" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="2a19c8b4-518f-4913-b0be-b952afb0d6e7" Name="Cadastrar encerramento de volume">
+          <Description />
+          <Implementation>
+            <Task>
+              <TaskUser Implementation="Unspecified" />
+            </Task>
+          </Implementation>
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="492" YCoordinate="325" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="eceb04fd-7dcb-4d29-80a5-a76ed174170c" Name="Gerar termo de encerramento">
+          <Description />
+          <Implementation>
+            <Task>
+              <TaskService />
+            </Task>
+          </Implementation>
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="633" YCoordinate="325" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="794d0026-e3d6-423b-8a8e-c0c79f0e811f" Name="Assinar e incluir fisicamente ao processo">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Segundo a &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:italic;"&gt;PORTARIA NORMATIVA&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; Nº 05/2002 da SLTI/&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:italic;"&gt;MPOG&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; , o termo de encerramento deve ser carimbado, numerado e assinado, sendo sua assinatura realizada por um servidor.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task>
+              <TaskManual />
+            </Task>
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Segundo a &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:italic;"&gt;PORTARIA NORMATIVA&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; Nº 05/2002 da SLTI/&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:italic;"&gt;MPOG&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; , o termo de encerramento deve ser carimbado, numerado e assinado, sendo sua assinatura realizada por um servidor.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="774" YCoordinate="325" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="2d4e1767-ecab-4b03-9f95-9c685288a108" Name="Cadastrar a abertura de volume">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O número da folha é preenchido automáticamente, levando em consideração o último número informado no termo de encerramento.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Campos obrigatórios:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Data da abertura do volume&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task>
+              <TaskUser Implementation="Unspecified" />
+            </Task>
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O número da folha é preenchido automáticamente, levando em consideração o último número informado no termo de encerramento.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Campos obrigatórios:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Data da abertura do volume&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="915" YCoordinate="325" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="7122f6d8-3559-4078-81f5-a398af1bdaaa" Name="Emitir o termo de abertura">
+          <Description />
+          <Implementation>
+            <Task>
+              <TaskService />
+            </Task>
+          </Implementation>
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1056" YCoordinate="325" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="0dffe407-ce6d-40a6-a685-f34f1cc7fedf" Name="Assinar e incluir o termo de abertura fisicamente ao processo">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;"&gt;Termo de abertura e encerramento de volume&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Deve ser utilizada quando o processo alcançar 200 folhas, promovendo primeiramente seu encerramento e posteriormente a abertura de um novo volume.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O termo de encerramento é a última folha do processo e o de abertura é a primeira folha do próximo volume. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O sistema já apresenta campos preenchidos com dados pertinentes, devendo o usuário apenas informar na tela de encerramento a data e o numero da ultima folha do volume. Após confirmar o encerramento e imprimir o termo, o sistema apresenta automaticamente a tela de abertura, onde o usuário deverá inserir apenas a data do dia, sendo produzido o termo automaticamente. O termo é apresentado em formato “Texto” passível de ser alterado antes da impressão.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Campos obrigatórios:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Data do encerramento do volume&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;número de Folhas&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Nome da unidade que solicitou o encerramento&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task>
+              <TaskManual />
+            </Task>
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;"&gt;Termo de abertura e encerramento de volume&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Deve ser utilizada quando o processo alcançar 200 folhas, promovendo primeiramente seu encerramento e posteriormente a abertura de um novo volume.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O termo de encerramento é a última folha do processo e o de abertura é a primeira folha do próximo volume. &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O sistema já apresenta campos preenchidos com dados pertinentes, devendo o usuário apenas informar na tela de encerramento a data e o numero da ultima folha do volume. Após confirmar o encerramento e imprimir o termo, o sistema apresenta automaticamente a tela de abertura, onde o usuário deverá inserir apenas a data do dia, sendo produzido o termo automaticamente. O termo é apresentado em formato “Texto” passível de ser alterado antes da impressão.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Campos obrigatórios:&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Data do encerramento do volume&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;número de Folhas&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Nome da unidade que solicitou o encerramento&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="87" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1197" YCoordinate="312" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="5ccdcf3f-08c2-46ba-a9df-dd99a6af3ace" Name="">
+          <Description />
+          <Event>
+            <EndEvent Result="None" />
+          </Event>
+          <Documentation />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6750208" FillColor="-1135958">
+              <Coordinates XCoordinate="1339" YCoordinate="340" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="42bde325-9ce7-458c-87a5-8774cc0f5c4f" Name="Processo">
+          <Description />
+          <Event>
+            <StartEvent Trigger="None" />
+          </Event>
+          <Documentation />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-10311914" FillColor="-1638505">
+              <Coordinates XCoordinate="241" YCoordinate="340.5" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+      </Activities>
+      <Transitions>
+        <Transition Id="fbb65d0b-6d83-4dd8-b846-2046550e6ce2" From="ae0946ed-5f03-43c7-aac6-df1a57071489" To="2a19c8b4-518f-4913-b0be-b952afb0d6e7">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="429" YCoordinate="355" />
+              <Coordinates XCoordinate="492" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="812fec9a-ee61-4164-bb8e-0e963ce8ff74" From="2a19c8b4-518f-4913-b0be-b952afb0d6e7" To="eceb04fd-7dcb-4d29-80a5-a76ed174170c">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="582" YCoordinate="355" />
+              <Coordinates XCoordinate="633" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="d35dc7b3-47b9-49a5-a558-816753b71ee1" From="eceb04fd-7dcb-4d29-80a5-a76ed174170c" To="794d0026-e3d6-423b-8a8e-c0c79f0e811f">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="723" YCoordinate="355" />
+              <Coordinates XCoordinate="774" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="25e9795a-0346-4d3f-ad43-4a1b642a3c0e" From="794d0026-e3d6-423b-8a8e-c0c79f0e811f" To="2d4e1767-ecab-4b03-9f95-9c685288a108">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="864" YCoordinate="355" />
+              <Coordinates XCoordinate="915" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="6742c333-741c-4e95-ac42-ea3190a0dd2f" From="2d4e1767-ecab-4b03-9f95-9c685288a108" To="7122f6d8-3559-4078-81f5-a398af1bdaaa">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1005" YCoordinate="355" />
+              <Coordinates XCoordinate="1056" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="c00f7947-cc23-4cde-92e2-b103024889dd" From="7122f6d8-3559-4078-81f5-a398af1bdaaa" To="0dffe407-ce6d-40a6-a685-f34f1cc7fedf">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1146" YCoordinate="355" />
+              <Coordinates XCoordinate="1197" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="08fb2eff-0e65-4d46-bbbb-f0e0dbc3535a" From="0dffe407-ce6d-40a6-a685-f34f1cc7fedf" To="5ccdcf3f-08c2-46ba-a9df-dd99a6af3ace">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1287" YCoordinate="355" />
+              <Coordinates XCoordinate="1339" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="a8a7e0e6-9e89-46f7-be2d-e45e029cfe71" From="42bde325-9ce7-458c-87a5-8774cc0f5c4f" To="ae0946ed-5f03-43c7-aac6-df1a57071489">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="271" YCoordinate="355" />
+              <Coordinates XCoordinate="321" YCoordinate="355" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+      </Transitions>
+      <ExtendedAttributes />
+    </WorkflowProcess>
+  </WorkflowProcesses>
+  <ExtendedAttributes />
+</Package>

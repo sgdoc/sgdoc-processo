@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#content{
+padding-top:10px;
+}
+.ac_input{
+	padding:2px 10px 2px 25px;
+}
+.search {
+padding:0px 0 4px;
+}
+.ui-tabs .ui-tabs-nav li{
+margin:0px 3px -3px 0px;
+}
+.layout-type li a
+{
+	padding:1px;
+}
+.imageflow h3{
+	padding-top:32px;
+}
+.BizAgi li{
+	padding-top:0px;
+}
+.BizAgi li a{
+	float:none;
+	padding-top:2px;
+	padding-bottom:6px;
+
+}

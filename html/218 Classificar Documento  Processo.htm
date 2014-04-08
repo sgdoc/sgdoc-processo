@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>2.18 Classificar Documento  Processo</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 18
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("2&#46;18 Classificar Documento  Processo","5ada46ae-4c93-4fbc-acae-bb12c3304b98");
+ht.add("Classificar","8d9d22ee-1295-4884-8aff-00bc9e68a408");
+ht.add("Definir código de classificação","cbd41b60-d5e1-4199-9562-2df75ead4688");
+ht.add("Classificar documento fora de caixa","a0ae8a74-ad89-4f92-be97-c8741adb3b0b");
+ht.add("Ler o Documento/Processo","212ddc59-2f2f-4084-8a10-5201b0343997");
+ht.add("Qual tipo de documento?","acf7486c-9173-4069-b1a7-d7f5a647458a");
+ht.add("Há imagem?","452d932f-69b8-42d7-9b2d-2bbaea5328fc");
+ht.add("Colar Digital","cd9d5163-280a-4745-ac0f-6bf6473e3d2c");
+ht.add("Cadastrar  digitalização de processo","ecdc9906-6912-40d6-8903-0352081ed85b");
+ht.add("Adicionar imagem","32199fe9-7294-4d97-8fcf-ebfc37395e97");
+ht.add("Documento/ Processo","184c356b-40f6-412b-8ca3-658c2acde1bc");
+ht.add("Documento classificado","4f085e14-f1c1-42ad-bd06-19e68d20e4fe");
+ht.add("Processo classificado","190d6258-c977-4473-9e77-cc19ab27832c");
+ht.add("Arquivo Central","29db4ebe-6f26-44e4-9593-5e5693990e3b");
+
+			var data = '2&#46;18 Classificar Documento  Processo|Classificar|Definir código de classificação|Classificar documento fora de caixa|Ler o Documento/Processo|Qual tipo de documento?|Há imagem?|Colar Digital|Cadastrar  digitalização de processo|Adicionar imagem|Documento/ Processo|Documento classificado|Processo classificado|Arquivo Central'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="22 Cadastrar Documento Externo.htm" title="tabs-4">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-5">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-6">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-7">2.6 Cadastrar Processo</a></li>
+<li><a href="27 Vincular Processo.htm" title="tabs-8">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-9">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-10">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-11">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-12">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-13">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-14">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-15">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-16">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-17">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-18">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="#tabs-0" title="tabs-0">2.18 Classificar Documento  Processo</a></li>
+<li><a href="219 Manter Caixa.htm" title="tabs-19">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-20">2.20 Desarquivar</a></li>
+<li><a href="3 Acompanhar Gestão da Informação.htm" title="tabs-21">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-22">4.1 Gerir Usuário</a></li>
+<li><a href="42 Gerir Unidade.htm" title="tabs-23">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-24">4.3 Gerir Etiqueta</a></li>
+<li><a href="44 Gerir Demandas.htm" title="tabs-25">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-26">4.6 Tratar Recursos SIC</a></li>
+<li><a href="47 Tratar Demanda SIC.htm" title="tabs-27">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#5ada46ae-4c93-4fbc-acae-bb12c3304b98" class="diagelem"><h2>2.18 Classificar Documento  Processo</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="5ada46ae-4c93-4fbc-acae-bb12c3304b98_doc" class="docelem" title="2&#46;18 Classificar Documento  Processo">
+<a name="5ada46ae-4c93-4fbc-acae-bb12c3304b98" id="5ada46ae-4c93-4fbc-acae-bb12c3304b98"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo de Classificar Documento</span></p><br> </p>
+
+</div>
+<div id="8d9d22ee-1295-4884-8aff-00bc9e68a408_doc" class="docelem" title="Classificar">
+<a name="8d9d22ee-1295-4884-8aff-00bc9e68a408" id="8d9d22ee-1295-4884-8aff-00bc9e68a408"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="cbd41b60-d5e1-4199-9562-2df75ead4688_doc" class="docelem" title="Definir código de classificação">
+<a name="cbd41b60-d5e1-4199-9562-2df75ead4688" id="cbd41b60-d5e1-4199-9562-2df75ead4688"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="a0ae8a74-ad89-4f92-be97-c8741adb3b0b_doc" class="docelem" title="Classificar documento fora de caixa">
+<a name="a0ae8a74-ad89-4f92-be97-c8741adb3b0b" id="a0ae8a74-ad89-4f92-be97-c8741adb3b0b"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="212ddc59-2f2f-4084-8a10-5201b0343997_doc" class="docelem" title="Ler o Documento/Processo">
+<a name="212ddc59-2f2f-4084-8a10-5201b0343997" id="212ddc59-2f2f-4084-8a10-5201b0343997"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="acf7486c-9173-4069-b1a7-d7f5a647458a_doc" class="docelem" title="Qual tipo de documento?">
+<a name="acf7486c-9173-4069-b1a7-d7f5a647458a" id="acf7486c-9173-4069-b1a7-d7f5a647458a"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Documento</p><p>&nbsp;Processo</p>
+</div>
+<div id="452d932f-69b8-42d7-9b2d-2bbaea5328fc_doc" class="docelem" title="Há imagem?">
+<a name="452d932f-69b8-42d7-9b2d-2bbaea5328fc" id="452d932f-69b8-42d7-9b2d-2bbaea5328fc"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Sim</p><p>&nbsp;Não</p>
+</div>
+<div id="cd9d5163-280a-4745-ac0f-6bf6473e3d2c_doc" class="docelem" title="Colar Digital">
+<a name="cd9d5163-280a-4745-ac0f-6bf6473e3d2c" id="cd9d5163-280a-4745-ac0f-6bf6473e3d2c"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="ecdc9906-6912-40d6-8903-0352081ed85b_doc" class="docelem" title="Cadastrar  digitalização de processo">
+<a name="ecdc9906-6912-40d6-8903-0352081ed85b" id="ecdc9906-6912-40d6-8903-0352081ed85b"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="32199fe9-7294-4d97-8fcf-ebfc37395e97_doc" class="docelem" title="Adicionar imagem">
+<a name="32199fe9-7294-4d97-8fcf-ebfc37395e97" id="32199fe9-7294-4d97-8fcf-ebfc37395e97"></a>
+<img class="icon" src="diagrams/bpmnimg/CallActivity.png" border="0" />
+
+<p><span class="InLinkBtn"><a href="211 Adicionar Imagem.htm">2.11 Adicionar Imagem</a></span></p><h4>Processo</h4><p>2&#46;11 Adicionar Imagem - Adicionar imagem <br> </p>
+
+</div>
+<div id="184c356b-40f6-412b-8ca3-658c2acde1bc_doc" class="docelem" title="Documento/ Processo">
+<a name="184c356b-40f6-412b-8ca3-658c2acde1bc" id="184c356b-40f6-412b-8ca3-658c2acde1bc"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneStart.png" border="0" />
+
+
+
+</div>
+<div id="4f085e14-f1c1-42ad-bd06-19e68d20e4fe_doc" class="docelem" title="Documento classificado">
+<a name="4f085e14-f1c1-42ad-bd06-19e68d20e4fe" id="4f085e14-f1c1-42ad-bd06-19e68d20e4fe"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="190d6258-c977-4473-9e77-cc19ab27832c_doc" class="docelem" title="Processo classificado">
+<a name="190d6258-c977-4473-9e77-cc19ab27832c" id="190d6258-c977-4473-9e77-cc19ab27832c"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="29db4ebe-6f26-44e4-9593-5e5693990e3b_doc" class="docelem" title="Arquivo Central">
+<a name="29db4ebe-6f26-44e4-9593-5e5693990e3b" id="29db4ebe-6f26-44e4-9593-5e5693990e3b"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/218 Classificar Documento  Processo.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="170,212,220,499" title="" href="#8d9d22ee-1295-4884-8aff-00bc9e68a408" />
+<area shape="rect" class="diagelem" coords="520,300,610,360" title="" href="#cbd41b60-d5e1-4199-9562-2df75ead4688" />
+<area shape="rect" class="diagelem" coords="783,239,873,299" title="" href="#a0ae8a74-ad89-4f92-be97-c8741adb3b0b" />
+<area shape="rect" class="diagelem" coords="380,300,470,360" title="" href="#212ddc59-2f2f-4084-8a10-5201b0343997" />
+<area shape="poly" class="diagelem" coords="651,330,671,310,691,330,671,350" title="" href="#acf7486c-9173-4069-b1a7-d7f5a647458a" />
+<area shape="poly" class="diagelem" coords="1036,410,1056,390,1076,410,1056,430" title="" href="#452d932f-69b8-42d7-9b2d-2bbaea5328fc" />
+<area shape="rect" class="diagelem" coords="786,380,876,440" title="" href="#cd9d5163-280a-4745-ac0f-6bf6473e3d2c" />
+<area shape="rect" class="diagelem" coords="918,380,1008,440" title="" href="#ecdc9906-6912-40d6-8903-0352081ed85b" />
+<area shape="rect" class="diagelem" coords="1119,380,1209,440" title="2&#46;11 Adicionar Imagem - Adicionar imagem
+" href="#32199fe9-7294-4d97-8fcf-ebfc37395e97" />
+<area shape="circle" class="diagelem" coords="322,330,15" title="" href="#184c356b-40f6-412b-8ca3-658c2acde1bc" />
+<area shape="circle" class="diagelem" coords="959,269,15" title="" href="#4f085e14-f1c1-42ad-bd06-19e68d20e4fe" />
+<area shape="circle" class="diagelem" coords="1250,410,15" title="" href="#190d6258-c977-4473-9e77-cc19ab27832c" />
+<area shape="rect" class="diagelem" coords="220,212,250,499" title="" href="#29db4ebe-6f26-44e4-9593-5e5693990e3b" />
+<area shape="rect" coords="1227,42858886719,559,071411132813,1317,42858886719,602,071411132813" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>

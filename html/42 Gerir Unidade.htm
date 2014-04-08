@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>4.2 Gerir Unidade</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 23
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("4&#46;2 Gerir Unidade","0049762e-ef8d-42b6-9b28-c97c22b02cbf");
+ht.add("Gerir Unidade","9f0d4d77-9adf-4de6-8c10-a8281b6db477");
+ht.add("Disponibilizar na lista de unidades","8c1ea1f8-a40a-4ce9-aba3-33124cd14806");
+ht.add("Analisar regra de trâmite","c757d26d-bae4-4e6e-9d0a-6a1fa459cbf6");
+ht.add("Definir permissões para a unidade ou por grupo","eca356a4-78b5-4493-b32c-93a094679eb0");
+ht.add("Elemento","be651d47-c4ef-411c-b81e-5137d7c6a41b");
+ht.add("Tipo de  gerenciamento?","50651ab8-657b-4e60-a073-38fec82e1e20");
+ht.add("Necessidade  de adição de unidade","8aea070c-953c-4769-9343-e891f2bf00e3");
+ht.add("Disponibilizar na árvore de trâmite","918b93b6-a672-4791-9025-7a794e779c87");
+ht.add("Acessar a área de adição de unidade","962447d0-4179-49ed-960d-0e30f16eae98");
+ht.add("Preencher campos com informações da unidade","8de70b74-8d4b-476c-a851-e7157bb1ba12");
+ht.add("Escolher a forma de gerenciar o trâmite","82288119-f4cd-4501-9e49-fd66fa225da5");
+ht.add("Selecionar órgão principal ,tipo de unidade e unidade disponível","bc32b644-7b45-4acf-aacb-51dfced8da50");
+ht.add("Selecionar órgão principal, tipo de unidade e unidades que podem ser clonadas","bb455bd9-6dc4-4c26-b21c-a716282e3df6");
+ht.add("Selecionar sequência das unidades hierárquicas desejadas","2e25a17d-a7a0-49e5-bb2b-4dcbcec8623a");
+ht.add("Migrar para unidade ativa","5d6952cb-e325-4243-828d-8dc30bb8dfb9");
+ht.add("Clonar","5c624221-019b-4c70-9c4c-d3cbd39c017c");
+ht.add("Administrador do Sistema","226c0d5c-454f-47e1-8d3c-3bc96a5dea3f");
+
+			var data = '4&#46;2 Gerir Unidade|Gerir Unidade|Disponibilizar na lista de unidades|Analisar regra de trâmite|Definir permissões para a unidade ou por grupo|Elemento|Tipo de  gerenciamento?|Necessidade  de adição de unidade|Disponibilizar na árvore de trâmite|Acessar a área de adição de unidade|Preencher campos com informações da unidade|Escolher a forma de gerenciar o trâmite|Selecionar órgão principal ,tipo de unidade e unidade disponível|Selecionar órgão principal, tipo de unidade e unidades que podem ser clonadas|Selecionar sequência das unidades hierárquicas desejadas|Migrar para unidade ativa|Clonar|Administrador do Sistema'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="22 Cadastrar Documento Externo.htm" title="tabs-4">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-5">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-6">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-7">2.6 Cadastrar Processo</a></li>
+<li><a href="27 Vincular Processo.htm" title="tabs-8">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-9">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-10">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-11">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-12">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-13">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-14">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-15">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-16">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-17">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-18">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="218 Classificar Documento  Processo.htm" title="tabs-19">2.18 Classificar Documento  Processo</a></li>
+<li><a href="219 Manter Caixa.htm" title="tabs-20">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-21">2.20 Desarquivar</a></li>
+<li><a href="3 Acompanhar Gestão da Informação.htm" title="tabs-22">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-23">4.1 Gerir Usuário</a></li>
+<li><a href="#tabs-0" title="tabs-0">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-24">4.3 Gerir Etiqueta</a></li>
+<li><a href="44 Gerir Demandas.htm" title="tabs-25">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-26">4.6 Tratar Recursos SIC</a></li>
+<li><a href="47 Tratar Demanda SIC.htm" title="tabs-27">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#0049762e-ef8d-42b6-9b28-c97c22b02cbf" class="diagelem"><h2>4.2 Gerir Unidade</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="0049762e-ef8d-42b6-9b28-c97c22b02cbf_doc" class="docelem" title="4&#46;2 Gerir Unidade">
+<a name="0049762e-ef8d-42b6-9b28-c97c22b02cbf" id="0049762e-ef8d-42b6-9b28-c97c22b02cbf"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo de Gerir Unidade</span></p><br> </p>
+
+</div>
+<div id="9f0d4d77-9adf-4de6-8c10-a8281b6db477_doc" class="docelem" title="Gerir Unidade">
+<a name="9f0d4d77-9adf-4de6-8c10-a8281b6db477" id="9f0d4d77-9adf-4de6-8c10-a8281b6db477"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="8c1ea1f8-a40a-4ce9-aba3-33124cd14806_doc" class="docelem" title="Disponibilizar na lista de unidades">
+<a name="8c1ea1f8-a40a-4ce9-aba3-33124cd14806" id="8c1ea1f8-a40a-4ce9-aba3-33124cd14806"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="c757d26d-bae4-4e6e-9d0a-6a1fa459cbf6_doc" class="docelem" title="Analisar regra de trâmite">
+<a name="c757d26d-bae4-4e6e-9d0a-6a1fa459cbf6" id="c757d26d-bae4-4e6e-9d0a-6a1fa459cbf6"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Deve ser analisado a hierarquia da instituição e inserido a regra de tramite</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="eca356a4-78b5-4493-b32c-93a094679eb0_doc" class="docelem" title="Definir permissões para a unidade ou por grupo">
+<a name="eca356a4-78b5-4493-b32c-93a094679eb0" id="eca356a4-78b5-4493-b32c-93a094679eb0"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Nesta atividade são selecionadas as permissões de ações dentro da estrutura da unidade.</span></p><br> </p>
+
+</div>
+<div id="be651d47-c4ef-411c-b81e-5137d7c6a41b_doc" class="docelem" title="Elemento">
+<a name="be651d47-c4ef-411c-b81e-5137d7c6a41b" id="be651d47-c4ef-411c-b81e-5137d7c6a41b"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="50651ab8-657b-4e60-a073-38fec82e1e20_doc" class="docelem" title="Tipo de  gerenciamento?">
+<a name="50651ab8-657b-4e60-a073-38fec82e1e20" id="50651ab8-657b-4e60-a073-38fec82e1e20"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;por tipo de unidade</p><p>&nbsp;por hierarquia da unidade</p><p>&nbsp;clonar trâmite de unidade</p>
+</div>
+<div id="8aea070c-953c-4769-9343-e891f2bf00e3_doc" class="docelem" title="Necessidade  de adição de unidade">
+<a name="8aea070c-953c-4769-9343-e891f2bf00e3" id="8aea070c-953c-4769-9343-e891f2bf00e3"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneStart.png" border="0" />
+
+
+
+</div>
+<div id="918b93b6-a672-4791-9025-7a794e779c87_doc" class="docelem" title="Disponibilizar na árvore de trâmite">
+<a name="918b93b6-a672-4791-9025-7a794e779c87" id="918b93b6-a672-4791-9025-7a794e779c87"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="962447d0-4179-49ed-960d-0e30f16eae98_doc" class="docelem" title="Acessar a área de adição de unidade">
+<a name="962447d0-4179-49ed-960d-0e30f16eae98" id="962447d0-4179-49ed-960d-0e30f16eae98"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="8de70b74-8d4b-476c-a851-e7157bb1ba12_doc" class="docelem" title="Preencher campos com informações da unidade">
+<a name="8de70b74-8d4b-476c-a851-e7157bb1ba12" id="8de70b74-8d4b-476c-a851-e7157bb1ba12"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="82288119-f4cd-4501-9e49-fd66fa225da5_doc" class="docelem" title="Escolher a forma de gerenciar o trâmite">
+<a name="82288119-f4cd-4501-9e49-fd66fa225da5" id="82288119-f4cd-4501-9e49-fd66fa225da5"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">O gerenciamento de trâmite pode ser feito por tipo, por clone ou por hierarquia</span></p><br> </p>
+
+</div>
+<div id="bc32b644-7b45-4acf-aacb-51dfced8da50_doc" class="docelem" title="Selecionar órgão principal ,tipo de unidade e unidade disponível">
+<a name="bc32b644-7b45-4acf-aacb-51dfced8da50" id="bc32b644-7b45-4acf-aacb-51dfced8da50"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="bb455bd9-6dc4-4c26-b21c-a716282e3df6_doc" class="docelem" title="Selecionar órgão principal, tipo de unidade e unidades que podem ser clonadas">
+<a name="bb455bd9-6dc4-4c26-b21c-a716282e3df6" id="bb455bd9-6dc4-4c26-b21c-a716282e3df6"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="2e25a17d-a7a0-49e5-bb2b-4dcbcec8623a_doc" class="docelem" title="Selecionar sequência das unidades hierárquicas desejadas">
+<a name="2e25a17d-a7a0-49e5-bb2b-4dcbcec8623a" id="2e25a17d-a7a0-49e5-bb2b-4dcbcec8623a"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="5d6952cb-e325-4243-828d-8dc30bb8dfb9_doc" class="docelem" title="Migrar para unidade ativa">
+<a name="5d6952cb-e325-4243-828d-8dc30bb8dfb9" id="5d6952cb-e325-4243-828d-8dc30bb8dfb9"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="5c624221-019b-4c70-9c4c-d3cbd39c017c_doc" class="docelem" title="Clonar">
+<a name="5c624221-019b-4c70-9c4c-d3cbd39c017c" id="5c624221-019b-4c70-9c4c-d3cbd39c017c"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="eccb871b-b0e2-44d6-be1c-5cba81381fbd_doc" class="docelem" title="Elemento">
+<a name="eccb871b-b0e2-44d6-be1c-5cba81381fbd" id="eccb871b-b0e2-44d6-be1c-5cba81381fbd"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p>
+</div>
+<div id="226c0d5c-454f-47e1-8d3c-3bc96a5dea3f_doc" class="docelem" title="Administrador do Sistema">
+<a name="226c0d5c-454f-47e1-8d3c-3bc96a5dea3f" id="226c0d5c-454f-47e1-8d3c-3bc96a5dea3f"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/42 Gerir Unidade.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="125,218,175,582" title="" href="#9f0d4d77-9adf-4de6-8c10-a8281b6db477" />
+<area shape="rect" class="diagelem" coords="672,321,762,381" title="Serviço Web
+" href="#8c1ea1f8-a40a-4ce9-aba3-33124cd14806" />
+<area shape="rect" class="diagelem" coords="807,318,897,378" title="Deve ser analisado a hierarquia da instituição e inserido a regra de tramite 
+" href="#c757d26d-bae4-4e6e-9d0a-6a1fa459cbf6" />
+<area shape="rect" class="diagelem" coords="1874,314,1964,386" title="Nesta atividade são selecionadas as permissões de ações dentro da estrutura da unidade&#46;
+" href="#eca356a4-78b5-4493-b32c-93a094679eb0" />
+<area shape="circle" class="diagelem" coords="2024,350,15" title="" href="#be651d47-c4ef-411c-b81e-5137d7c6a41b" />
+<area shape="poly" class="diagelem" coords="1075,347,1095,327,1115,347,1095,367" title="" href="#50651ab8-657b-4e60-a073-38fec82e1e20" />
+<area shape="circle" class="diagelem" coords="276,351,15" title="" href="#8aea070c-953c-4769-9343-e891f2bf00e3" />
+<area shape="rect" class="diagelem" coords="1748,320,1838,380" title="Serviço Web
+" href="#918b93b6-a672-4791-9025-7a794e779c87" />
+<area shape="rect" class="diagelem" coords="363,321,453,381" title="" href="#962447d0-4179-49ed-960d-0e30f16eae98" />
+<area shape="rect" class="diagelem" coords="517,314,607,388" title="" href="#8de70b74-8d4b-476c-a851-e7157bb1ba12" />
+<area shape="rect" class="diagelem" coords="932,312,1022,383" title="O gerenciamento de trâmite pode ser feito por tipo, por clone ou por hierarquia
+" href="#82288119-f4cd-4501-9e49-fd66fa225da5" />
+<area shape="rect" class="diagelem" coords="1318,240,1428,308" title="" href="#bc32b644-7b45-4acf-aacb-51dfced8da50" />
+<area shape="rect" class="diagelem" coords="1316,340,1437,422" title="" href="#bb455bd9-6dc4-4c26-b21c-a716282e3df6" />
+<area shape="rect" class="diagelem" coords="1322,458,1440,525" title="" href="#2e25a17d-a7a0-49e5-bb2b-4dcbcec8623a" />
+<area shape="rect" class="diagelem" coords="1478,244,1568,304" title="" href="#5d6952cb-e325-4243-828d-8dc30bb8dfb9" />
+<area shape="rect" class="diagelem" coords="1480,351,1570,411" title="" href="#5c624221-019b-4c70-9c4c-d3cbd39c017c" />
+<area shape="poly" class="diagelem" coords="1678,350,1698,330,1718,350,1698,370" title="" href="#eccb871b-b0e2-44d6-be1c-5cba81381fbd" />
+<area shape="rect" class="diagelem" coords="175,218,205,582" title="" href="#226c0d5c-454f-47e1-8d3c-3bc96a5dea3f" />
+<area shape="rect" coords="1983,642,2073,685" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>
