@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>2.7 Vincular Processo</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 7
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("2&#46;7 Vincular Processo","5aa2312a-3ae7-4e44-9bdb-13246eb56a5d");
+ht.add("Vincular processo","c931ce8c-393e-43b2-bf30-7b180fea7459");
+ht.add("Indisponibilizar o processo apensado da área de trabalho","8f051058-2aa9-4d30-aa24-be6310db2ab9");
+ht.add("Indisponibilizar o processo anexado da área de trabalho","44cb87f7-3aa0-4b13-8554-136931483921");
+ht.add("Processo anexado","8ab36907-1ffa-43cb-a7d1-63a751797f3e");
+ht.add("Gerar termo de juntada por anexação","7fd3a91e-a695-4a67-995d-fabbfdd36621");
+ht.add("Juntar fisicamente os processos e o termo de juntada","162de7f3-5914-46fd-9e30-849ef18d881a");
+ht.add("Apensar processo","e17b06aa-cf85-49a0-a703-c05a75ebc5d8");
+ht.add("Gerar termo de juntada por apensação","d907b9ce-c626-49b6-938d-048c706156ac");
+ht.add("Assinar termo de juntada por apensação","056bd2b2-e4ec-47ed-9e1d-919039f1b7b8");
+ht.add("Selecionar o processo principal","41ef6954-8798-43f8-9929-2f8f7abae80e");
+ht.add("Assinar termo de juntada por anexação","4afa8e2d-d943-4e67-ad64-0c4ba46a9331");
+ht.add("Juntar fisicamenteos processos e o termo de juntada","f13cb381-8978-4ad5-af7f-45c0e39995ca");
+ht.add("Separar fisicamente","e9ab5287-e908-4eab-87b0-ab88f8f48ef5");
+ht.add("Anexar processo","53bd93bb-a6e5-4f39-8dfe-2a6221ad8644");
+ht.add("Disponibilizar processo desapensado na área de trabalho","70bdc78b-f44a-4616-997f-cb2dce7fbddc");
+ht.add("Assinar termo de desapensação","3e5aaaef-2a8d-47e0-b168-9dacb67d1855");
+ht.add("Documentação apensada","3e62d5e9-4ccc-4f8a-9406-aeb6d8cba2e4");
+ht.add("Cadastrar despacho","0ce3dba1-c170-41f9-8cc1-5ad297aefeea");
+ht.add("Preencher os dados do termo de juntada por anexação","a0527839-bdde-452e-8a2c-046390066c75");
+ht.add("Elaborar despacho","27140363-554e-48eb-88dd-79357783be76");
+ht.add("Tramitar processo para o protocolo","6e480fab-f01f-4b24-8ad1-39e9e82e6f34");
+ht.add("Qual atividade solicitada no despacho","b4e4d487-047b-4d18-a965-784c95c2ac93");
+ht.add("Preencher os dados do termo de juntada por apensação","527a4a17-ab23-4ef5-8427-1e52fcb6f8a2");
+ht.add("Cadastrar o termo de desapensação","322349d8-ec8c-4e68-bc51-3e1421b7192c");
+ht.add("Selecionar número do processo a ser desapensado","0b3ab3b0-f702-4f34-b4e7-a95b985f9a7e");
+ht.add("Gerar termo de desapensação","f356e606-aa62-4917-b2c3-ed0d0409c498");
+ht.add("Desapensar processo","08fae994-ec7c-417a-8668-6f556f94c2c3");
+ht.add("Elemento","b0c8cd05-2102-4789-9e3b-e785271df0b3");
+ht.add("Tramitar para o setor solicitante","023ffe24-809c-47b3-9157-183d891a4e1f");
+ht.add("Processo","4de05c0f-15a6-48e1-b74e-9a93700a857e");
+ht.add("Protocolo","9478ed44-202f-4309-9f69-97df5f5af7d8");
+ht.add("Todas as áreas","ab54a6f7-5134-47e8-b06e-a8f0ac1bf3c7");
+
+			var data = '2&#46;7 Vincular Processo|Vincular processo|Indisponibilizar o processo apensado da área de trabalho|Indisponibilizar o processo anexado da área de trabalho|Processo anexado|Gerar termo de juntada por anexação|Juntar fisicamente os processos e o termo de juntada|Apensar processo|Gerar termo de juntada por apensação|Assinar termo de juntada por apensação|Selecionar o processo principal|Assinar termo de juntada por anexação|Juntar fisicamenteos processos e o termo de juntada|Separar fisicamente|Anexar processo|Disponibilizar processo desapensado na área de trabalho|Assinar termo de desapensação|Documentação apensada|Cadastrar despacho|Preencher os dados do termo de juntada por anexação|Elaborar despacho|Tramitar processo para o protocolo|Qual atividade solicitada no despacho|Preencher os dados do termo de juntada por apensação|Cadastrar o termo de desapensação|Selecionar número do processo a ser desapensado|Gerar termo de desapensação|Desapensar processo|Elemento|Tramitar para o setor solicitante|Processo|Protocolo|Todas as áreas'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="22 Cadastrar Documento Externo.htm" title="tabs-4">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-5">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-6">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-7">2.6 Cadastrar Processo</a></li>
+<li><a href="#tabs-0" title="tabs-0">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-8">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-9">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-10">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-11">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-12">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-13">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-14">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-15">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-16">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-17">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="218 Classificar Documento  Processo.htm" title="tabs-18">2.18 Classificar Documento  Processo</a></li>
+<li><a href="219 Manter Caixa.htm" title="tabs-19">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-20">2.20 Desarquivar</a></li>
+<li><a href="3 Acompanhar Gestão da Informação.htm" title="tabs-21">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-22">4.1 Gerir Usuário</a></li>
+<li><a href="42 Gerir Unidade.htm" title="tabs-23">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-24">4.3 Gerir Etiqueta</a></li>
+<li><a href="44 Gerir Demandas.htm" title="tabs-25">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-26">4.6 Tratar Recursos SIC</a></li>
+<li><a href="47 Tratar Demanda SIC.htm" title="tabs-27">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#5aa2312a-3ae7-4e44-9bdb-13246eb56a5d" class="diagelem"><h2>2.7 Vincular Processo</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="5aa2312a-3ae7-4e44-9bdb-13246eb56a5d_doc" class="docelem" title="2&#46;7 Vincular Processo">
+<a name="5aa2312a-3ae7-4e44-9bdb-13246eb56a5d" id="5aa2312a-3ae7-4e44-9bdb-13246eb56a5d"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo de Vincular Processo</span></p><br> </p>
+
+</div>
+<div id="c931ce8c-393e-43b2-bf30-7b180fea7459_doc" class="docelem" title="Vincular processo">
+<a name="c931ce8c-393e-43b2-bf30-7b180fea7459" id="c931ce8c-393e-43b2-bf30-7b180fea7459"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="8f051058-2aa9-4d30-aa24-be6310db2ab9_doc" class="docelem" title="Indisponibilizar o processo apensado da área de trabalho">
+<a name="8f051058-2aa9-4d30-aa24-be6310db2ab9" id="8f051058-2aa9-4d30-aa24-be6310db2ab9"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="44cb87f7-3aa0-4b13-8554-136931483921_doc" class="docelem" title="Indisponibilizar o processo anexado da área de trabalho">
+<a name="44cb87f7-3aa0-4b13-8554-136931483921" id="44cb87f7-3aa0-4b13-8554-136931483921"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="8ab36907-1ffa-43cb-a7d1-63a751797f3e_doc" class="docelem" title="Processo anexado">
+<a name="8ab36907-1ffa-43cb-a7d1-63a751797f3e" id="8ab36907-1ffa-43cb-a7d1-63a751797f3e"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="7fd3a91e-a695-4a67-995d-fabbfdd36621_doc" class="docelem" title="Gerar termo de juntada por anexação">
+<a name="7fd3a91e-a695-4a67-995d-fabbfdd36621" id="7fd3a91e-a695-4a67-995d-fabbfdd36621"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="162de7f3-5914-46fd-9e30-849ef18d881a_doc" class="docelem" title="Juntar fisicamente os processos e o termo de juntada">
+<a name="162de7f3-5914-46fd-9e30-849ef18d881a" id="162de7f3-5914-46fd-9e30-849ef18d881a"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Este procedimento está detalhado na Portaria Normativa de n 5 do MPOG.</span></p><br> </p>
+
+</div>
+<div id="e17b06aa-cf85-49a0-a703-c05a75ebc5d8_doc" class="docelem" title="Apensar processo">
+<a name="e17b06aa-cf85-49a0-a703-c05a75ebc5d8" id="e17b06aa-cf85-49a0-a703-c05a75ebc5d8"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">O termo de juntada por apensação vai no processo principal.</span></p><br> </p><h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="d907b9ce-c626-49b6-938d-048c706156ac_doc" class="docelem" title="Gerar termo de juntada por apensação">
+<a name="d907b9ce-c626-49b6-938d-048c706156ac" id="d907b9ce-c626-49b6-938d-048c706156ac"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="056bd2b2-e4ec-47ed-9e1d-919039f1b7b8_doc" class="docelem" title="Assinar termo de juntada por apensação">
+<a name="056bd2b2-e4ec-47ed-9e1d-919039f1b7b8" id="056bd2b2-e4ec-47ed-9e1d-919039f1b7b8"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Termo de juntada por apensação</span></p><p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Na apensação o pedido vem no processo principal e o termo entra no processo acessório, ressaltando que após o termo de apensação não pode ser inserida nenhuma peça junto ao processo acessório até sua desapensação. Qualquer informação deverá ser inserida no processo principal.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="41ef6954-8798-43f8-9929-2f8f7abae80e_doc" class="docelem" title="Selecionar o processo principal">
+<a name="41ef6954-8798-43f8-9929-2f8f7abae80e" id="41ef6954-8798-43f8-9929-2f8f7abae80e"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="4afa8e2d-d943-4e67-ad64-0c4ba46a9331_doc" class="docelem" title="Assinar termo de juntada por anexação">
+<a name="4afa8e2d-d943-4e67-ad64-0c4ba46a9331" id="4afa8e2d-d943-4e67-ad64-0c4ba46a9331"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Termo de juntada por anexação</span></p><p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">O pedido de anexação ou apensação deve ser feito no processo principal. O termo de anexação será aposto em seguida do pedido de anexação, no processo principal e subseqüente vêm as peças do processo apensado, tornando-se um único processo.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="f13cb381-8978-4ad5-af7f-45c0e39995ca_doc" class="docelem" title="Juntar fisicamenteos processos e o termo de juntada">
+<a name="f13cb381-8978-4ad5-af7f-45c0e39995ca" id="f13cb381-8978-4ad5-af7f-45c0e39995ca"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="e9ab5287-e908-4eab-87b0-ab88f8f48ef5_doc" class="docelem" title="Separar fisicamente">
+<a name="e9ab5287-e908-4eab-87b0-ab88f8f48ef5" id="e9ab5287-e908-4eab-87b0-ab88f8f48ef5"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="53bd93bb-a6e5-4f39-8dfe-2a6221ad8644_doc" class="docelem" title="Anexar processo">
+<a name="53bd93bb-a6e5-4f39-8dfe-2a6221ad8644" id="53bd93bb-a6e5-4f39-8dfe-2a6221ad8644"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="70bdc78b-f44a-4616-997f-cb2dce7fbddc_doc" class="docelem" title="Disponibilizar processo desapensado na área de trabalho">
+<a name="70bdc78b-f44a-4616-997f-cb2dce7fbddc" id="70bdc78b-f44a-4616-997f-cb2dce7fbddc"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="3e5aaaef-2a8d-47e0-b168-9dacb67d1855_doc" class="docelem" title="Assinar termo de desapensação">
+<a name="3e5aaaef-2a8d-47e0-b168-9dacb67d1855" id="3e5aaaef-2a8d-47e0-b168-9dacb67d1855"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Termo de desapensação</span></p><p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:35pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Quando o processo acessório (apensado) não for mais necessário para subsidiar o processo principal, utiliza-se deste termo para separá-los.</span></p><br> </p>
+
+</div>
+<div id="3e62d5e9-4ccc-4f8a-9406-aeb6d8cba2e4_doc" class="docelem" title="Documentação apensada">
+<a name="3e62d5e9-4ccc-4f8a-9406-aeb6d8cba2e4" id="3e62d5e9-4ccc-4f8a-9406-aeb6d8cba2e4"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="0ce3dba1-c170-41f9-8cc1-5ad297aefeea_doc" class="docelem" title="Cadastrar despacho">
+<a name="0ce3dba1-c170-41f9-8cc1-5ad297aefeea" id="0ce3dba1-c170-41f9-8cc1-5ad297aefeea"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Esta atividade consiste no preenchimento dos campos no sistema:</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Campos obrigatórios:</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Texto</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Data</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Assinatura (normalmente feita pelo chefe do setor ou algum servidor da casa)</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Campo opcional:</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Complemento</span></p><br> </p>
+
+</div>
+<div id="a0527839-bdde-452e-8a2c-046390066c75_doc" class="docelem" title="Preencher os dados do termo de juntada por anexação">
+<a name="a0527839-bdde-452e-8a2c-046390066c75" id="a0527839-bdde-452e-8a2c-046390066c75"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="27140363-554e-48eb-88dd-79357783be76_doc" class="docelem" title="Elaborar despacho">
+<a name="27140363-554e-48eb-88dd-79357783be76" id="27140363-554e-48eb-88dd-79357783be76"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Esta atividade consiste na elaboração do despacho no processo físico que será utilizado para dar andamento ao processo ou solicitação de alguma vinculação.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="6e480fab-f01f-4b24-8ad1-39e9e82e6f34_doc" class="docelem" title="Tramitar processo para o protocolo">
+<a name="6e480fab-f01f-4b24-8ad1-39e9e82e6f34" id="6e480fab-f01f-4b24-8ad1-39e9e82e6f34"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Esta atividade consiste em fazer o tramite interno para o protocolo</span></p><br> </p>
+
+</div>
+<div id="4c2fd174-fda0-434f-b1ca-4c668aadbb53_doc" class="docelem" title="Selecionar o processo principal">
+<a name="4c2fd174-fda0-434f-b1ca-4c668aadbb53" id="4c2fd174-fda0-434f-b1ca-4c668aadbb53"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="b4e4d487-047b-4d18-a965-784c95c2ac93_doc" class="docelem" title="Qual atividade solicitada no despacho">
+<a name="b4e4d487-047b-4d18-a965-784c95c2ac93" id="b4e4d487-047b-4d18-a965-784c95c2ac93"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Desapensar</p><p>&nbsp;Apensar</p><p>&nbsp;Anexar</p>
+</div>
+<div id="527a4a17-ab23-4ef5-8427-1e52fcb6f8a2_doc" class="docelem" title="Preencher os dados do termo de juntada por apensação">
+<a name="527a4a17-ab23-4ef5-8427-1e52fcb6f8a2" id="527a4a17-ab23-4ef5-8427-1e52fcb6f8a2"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="322349d8-ec8c-4e68-bc51-3e1421b7192c_doc" class="docelem" title="Cadastrar o termo de desapensação">
+<a name="322349d8-ec8c-4e68-bc51-3e1421b7192c" id="322349d8-ec8c-4e68-bc51-3e1421b7192c"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="0b3ab3b0-f702-4f34-b4e7-a95b985f9a7e_doc" class="docelem" title="Selecionar número do processo a ser desapensado">
+<a name="0b3ab3b0-f702-4f34-b4e7-a95b985f9a7e" id="0b3ab3b0-f702-4f34-b4e7-a95b985f9a7e"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="f356e606-aa62-4917-b2c3-ed0d0409c498_doc" class="docelem" title="Gerar termo de desapensação">
+<a name="f356e606-aa62-4917-b2c3-ed0d0409c498" id="f356e606-aa62-4917-b2c3-ed0d0409c498"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="08fae994-ec7c-417a-8668-6f556f94c2c3_doc" class="docelem" title="Desapensar processo">
+<a name="08fae994-ec7c-417a-8668-6f556f94c2c3" id="08fae994-ec7c-417a-8668-6f556f94c2c3"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="b0c8cd05-2102-4789-9e3b-e785271df0b3_doc" class="docelem" title="Elemento">
+<a name="b0c8cd05-2102-4789-9e3b-e785271df0b3" id="b0c8cd05-2102-4789-9e3b-e785271df0b3"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="023ffe24-809c-47b3-9157-183d891a4e1f_doc" class="docelem" title="Tramitar para o setor solicitante">
+<a name="023ffe24-809c-47b3-9157-183d891a4e1f" id="023ffe24-809c-47b3-9157-183d891a4e1f"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="0f53acab-5d30-4604-90e3-23d8cc745000_doc" class="docelem" title="Elemento">
+<a name="0f53acab-5d30-4604-90e3-23d8cc745000" id="0f53acab-5d30-4604-90e3-23d8cc745000"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p>
+</div>
+<div id="4de05c0f-15a6-48e1-b74e-9a93700a857e_doc" class="docelem" title="Processo">
+<a name="4de05c0f-15a6-48e1-b74e-9a93700a857e" id="4de05c0f-15a6-48e1-b74e-9a93700a857e"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneStart.png" border="0" />
+
+
+
+</div>
+<div id="9478ed44-202f-4309-9f69-97df5f5af7d8_doc" class="docelem" title="Protocolo">
+<a name="9478ed44-202f-4309-9f69-97df5f5af7d8" id="9478ed44-202f-4309-9f69-97df5f5af7d8"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+<div id="ab54a6f7-5134-47e8-b06e-a8f0ac1bf3c7_doc" class="docelem" title="Todas as áreas">
+<a name="ab54a6f7-5134-47e8-b06e-a8f0ac1bf3c7" id="ab54a6f7-5134-47e8-b06e-a8f0ac1bf3c7"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/27 Vincular Processo.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="169,230,219,1008" title="" href="#c931ce8c-393e-43b2-bf30-7b180fea7459" />
+<area shape="rect" class="diagelem" coords="1933,460,2028,528" title="Serviço Web
+" href="#8f051058-2aa9-4d30-aa24-be6310db2ab9" />
+<area shape="rect" class="diagelem" coords="2021,324,2111,414" title="Serviço Web
+" href="#44cb87f7-3aa0-4b13-8554-136931483921" />
+<area shape="circle" class="diagelem" coords="1888,370,15" title="" href="#8ab36907-1ffa-43cb-a7d1-63a751797f3e" />
+<area shape="rect" class="diagelem" coords="1480,340,1570,400" title="Serviço Web
+" href="#7fd3a91e-a695-4a67-995d-fabbfdd36621" />
+<area shape="rect" class="diagelem" coords="1708,330,1798,410" title="Este procedimento está detalhado na Portaria Normativa de n 5 do MPOG&#46;
+" href="#162de7f3-5914-46fd-9e30-849ef18d881a" />
+<area shape="rect" class="diagelem" coords="1317,464,1407,524" title="O termo de juntada por apensação vai no processo principal&#46;
+" href="#e17b06aa-cf85-49a0-a703-c05a75ebc5d8" />
+<area shape="rect" class="diagelem" coords="1459,464,1549,524" title="Serviço Web
+" href="#d907b9ce-c626-49b6-938d-048c706156ac" />
+<area shape="rect" class="diagelem" coords="1589,464,1679,524" title="Termo de juntada por apensação Na apensação o pedido vem no processo principal e o termo entra no processo acessório, ressaltando que após o termo de apensação não pode ser inserida nenhuma peça junto ao processo acessório até sua desapensação&#46; Qualquer informação deverá ser inserida no processo principal&#46; 
+" href="#056bd2b2-e4ec-47ed-9e1d-919039f1b7b8" />
+<area shape="rect" class="diagelem" coords="731,838,821,898" title="" href="#41ef6954-8798-43f8-9929-2f8f7abae80e" />
+<area shape="rect" class="diagelem" coords="1594,340,1684,400" title="Termo de juntada por anexação O pedido de anexação ou apensação deve ser feito no processo principal&#46; O termo de anexação será aposto em seguida do pedido de anexação, no processo principal e subseqüente vêm as peças do processo apensado, tornando-se um único processo&#46; 
+" href="#4afa8e2d-d943-4e67-ad64-0c4ba46a9331" />
+<area shape="rect" class="diagelem" coords="1753,464,1843,524" title="" href="#f13cb381-8978-4ad5-af7f-45c0e39995ca" />
+<area shape="rect" class="diagelem" coords="2022,606,2112,666" title="" href="#e9ab5287-e908-4eab-87b0-ab88f8f48ef5" />
+<area shape="rect" class="diagelem" coords="1320,340,1410,400" title="Serviço Web
+" href="#53bd93bb-a6e5-4f39-8dfe-2a6221ad8644" />
+<area shape="rect" class="diagelem" coords="1689,603,1809,669" title="Serviço Web
+" href="#70bdc78b-f44a-4616-997f-cb2dce7fbddc" />
+<area shape="rect" class="diagelem" coords="1875,606,1965,666" title="Termo de desapensação Quando o processo acessório (apensado) não for mais necessário para subsidiar o processo principal, utiliza-se deste termo para separá-los&#46;
+" href="#3e5aaaef-2a8d-47e0-b168-9dacb67d1855" />
+<area shape="circle" class="diagelem" coords="1886,494,15" title="" href="#3e62d5e9-4ccc-4f8a-9406-aeb6d8cba2e4" />
+<area shape="rect" class="diagelem" coords="581,838,671,898" title="Esta atividade consiste no preenchimento dos campos no sistema: Campos obrigatórios: TextoDataAssinatura (normalmente feita pelo chefe do setor ou algum servidor da casa) Campo opcional:Complemento
+" href="#0ce3dba1-c170-41f9-8cc1-5ad297aefeea" />
+<area shape="rect" class="diagelem" coords="1162,330,1252,408" title="" href="#a0527839-bdde-452e-8a2c-046390066c75" />
+<area shape="rect" class="diagelem" coords="431,838,521,898" title="Esta atividade consiste na elaboração do despacho no processo físico que será utilizado para dar andamento ao processo ou solicitação de alguma vinculação&#46; 
+" href="#27140363-554e-48eb-88dd-79357783be76" />
+<area shape="rect" class="diagelem" coords="881,838,971,898" title="Esta atividade consiste em fazer o tramite interno para o protocolo
+" href="#6e480fab-f01f-4b24-8ad1-39e9e82e6f34" />
+<area shape="rect" class="diagelem" coords="881,464,971,524" title="" href="#4c2fd174-fda0-434f-b1ca-4c668aadbb53" />
+<area shape="poly" class="diagelem" coords="1039,494,1059,474,1079,494,1059,514" title="" href="#b4e4d487-047b-4d18-a965-784c95c2ac93" />
+<area shape="rect" class="diagelem" coords="1159,455,1249,533" title="" href="#527a4a17-ab23-4ef5-8427-1e52fcb6f8a2" />
+<area shape="rect" class="diagelem" coords="1151,606,1241,666" title="" href="#322349d8-ec8c-4e68-bc51-3e1421b7192c" />
+<area shape="rect" class="diagelem" coords="1309,602,1402,670" title="" href="#0b3ab3b0-f702-4f34-b4e7-a95b985f9a7e" />
+<area shape="rect" class="diagelem" coords="1573,606,1663,666" title="Serviço Web
+" href="#f356e606-aa62-4917-b2c3-ed0d0409c498" />
+<area shape="rect" class="diagelem" coords="1443,606,1533,666" title="" href="#08fae994-ec7c-417a-8668-6f556f94c2c3" />
+<area shape="circle" class="diagelem" coords="2260,494,15" title="" href="#b0c8cd05-2102-4789-9e3b-e785271df0b3" />
+<area shape="rect" class="diagelem" coords="2111,464,2201,524" title="" href="#023ffe24-809c-47b3-9157-183d891a4e1f" />
+<area shape="poly" class="diagelem" coords="2047,494,2067,474,2087,494,2067,514" title="" href="#0f53acab-5d30-4604-90e3-23d8cc745000" />
+<area shape="circle" class="diagelem" coords="356,868,15" title="" href="#4de05c0f-15a6-48e1-b74e-9a93700a857e" />
+<area shape="rect" class="diagelem" coords="219,230,249,736" title="" href="#9478ed44-202f-4309-9f69-97df5f5af7d8" />
+<area shape="rect" class="diagelem" coords="219,736,249,1008" title="" href="#ab54a6f7-5134-47e8-b06e-a8f0ac1bf3c7" />
+<area shape="rect" coords="2235,1068,5,2325,1111,5" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>

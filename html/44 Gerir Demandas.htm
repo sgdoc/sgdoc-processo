@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>4.4 Gerir Demandas</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 25
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("4&#46;4 Gerir Demandas","25a34aff-8465-45c0-8cdd-0ca669e7f68a");
+ht.add("Gerir Demandas","096066dd-4c20-4db9-be9f-ec9eeb49ac83");
+ht.add("Elemento","fdf000ff-6e3b-470d-848d-20a162f9967a");
+ht.add("Disponibilzar a demanda na lista de triagem","052db2f7-6ab9-45cd-8dda-aa103c128c53");
+ht.add("Atividade?","e1773593-3e46-46ed-8655-d0172cb6e62b");
+ht.add("Avaliar atendimento do chamado","169dc525-c257-43d0-8b68-3bcb519e428c");
+ht.add("Encaminhar demanda","5f12c8d1-d72a-4edb-8c16-de4a8cca9cc0");
+ht.add("Acessar lista de minha caixa de demandas","eee7cdf5-b82d-4a90-be13-17513b1ad3cf");
+ht.add("Detalhar demanda","082069a3-c52b-4ee2-8dd3-dd218fe990f5");
+ht.add("Preencher comentário do atendente","d30583d9-02b8-4543-9b63-b391b110c029");
+ht.add("Disponibilizar na lista de  histórico","936e7021-8437-4d13-9381-73252e2e0773");
+ht.add("Disnibilizar na lista de chamados","8b48157a-8f7b-4b0a-bb83-6f14d0d89d9a");
+ht.add("Demanda atendida","e8541d56-cfc0-427f-a2c2-fc93923094ce");
+ht.add("Solicitação de Exclusão","d6a53938-ad25-472c-af15-b0327f33fc79");
+ht.add("Encaminhar para solicitante","275ad3c5-3ea8-439a-bbb8-a95c0b5aa292");
+ht.add("Solicitação de demanda","f76b1583-3d95-4543-b5c0-90a44e5c4964");
+ht.add("Usuário demandante","547a4686-978d-442d-b2c0-56915e80f180");
+ht.add("Administrador","be12b09a-6073-49f2-a485-6cc0a47a0408");
+
+			var data = '4&#46;4 Gerir Demandas|Gerir Demandas|Elemento|Disponibilzar a demanda na lista de triagem|Atividade?|Avaliar atendimento do chamado|Encaminhar demanda|Acessar lista de minha caixa de demandas|Detalhar demanda|Preencher comentário do atendente|Disponibilizar na lista de  histórico|Disnibilizar na lista de chamados|Demanda atendida|Solicitação de Exclusão|Encaminhar para solicitante|Solicitação de demanda|Usuário demandante|Administrador'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="22 Cadastrar Documento Externo.htm" title="tabs-4">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-5">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-6">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-7">2.6 Cadastrar Processo</a></li>
+<li><a href="27 Vincular Processo.htm" title="tabs-8">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-9">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-10">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-11">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-12">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-13">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-14">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-15">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-16">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-17">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-18">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="218 Classificar Documento  Processo.htm" title="tabs-19">2.18 Classificar Documento  Processo</a></li>
+<li><a href="219 Manter Caixa.htm" title="tabs-20">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-21">2.20 Desarquivar</a></li>
+<li><a href="3 Acompanhar Gestão da Informação.htm" title="tabs-22">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-23">4.1 Gerir Usuário</a></li>
+<li><a href="42 Gerir Unidade.htm" title="tabs-24">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-25">4.3 Gerir Etiqueta</a></li>
+<li><a href="#tabs-0" title="tabs-0">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-26">4.6 Tratar Recursos SIC</a></li>
+<li><a href="47 Tratar Demanda SIC.htm" title="tabs-27">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#25a34aff-8465-45c0-8cdd-0ca669e7f68a" class="diagelem"><h2>4.4 Gerir Demandas</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="25a34aff-8465-45c0-8cdd-0ca669e7f68a_doc" class="docelem" title="4&#46;4 Gerir Demandas">
+<a name="25a34aff-8465-45c0-8cdd-0ca669e7f68a" id="25a34aff-8465-45c0-8cdd-0ca669e7f68a"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo de Gerir Demandas</span></p><br> </p>
+
+</div>
+<div id="096066dd-4c20-4db9-be9f-ec9eeb49ac83_doc" class="docelem" title="Gerir Demandas">
+<a name="096066dd-4c20-4db9-be9f-ec9eeb49ac83" id="096066dd-4c20-4db9-be9f-ec9eeb49ac83"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="fdf000ff-6e3b-470d-848d-20a162f9967a_doc" class="docelem" title="Elemento">
+<a name="fdf000ff-6e3b-470d-848d-20a162f9967a" id="fdf000ff-6e3b-470d-848d-20a162f9967a"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="052db2f7-6ab9-45cd-8dda-aa103c128c53_doc" class="docelem" title="Disponibilzar a demanda na lista de triagem">
+<a name="052db2f7-6ab9-45cd-8dda-aa103c128c53" id="052db2f7-6ab9-45cd-8dda-aa103c128c53"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="e1773593-3e46-46ed-8655-d0172cb6e62b_doc" class="docelem" title="Atividade?">
+<a name="e1773593-3e46-46ed-8655-d0172cb6e62b" id="e1773593-3e46-46ed-8655-d0172cb6e62b"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Finalizar</p><p>&nbsp;Devolver</p>
+</div>
+<div id="169dc525-c257-43d0-8b68-3bcb519e428c_doc" class="docelem" title="Avaliar atendimento do chamado">
+<a name="169dc525-c257-43d0-8b68-3bcb519e428c" id="169dc525-c257-43d0-8b68-3bcb519e428c"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="5f12c8d1-d72a-4edb-8c16-de4a8cca9cc0_doc" class="docelem" title="Encaminhar demanda">
+<a name="5f12c8d1-d72a-4edb-8c16-de4a8cca9cc0" id="5f12c8d1-d72a-4edb-8c16-de4a8cca9cc0"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="eee7cdf5-b82d-4a90-be13-17513b1ad3cf_doc" class="docelem" title="Acessar lista de minha caixa de demandas">
+<a name="eee7cdf5-b82d-4a90-be13-17513b1ad3cf" id="eee7cdf5-b82d-4a90-be13-17513b1ad3cf"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="082069a3-c52b-4ee2-8dd3-dd218fe990f5_doc" class="docelem" title="Detalhar demanda">
+<a name="082069a3-c52b-4ee2-8dd3-dd218fe990f5" id="082069a3-c52b-4ee2-8dd3-dd218fe990f5"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="d30583d9-02b8-4543-9b63-b391b110c029_doc" class="docelem" title="Preencher comentário do atendente">
+<a name="d30583d9-02b8-4543-9b63-b391b110c029" id="d30583d9-02b8-4543-9b63-b391b110c029"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="936e7021-8437-4d13-9381-73252e2e0773_doc" class="docelem" title="Disponibilizar na lista de  histórico">
+<a name="936e7021-8437-4d13-9381-73252e2e0773" id="936e7021-8437-4d13-9381-73252e2e0773"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="8b48157a-8f7b-4b0a-bb83-6f14d0d89d9a_doc" class="docelem" title="Disnibilizar na lista de chamados">
+<a name="8b48157a-8f7b-4b0a-bb83-6f14d0d89d9a" id="8b48157a-8f7b-4b0a-bb83-6f14d0d89d9a"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="e8541d56-cfc0-427f-a2c2-fc93923094ce_doc" class="docelem" title="Demanda atendida">
+<a name="e8541d56-cfc0-427f-a2c2-fc93923094ce" id="e8541d56-cfc0-427f-a2c2-fc93923094ce"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="_doc" class="docelem" title="Adicionar imagem">
+<a name="" id=""></a>
+<img class="icon" src="diagrams/bpmnimg/CallActivity.png" border="0" />
+
+
+
+</div>
+<div id="d6a53938-ad25-472c-af15-b0327f33fc79_doc" class="docelem" title="Solicitação de Exclusão">
+<a name="d6a53938-ad25-472c-af15-b0327f33fc79" id="d6a53938-ad25-472c-af15-b0327f33fc79"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="d94cc1ab-5845-41b0-beb2-e518de68f438_doc" class="docelem" title="Elemento">
+<a name="d94cc1ab-5845-41b0-beb2-e518de68f438" id="d94cc1ab-5845-41b0-beb2-e518de68f438"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p>
+</div>
+<div id="29fa0615-2f5b-47a3-b1b2-f2f23945da41_doc" class="docelem" title="Elemento">
+<a name="29fa0615-2f5b-47a3-b1b2-f2f23945da41" id="29fa0615-2f5b-47a3-b1b2-f2f23945da41"></a>
+<img class="icon" src="diagrams/bpmnimg/ParallelGateway.png" border="0" />
+
+
+
+</div>
+<div id="293d0793-fc37-4417-b848-13f762ca7e9b_doc" class="docelem" title="Elemento">
+<a name="293d0793-fc37-4417-b848-13f762ca7e9b" id="293d0793-fc37-4417-b848-13f762ca7e9b"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p><p>&nbsp;Portão</p>
+</div>
+<div id="_doc" class="docelem" title="Adicionar imagem">
+<a name="" id=""></a>
+<img class="icon" src="diagrams/bpmnimg/CallActivity.png" border="0" />
+
+
+
+</div>
+<div id="275ad3c5-3ea8-439a-bbb8-a95c0b5aa292_doc" class="docelem" title="Encaminhar para solicitante">
+<a name="275ad3c5-3ea8-439a-bbb8-a95c0b5aa292" id="275ad3c5-3ea8-439a-bbb8-a95c0b5aa292"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="12c802c1-7406-4ea0-ad94-6118e368817b_doc" class="docelem" title="Elemento">
+<a name="12c802c1-7406-4ea0-ad94-6118e368817b" id="12c802c1-7406-4ea0-ad94-6118e368817b"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="f76b1583-3d95-4543-b5c0-90a44e5c4964_doc" class="docelem" title="Solicitação de demanda">
+<a name="f76b1583-3d95-4543-b5c0-90a44e5c4964" id="f76b1583-3d95-4543-b5c0-90a44e5c4964"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneStart.png" border="0" />
+
+
+
+</div>
+<div id="547a4686-978d-442d-b2c0-56915e80f180_doc" class="docelem" title="Usuário demandante">
+<a name="547a4686-978d-442d-b2c0-56915e80f180" id="547a4686-978d-442d-b2c0-56915e80f180"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+<div id="be12b09a-6073-49f2-a485-6cc0a47a0408_doc" class="docelem" title="Administrador">
+<a name="be12b09a-6073-49f2-a485-6cc0a47a0408" id="be12b09a-6073-49f2-a485-6cc0a47a0408"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/44 Gerir Demandas.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="203,234,253,904" title="" href="#096066dd-4c20-4db9-be9f-ec9eeb49ac83" />
+<area shape="circle" class="diagelem" coords="1950,490,15" title="" href="#fdf000ff-6e3b-470d-848d-20a162f9967a" />
+<area shape="rect" class="diagelem" coords="545,706,635,766" title="Serviço Web
+" href="#052db2f7-6ab9-45cd-8dda-aa103c128c53" />
+<area shape="poly" class="diagelem" coords="1300,736,1320,716,1340,736,1320,756" title="" href="#e1773593-3e46-46ed-8655-d0172cb6e62b" />
+<area shape="rect" class="diagelem" coords="1811,460,1901,520" title="" href="#169dc525-c257-43d0-8b68-3bcb519e428c" />
+<area shape="rect" class="diagelem" coords="704,706,794,766" title="" href="#5f12c8d1-d72a-4edb-8c16-de4a8cca9cc0" />
+<area shape="rect" class="diagelem" coords="877,706,967,766" title="" href="#eee7cdf5-b82d-4a90-be13-17513b1ad3cf" />
+<area shape="rect" class="diagelem" coords="1028,706,1118,766" title="" href="#082069a3-c52b-4ee2-8dd3-dd218fe990f5" />
+<area shape="rect" class="diagelem" coords="1163,706,1253,766" title="" href="#d30583d9-02b8-4543-9b63-b391b110c029" />
+<area shape="rect" class="diagelem" coords="1412,706,1502,766" title="Serviço Web
+" href="#936e7021-8437-4d13-9381-73252e2e0773" />
+<area shape="rect" class="diagelem" coords="1530,706,1620,766" title="Serviço Web
+" href="#8b48157a-8f7b-4b0a-bb83-6f14d0d89d9a" />
+<area shape="circle" class="diagelem" coords="1678,736,15" title="" href="#e8541d56-cfc0-427f-a2c2-fc93923094ce" />
+<area shape="circle" class="diagelem" coords="453,816,15" title="" href="#d6a53938-ad25-472c-af15-b0327f33fc79" />
+<area shape="poly" class="diagelem" coords="470,742,490,722,510,742,490,762" title="" href="#d94cc1ab-5845-41b0-beb2-e518de68f438" />
+<area shape="poly" class="diagelem" coords="1729,736,1749,716,1769,736,1749,756" title="" href="#29fa0615-2f5b-47a3-b1b2-f2f23945da41" />
+<area shape="poly" class="diagelem" coords="1795,788,1815,768,1835,788,1815,808" title="" href="#293d0793-fc37-4417-b848-13f762ca7e9b" />
+<area shape="rect" class="diagelem" coords="1888,822,1978,882" title="" href="#275ad3c5-3ea8-439a-bbb8-a95c0b5aa292" />
+<area shape="circle" class="diagelem" coords="2025,852,15" title="" href="#12c802c1-7406-4ea0-ad94-6118e368817b" />
+<area shape="circle" class="diagelem" coords="352,694,15" title="" href="#f76b1583-3d95-4543-b5c0-90a44e5c4964" />
+<area shape="rect" class="diagelem" coords="253,234,283,588" title="" href="#547a4686-978d-442d-b2c0-56915e80f180" />
+<area shape="rect" class="diagelem" coords="253,588,283,904" title="" href="#be12b09a-6073-49f2-a485-6cc0a47a0408" />
+<area shape="rect" coords="1990,963,5,2080,1006,5" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>
