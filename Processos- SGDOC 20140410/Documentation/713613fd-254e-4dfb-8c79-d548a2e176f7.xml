@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ExtendedAttribute xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="713613fd-254e-4dfb-8c79-d548a2e176f7" Type="FileEmbedded" ExportAsTable="false" ModifiedBy="tbdfnb00002561_telebras_christophe.desseaux" ModificationDate="2014-04-10T17:09:37.7380837-03:00">
+  <Name>Attachment</Name>
+  <Options />
+  <TableColumns />
+  <ElementTypes>
+    <AttributeElementType Type="AbstractTask" />
+  </ElementTypes>
+</ExtendedAttribute>

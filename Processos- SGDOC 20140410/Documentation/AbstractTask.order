@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ExtendedAttributeOrder xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ModifiedBy="tbdfnb00002561_telebras_christophe.desseaux">
+  <ExtendedAttributes>
+    <Id>713613fd-254e-4dfb-8c79-d548a2e176f7</Id>
+  </ExtendedAttributes>
+  <ElementType Type="AbstractTask" />
+</ExtendedAttributeOrder>

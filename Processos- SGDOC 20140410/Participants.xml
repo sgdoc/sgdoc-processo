@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Participants xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wfmc.org/2009/XPDL2.2">
+  <Participant Id="f5a3074f-d9d1-445e-aeec-34be974e44c0" Name="Área responsável pela Gestão de Informação">
+    <ParticipantType Type="RESOURCE" />
+    <Description />
+    <ExtendedAttributes>
+      <ExtendedAttribute Name="Área_responsável_pela_Gestão_de_Informação" />
+    </ExtendedAttributes>
+  </Participant>
+  <Participant Id="5ea1a7f8-9ef8-45a0-9fd6-151d9e914b07" Name="Todas as áreas">
+    <ParticipantType Type="RESOURCE" />
+    <Description />
+    <ExtendedAttributes>
+      <ExtendedAttribute Name="Todas_as_áreas" />
+    </ExtendedAttributes>
+  </Participant>
+  <Participant Id="adba3236-b20b-4809-8299-865159eafd24" Name="Protocolo">
+    <ParticipantType Type="RESOURCE" />
+    <Description />
+    <ExtendedAttributes>
+      <ExtendedAttribute Name="Protocolo" />
+    </ExtendedAttributes>
+  </Participant>
+  <Participant Id="e7c0121e-f266-406b-bf70-f277ea1cccad" Name="Administrador do Sistema">
+    <ParticipantType Type="RESOURCE" />
+    <Description />
+    <ExtendedAttributes>
+      <ExtendedAttribute Name="Administrador_do_Sistema" />
+    </ExtendedAttributes>
+  </Participant>
+  <Participant Id="c19b98ae-4dfd-4d8b-8bf4-d54f743f0cc3" Name="Arquivo">
+    <ParticipantType Type="RESOURCE" />
+    <Description />
+    <ExtendedAttributes>
+      <ExtendedAttribute Name="Arquivo" />
+    </ExtendedAttributes>
+  </Participant>
+  <Participant Id="3f1f0837-2be1-4933-b7e4-aaa3ff2823d9" Name="Sistema">
+    <ParticipantType Type="RESOURCE" />
+    <Description />
+    <ExtendedAttributes>
+      <ExtendedAttribute Name="Sistema" />
+    </ExtendedAttributes>
+  </Participant>
+</Participants>
