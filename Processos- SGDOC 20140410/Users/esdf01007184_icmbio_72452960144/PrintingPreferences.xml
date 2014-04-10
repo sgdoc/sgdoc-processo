@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PrintingPreferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" AutoFitToPagesWidth="0" Orientation="Landscape" PageColor="-1" ScaleFactor="1" Size="Letter">
+  <FontFooter>
+    <FontValue>Microsoft Sans Serif; 8,25pt</FontValue>
+  </FontFooter>
+  <FontHeader>
+    <FontValue>Microsoft Sans Serif; 8,25pt</FontValue>
+  </FontHeader>
+  <Footer>||[Image 0]|</Footer>
+  <Header />
+  <Margins Bottom="50" Top="50" Left="50" Right="50" />
+  <Watermark ForeColor="-65536" ImageAlign="MiddleCenter" ImageTiling="false" ImageTransparency="0" ImageViewMode="Clip" PageRange="" TextDirection="ForwardDiagonal" TextTransparency="0" ShowBehind="false">
+    <Font>
+      <FontValue>Verdana; 36pt</FontValue>
+    </Font>
+    <Text />
+  </Watermark>
+</PrintingPreferences>

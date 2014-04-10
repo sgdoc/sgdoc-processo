@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<UserPreferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OpenedItems>
+    <ModelItem ItemType="Diagram" DiagramId="e4ab2d34-27b8-4d42-9251-c4a8d591304f" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="9309eaec-a171-4a35-be27-a59d2e2b1060" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="fc21bfc2-77fd-4d44-ab8d-8e6489a6ef35" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="0e3ebf30-e4b9-4b03-9fb0-8a74d5ebcc1a" IsSelected="true" />
+    <ModelItem ItemType="Diagram" DiagramId="78c706dc-628e-4f76-a931-ab08c9b52de8" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="80505338-b433-4bd9-98ca-785bda24e44e" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="de70b1ff-b09b-43c8-a1ef-1e84367f56f7" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="5aa2312a-3ae7-4e44-9bdb-13246eb56a5d" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="723dea44-71fd-4219-821b-112c57138718" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="a6c699e1-e370-4097-aa5a-23ccc92db99a" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="66292df1-b009-4e4e-93f9-205e8222cf13" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="2aecc75c-b5ab-4541-b60a-c278a2ef41d4" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="25a34aff-8465-45c0-8cdd-0ca669e7f68a" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="5a6b290d-4d70-4b07-b555-f5405b06cd72" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="f81efa98-7741-4ac3-83ee-0c139db7e365" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="2edfc679-1d5d-46f1-8b37-9dccb8772308" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="20e53d8e-63e9-468a-89dc-381ee766788d" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="62c4709e-d077-4ae0-b581-774e43161452" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="5d00a354-ee8f-4c97-9dcb-8d6777388773" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="5ada46ae-4c93-4fbc-acae-bb12c3304b98" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="e7393349-dbd1-4f65-a11c-bd280bc1549e" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="12e52a7a-fac3-456a-b05f-d5bf5649f228" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="0049762e-ef8d-42b6-9b28-c97c22b02cbf" IsSelected="false" />
+  </OpenedItems>
+</UserPreferences>

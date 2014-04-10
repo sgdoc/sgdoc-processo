@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<UserPreferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OpenedItems>
+    <ModelItem ItemType="Diagram" DiagramId="5d00a354-ee8f-4c97-9dcb-8d6777388773" IsSelected="true" />
+    <ModelItem ItemType="Diagram" DiagramId="5a6b290d-4d70-4b07-b555-f5405b06cd72" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="62c4709e-d077-4ae0-b581-774e43161452" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="5ada46ae-4c93-4fbc-acae-bb12c3304b98" IsSelected="false" />
+    <ModelItem ItemType="Diagram" DiagramId="53675a76-c5ca-463c-bde3-7c5817b5aa00" IsSelected="false" />
+  </OpenedItems>
+</UserPreferences>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<PrintingPreferences xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" AutoFitToPagesWidth="0" ScaleFactor="1">
+  <Margins Bottom="0" Top="0" Left="0" Right="0" />
+  <Watermark ImageTiling="false" ImageTransparency="0" TextTransparency="0" ShowBehind="false" />
+</PrintingPreferences>

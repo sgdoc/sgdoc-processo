@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfCategory xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Category>
+    <Color>Orange</Color>
+  </Category>
+  <Category>
+    <Color>Red</Color>
+  </Category>
+  <Category>
+    <Color>Yellow</Color>
+  </Category>
+  <Category>
+    <Color>Blue</Color>
+  </Category>
+  <Category>
+    <Color>Purple</Color>
+  </Category>
+  <Category>
+    <Color>Green</Color>
+  </Category>
+</ArrayOfCategory>
