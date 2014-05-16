@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>2.2 Cadastrar Documento Externo</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 3
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("2&#46;2 Cadastrar Documento Externo","78c706dc-628e-4f76-a931-ab08c9b52de8");
+ht.add("Cadastrar Documento","5d09e09c-6f76-44d8-9730-cbb5352f88d0");
+ht.add("Preencher nome de quem recebeu e data de entrada","c1c4376a-2f74-42b1-aa70-6958b5f2b5e4");
+ht.add("Disponibilizar na área de trabalho do setor que fez o cadastro","efc75317-c883-4e32-a7a7-c6df03eeef47");
+ht.add("Documento","90c2d42f-8d66-43c5-85d5-104b192601fa");
+ht.add("Receber documento","43381e54-a473-466b-b3d2-9a4ee8614df0");
+ht.add("Preencher pré-cadastro","e13d1897-fbbd-4e38-b22a-1676c592f85e");
+ht.add("Complementar cadastro","6ae0c5d2-18ba-47ad-9d0e-11352a52e3a1");
+ht.add("Salvar cadastro","a74250a2-8cdd-4a5f-bfdd-74c6189669c7");
+ht.add("Colar digital no documento","00b0aa88-0c7f-42ab-ab03-ff402b592823");
+ht.add("Documento cadastrado","db746a7c-01db-40a9-8ff4-1327172ab2a9");
+ht.add("Protocolo","05c91f5d-1661-44cb-ace6-19ee7f4f6e72");
+
+			var data = '2&#46;2 Cadastrar Documento Externo|Cadastrar Documento|Preencher nome de quem recebeu e data de entrada|Disponibilizar na área de trabalho do setor que fez o cadastro|Documento|Receber documento|Preencher pré-cadastro|Complementar cadastro|Salvar cadastro|Colar digital no documento|Documento cadastrado|Protocolo'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="#tabs-0" title="tabs-0">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-4">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-5">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-6">2.6 Cadastrar Processo</a></li>
+<li><a href="27 Vincular Processo.htm" title="tabs-7">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-8">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-9">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-10">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-11">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-12">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-13">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-14">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-15">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-16">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-17">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="218 Classificar Documento  Processo.htm" title="tabs-18">2.18 Classificar Documento  Processo</a></li>
+<li><a href="219 Manter Caixa.htm" title="tabs-19">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-20">2.20 Desarquivar</a></li>
+<li><a href="3 Acompanhar Gestão da Informação.htm" title="tabs-21">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-22">4.1 Gerir Usuário</a></li>
+<li><a href="42 Gerir Unidade.htm" title="tabs-23">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-24">4.3 Gerir Etiqueta</a></li>
+<li><a href="44 Gerir Demandas.htm" title="tabs-25">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-26">4.6 Tratar Recursos SIC</a></li>
+<li><a href="47 Tratar Demanda SIC.htm" title="tabs-27">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#78c706dc-628e-4f76-a931-ab08c9b52de8" class="diagelem"><h2>2.2 Cadastrar Documento Externo</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="78c706dc-628e-4f76-a931-ab08c9b52de8_doc" class="docelem" title="2&#46;2 Cadastrar Documento Externo">
+<a name="78c706dc-628e-4f76-a931-ab08c9b52de8" id="78c706dc-628e-4f76-a931-ab08c9b52de8"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo relativo ao cadastramento de documento externo</span></p><br> </p>
+
+</div>
+<div id="5d09e09c-6f76-44d8-9730-cbb5352f88d0_doc" class="docelem" title="Cadastrar Documento">
+<a name="5d09e09c-6f76-44d8-9730-cbb5352f88d0" id="5d09e09c-6f76-44d8-9730-cbb5352f88d0"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="c1c4376a-2f74-42b1-aa70-6958b5f2b5e4_doc" class="docelem" title="Preencher nome de quem recebeu e data de entrada">
+<a name="c1c4376a-2f74-42b1-aa70-6958b5f2b5e4" id="c1c4376a-2f74-42b1-aa70-6958b5f2b5e4"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Atividade do Sistema</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Possível alteração manual a qualquer momento</span></p><br> </p><h4>Implementação</h4><p>Não especificado <br> </p>
+
+</div>
+<div id="efc75317-c883-4e32-a7a7-c6df03eeef47_doc" class="docelem" title="Disponibilizar na área de trabalho do setor que fez o cadastro">
+<a name="efc75317-c883-4e32-a7a7-c6df03eeef47" id="efc75317-c883-4e32-a7a7-c6df03eeef47"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Atividade do Sistema</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p><h4>Implementação</h4><p>Não especificado <br> </p>
+
+</div>
+<div id="90c2d42f-8d66-43c5-85d5-104b192601fa_doc" class="docelem" title="Documento">
+<a name="90c2d42f-8d66-43c5-85d5-104b192601fa" id="90c2d42f-8d66-43c5-85d5-104b192601fa"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneStart.png" border="0" />
+
+
+
+</div>
+<div id="43381e54-a473-466b-b3d2-9a4ee8614df0_doc" class="docelem" title="Receber documento">
+<a name="43381e54-a473-466b-b3d2-9a4ee8614df0" id="43381e54-a473-466b-b3d2-9a4ee8614df0"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Receber documento</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">No momento do recebimento do documento/processo deve ser verificado se o mesmo está de acordo com a Portaria Normativa SLTI/MP 5/2002 e a Portaria Normativa SLTI/MP 3/2003, além de verificar se está de acordo com o que está descrito na guia de entrega.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="e13d1897-fbbd-4e38-b22a-1676c592f85e_doc" class="docelem" title="Preencher pré-cadastro">
+<a name="e13d1897-fbbd-4e38-b22a-1676c592f85e" id="e13d1897-fbbd-4e38-b22a-1676c592f85e"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Preencher pré-cadastro</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Itens obrigatórios: </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Digital </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Tipo de documento </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Número          </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Origem    </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Procedência </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Comentário</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="6ae0c5d2-18ba-47ad-9d0e-11352a52e3a1_doc" class="docelem" title="Complementar cadastro">
+<a name="6ae0c5d2-18ba-47ad-9d0e-11352a52e3a1" id="6ae0c5d2-18ba-47ad-9d0e-11352a52e3a1"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Complementar cadastro</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">O sistema apresenta campos que contém filtros, estes só são preenchidos com a pesquisa.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Caso a digital já tenha sido cadastrada o sistema não permitirá o preenchimento dos demais campos, o erro gerado é "digital inválida".</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">O gerador automático de número do documento é utilizado para controlar a numeração da tipologia do documento. Este, tem sua numeração reiniciada anualmente. Caso o numero gerado não for utilizado, é necessário entrar em contato com o suporte para reaproveitamento do número.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;">Itens obrigatórios:</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Data</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Destino      </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Encaminhado para </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Assunto</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;">Itens  facultativos: </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Assunto Complementar </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Interessado     </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Assinatura</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Cargo</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Data do prazo </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">Procedência</span></p><br> </p>
+
+</div>
+<div id="a74250a2-8cdd-4a5f-bfdd-74c6189669c7_doc" class="docelem" title="Salvar cadastro">
+<a name="a74250a2-8cdd-4a5f-bfdd-74c6189669c7" id="a74250a2-8cdd-4a5f-bfdd-74c6189669c7"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Salvar cadastro</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">O sistema não permitirá salvar o cadastro caso haja repetição nos campos origem, tipo e número, ou se os campos obrigatórios não forem preenchidos.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="00b0aa88-0c7f-42ab-ab03-ff402b592823_doc" class="docelem" title="Colar digital no documento">
+<a name="00b0aa88-0c7f-42ab-ab03-ff402b592823" id="00b0aa88-0c7f-42ab-ab03-ff402b592823"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#9BBB59;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;">Colar digital no documento</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">A folha de digitais deve estar em um local visível a todos os usuário que vão realizar o cadastro de documento interno, ou sob responsabilidade do funcionário da área que vai fazer o controle utilização.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"> </span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;">A digital deverá ser colada no quadrante superior direito do documento, sem sobrepor informações contidas no documento, em último caso deve ser colado no quadrante inferior direito.</span></p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"> </span></p><br> </p>
+
+</div>
+<div id="db746a7c-01db-40a9-8ff4-1327172ab2a9_doc" class="docelem" title="Documento cadastrado">
+<a name="db746a7c-01db-40a9-8ff4-1327172ab2a9" id="db746a7c-01db-40a9-8ff4-1327172ab2a9"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="05c91f5d-1661-44cb-ace6-19ee7f4f6e72_doc" class="docelem" title="Protocolo">
+<a name="05c91f5d-1661-44cb-ace6-19ee7f4f6e72" id="05c91f5d-1661-44cb-ace6-19ee7f4f6e72"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/22 Cadastrar Documento Externo.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="300,226,350,538" title="" href="#5d09e09c-6f76-44d8-9730-cbb5352f88d0" />
+<area shape="rect" class="diagelem" coords="1196,336,1286,398" title="Atividade do Sistema  Possível alteração manual a qualquer momento
+" href="#c1c4376a-2f74-42b1-aa70-6958b5f2b5e4" />
+<area shape="rect" class="diagelem" coords="1028,335,1122,400" title="Atividade do Sistema 
+" href="#efc75317-c883-4e32-a7a7-c6df03eeef47" />
+<area shape="circle" class="diagelem" coords="448,368,15" title="" href="#90c2d42f-8d66-43c5-85d5-104b192601fa" />
+<area shape="rect" class="diagelem" coords="538,338,628,398" title="Receber documento No momento do recebimento do documento/processo deve ser verificado se o mesmo está de acordo com a Portaria Normativa SLTI/MP 5/2002 e a Portaria Normativa SLTI/MP 3/2003, além de verificar se está de acordo com o que está descrito na guia de entrega&#46; 
+" href="#43381e54-a473-466b-b3d2-9a4ee8614df0" />
+<area shape="rect" class="diagelem" coords="866,338,956,398" title="Preencher pré-cadastro Itens obrigatórios: Digital Tipo de documento Número          Origem    Procedência Comentário 
+" href="#e13d1897-fbbd-4e38-b22a-1676c592f85e" />
+<area shape="rect" class="diagelem" coords="1361,338,1451,398" title="Complementar cadastroO sistema apresenta campos que contém filtros, estes só são preenchidos com a pesquisa&#46; Caso a digital já tenha sido cadastrada o sistema não permitirá o preenchimento dos demais campos, o erro gerado é &quot;digital inválida&quot;&#46; O gerador automático de número do documento é utilizado para controlar a numeração da tipologia do documento&#46; Este, tem sua numeração reiniciada anualmente&#46; Caso o numero gerado não for utilizado, é necessário entrar em contato com o suporte para reaproveitamento do número&#46; Itens obrigatórios:DataDestino      Encaminhado para AssuntoItens  facultativos: Assunto Complementar Interessado     AssinaturaCargoData do prazo Procedência
+" href="#6ae0c5d2-18ba-47ad-9d0e-11352a52e3a1" />
+<area shape="rect" class="diagelem" coords="1526,338,1616,398" title="Salvar cadastro O sistema não permitirá salvar o cadastro caso haja repetição nos campos origem, tipo e número, ou se os campos obrigatórios não forem preenchidos&#46; 
+" href="#a74250a2-8cdd-4a5f-bfdd-74c6189669c7" />
+<area shape="rect" class="diagelem" coords="702,336,790,398" title="Colar digital no documentoA folha de digitais deve estar em um local visível a todos os usuário que vão realizar o cadastro de documento interno, ou sob responsabilidade do funcionário da área que vai fazer o controle utilização&#46; A digital deverá ser colada no quadrante superior direito do documento, sem sobrepor informações contidas no documento, em último caso deve ser colado no quadrante inferior direito&#46; 
+" href="#00b0aa88-0c7f-42ab-ab03-ff402b592823" />
+<area shape="circle" class="diagelem" coords="1672,368,15" title="" href="#db746a7c-01db-40a9-8ff4-1327172ab2a9" />
+<area shape="rect" class="diagelem" coords="350,226,380,538" title="" href="#05c91f5d-1661-44cb-ace6-19ee7f4f6e72" />
+<area shape="rect" coords="1754,597,5,1844,640,5" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>

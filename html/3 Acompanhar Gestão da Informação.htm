@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>3 Acompanhar Gestão da Informação</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 21
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("3 Acompanhar Gestão da Informação","de98b5fe-5d8e-4822-b8f1-6f2cec59c1bb");
+ht.add("Acompanhar gestão da informação","083549d4-2516-4c95-b7e5-7d36f50137dd");
+ht.add("Modelo de gestão da informação","c450cb55-dcd5-4dd6-ba64-bff403668945");
+ht.add("Elemento","32b2b160-4323-498e-810d-3c9857ae5a7b");
+ht.add("Consolidar dados da gestão da informação","c28553a0-acd1-4c3f-833e-4b402f8f0132");
+ht.add("Plano de gestão da informação","15173581-d360-4c91-ae49-ebe5a3f7a01d");
+ht.add("Avaliar resultados dos indicadores e cumprimento das metas","119f6995-ba4d-4aa5-8608-a287bb3acc76");
+ht.add("Avaliar aderência às diretrizes e políticas do modelo de gestão da informação","c5577de5-8f41-47a1-af86-d17e9f94fe17");
+ht.add("Relatório dos resultados da gestão da informação","7f0b57a1-5936-4dd6-8989-2e0797318329");
+ht.add("Área gestora da informação","9e1f9375-ad24-4583-8f58-7f58cad35890");
+
+			var data = '3 Acompanhar Gestão da Informação|Acompanhar gestão da informação|Modelo de gestão da informação|Elemento|Consolidar dados da gestão da informação|Plano de gestão da informação|Avaliar resultados dos indicadores e cumprimento das metas|Avaliar aderência às diretrizes e políticas do modelo de gestão da informação|Relatório dos resultados da gestão da informação|Área gestora da informação'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="22 Cadastrar Documento Externo.htm" title="tabs-4">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-5">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-6">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-7">2.6 Cadastrar Processo</a></li>
+<li><a href="27 Vincular Processo.htm" title="tabs-8">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-9">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-10">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-11">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-12">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-13">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-14">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-15">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-16">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-17">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-18">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="218 Classificar Documento  Processo.htm" title="tabs-19">2.18 Classificar Documento  Processo</a></li>
+<li><a href="219 Manter Caixa.htm" title="tabs-20">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-21">2.20 Desarquivar</a></li>
+<li><a href="#tabs-0" title="tabs-0">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-22">4.1 Gerir Usuário</a></li>
+<li><a href="42 Gerir Unidade.htm" title="tabs-23">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-24">4.3 Gerir Etiqueta</a></li>
+<li><a href="44 Gerir Demandas.htm" title="tabs-25">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-26">4.6 Tratar Recursos SIC</a></li>
+<li><a href="47 Tratar Demanda SIC.htm" title="tabs-27">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#de98b5fe-5d8e-4822-b8f1-6f2cec59c1bb" class="diagelem"><h2>3 Acompanhar Gestão da Informação</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="de98b5fe-5d8e-4822-b8f1-6f2cec59c1bb_doc" class="docelem" title="3 Acompanhar Gestão da Informação">
+<a name="de98b5fe-5d8e-4822-b8f1-6f2cec59c1bb" id="de98b5fe-5d8e-4822-b8f1-6f2cec59c1bb"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo de Acompanhar gestão da informação</span></p><br> </p>
+
+</div>
+<div id="083549d4-2516-4c95-b7e5-7d36f50137dd_doc" class="docelem" title="Acompanhar gestão da informação">
+<a name="083549d4-2516-4c95-b7e5-7d36f50137dd" id="083549d4-2516-4c95-b7e5-7d36f50137dd"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="c450cb55-dcd5-4dd6-ba64-bff403668945_doc" class="docelem" title="Modelo de gestão da informação">
+<a name="c450cb55-dcd5-4dd6-ba64-bff403668945" id="c450cb55-dcd5-4dd6-ba64-bff403668945"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="32b2b160-4323-498e-810d-3c9857ae5a7b_doc" class="docelem" title="Elemento">
+<a name="32b2b160-4323-498e-810d-3c9857ae5a7b" id="32b2b160-4323-498e-810d-3c9857ae5a7b"></a>
+<img class="icon" src="diagrams/bpmnimg/ParallelGateway.png" border="0" />
+
+
+
+</div>
+<div id="d6481813-2d96-4223-bfaf-9a50b401fcd5_doc" class="docelem" title="Elemento">
+<a name="d6481813-2d96-4223-bfaf-9a50b401fcd5" id="d6481813-2d96-4223-bfaf-9a50b401fcd5"></a>
+<img class="icon" src="diagrams/bpmnimg/ParallelGateway.png" border="0" />
+
+
+
+</div>
+<div id="c28553a0-acd1-4c3f-833e-4b402f8f0132_doc" class="docelem" title="Consolidar dados da gestão da informação">
+<a name="c28553a0-acd1-4c3f-833e-4b402f8f0132" id="c28553a0-acd1-4c3f-833e-4b402f8f0132"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="_doc" class="docelem" title="Planejar gestão da informação">
+<a name="" id=""></a>
+<img class="icon" src="diagrams/bpmnimg/CallActivity.png" border="0" />
+
+
+
+</div>
+<div id="928bb220-7453-4813-bf51-698b2eb05b13_doc" class="docelem" title="Elemento">
+<a name="928bb220-7453-4813-bf51-698b2eb05b13" id="928bb220-7453-4813-bf51-698b2eb05b13"></a>
+<img class="icon" src="diagrams/bpmnimg/ParallelGateway.png" border="0" />
+
+
+
+</div>
+<div id="_doc" class="docelem" title="Planejar Gestão da  Informação">
+<a name="" id=""></a>
+<img class="icon" src="diagrams/bpmnimg/CallActivity.png" border="0" />
+
+
+
+</div>
+<div id="15173581-d360-4c91-ae49-ebe5a3f7a01d_doc" class="docelem" title="Plano de gestão da informação">
+<a name="15173581-d360-4c91-ae49-ebe5a3f7a01d" id="15173581-d360-4c91-ae49-ebe5a3f7a01d"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="119f6995-ba4d-4aa5-8608-a287bb3acc76_doc" class="docelem" title="Avaliar resultados dos indicadores e cumprimento das metas">
+<a name="119f6995-ba4d-4aa5-8608-a287bb3acc76" id="119f6995-ba4d-4aa5-8608-a287bb3acc76"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="c5577de5-8f41-47a1-af86-d17e9f94fe17_doc" class="docelem" title="Avaliar aderência às diretrizes e políticas do modelo de gestão da informação">
+<a name="c5577de5-8f41-47a1-af86-d17e9f94fe17" id="c5577de5-8f41-47a1-af86-d17e9f94fe17"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="7f0b57a1-5936-4dd6-8989-2e0797318329_doc" class="docelem" title="Relatório dos resultados da gestão da informação">
+<a name="7f0b57a1-5936-4dd6-8989-2e0797318329" id="7f0b57a1-5936-4dd6-8989-2e0797318329"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="6a9f15ff-40f4-4d58-acb0-3fe45872f76b_doc" class="docelem" title="Elemento">
+<a name="6a9f15ff-40f4-4d58-acb0-3fe45872f76b" id="6a9f15ff-40f4-4d58-acb0-3fe45872f76b"></a>
+<img class="icon" src="diagrams/bpmnimg/InclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p>
+</div>
+<div id="9e1f9375-ad24-4583-8f58-7f58cad35890_doc" class="docelem" title="Área gestora da informação">
+<a name="9e1f9375-ad24-4583-8f58-7f58cad35890" id="9e1f9375-ad24-4583-8f58-7f58cad35890"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/3 Acompanhar Gestão da Informação.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="177,250,227,600" title="" href="#083549d4-2516-4c95-b7e5-7d36f50137dd" />
+<area shape="circle" class="diagelem" coords="499,339,15" title="" href="#c450cb55-dcd5-4dd6-ba64-bff403668945" />
+<area shape="poly" class="diagelem" coords="415,403,435,383,455,403,435,423" title="" href="#32b2b160-4323-498e-810d-3c9857ae5a7b" />
+<area shape="poly" class="diagelem" coords="994,400,1014,380,1034,400,1014,420" title="" href="#d6481813-2d96-4223-bfaf-9a50b401fcd5" />
+<area shape="rect" class="diagelem" coords="630,367,723,429" title="" href="#c28553a0-acd1-4c3f-833e-4b402f8f0132" />
+<area shape="poly" class="diagelem" coords="756,398,776,378,796,398,776,418" title="" href="#928bb220-7453-4813-bf51-698b2eb05b13" />
+<area shape="circle" class="diagelem" coords="494,466,15" title="" href="#15173581-d360-4c91-ae49-ebe5a3f7a01d" />
+<area shape="rect" class="diagelem" coords="851,425,952,504" title="" href="#119f6995-ba4d-4aa5-8608-a287bb3acc76" />
+<area shape="rect" class="diagelem" coords="848,280,947,386" title="" href="#c5577de5-8f41-47a1-af86-d17e9f94fe17" />
+<area shape="circle" class="diagelem" coords="1096,400,15" title="" href="#7f0b57a1-5936-4dd6-8989-2e0797318329" />
+<area shape="poly" class="diagelem" coords="556,398,576,378,596,398,576,418" title="" href="#6a9f15ff-40f4-4d58-acb0-3fe45872f76b" />
+<area shape="rect" class="diagelem" coords="227,250,257,600" title="" href="#9e1f9375-ad24-4583-8f58-7f58cad35890" />
+<area shape="rect" coords="1311,660,1401,703" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>

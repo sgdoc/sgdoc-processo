@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>4.7 Tratar Demanda SIC</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 27
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("4&#46;7 Tratar Demanda SIC","f61594a3-716d-46dd-aacc-50738414c78e");
+ht.add("Tratar Demanda SIC","dcb26b5d-0b81-4f5b-940e-0803cd02d5e4");
+ht.add("Registrar resposta no e-SIC","ed516188-624a-4c56-8c54-fafbd531cd45");
+ht.add("Tratar Recursos SIC","6f179d70-4ac1-4e24-bc60-a1677a6a7263");
+ht.add("Justificar indisponibilidade parcial ou total da informação","8a287a79-a2b3-4ce6-a40f-74559ecaac1f");
+ht.add("3 dias antes de acabar o prazo","f9b9b03d-83b8-4def-ba51-582c613617c7");
+ht.add("Registrar resposta no  SGDoc","db251bb1-c3d4-423f-84fc-c570f1de2b19");
+ht.add("Efetuar cadastro do requerente no e-SIC","1c0e1680-aeef-4081-819b-b1a5c6f5a0eb");
+ht.add("Informação sigilosa?","341b3eb9-ebc2-41ab-b9ef-1d2120ad412b");
+ht.add("Acompanhar prazo","558bcbd0-65c9-497f-940c-d0efdf70e396");
+ht.add("Elemento","9394c10f-9deb-4e9a-9876-a31714768512");
+ht.add("Primeiro acesso do requerente?","e1e7629e-d361-4a69-a31a-8aaff6737553");
+ht.add("Cobrar resposta da área responsável","f3b005e3-5932-4758-8420-b961a9885082");
+ht.add("Há resposta padronizada?","1ee8479c-1795-4cc5-ad2f-2ec74abd81e0");
+ht.add("Elaborar resposta","b05d103c-b69f-4caf-a57e-78358006051c");
+ht.add("Solicitação de adequação de resposta","c6d09e37-0d94-460a-9b9e-8b0fe6d6c61d");
+ht.add("Demanda entrou via solicitação presencial","e905eb0c-640f-4e36-9b9d-ac4031dd8822");
+ht.add("Necessidade de mais prazo?","de064da1-b58a-4e9a-a13f-8d89b2fae68d");
+ht.add("Propor alterações","1d326a18-b707-4ab6-af35-e1956dbb60f1");
+ht.add("Analisar requisição de informação","096a77c6-57f1-4a5c-8a10-92b5af421bb3");
+ht.add("Há necessidades de alterações na resposta?","cb99baa2-0d67-4f7c-838a-a559a630abd5");
+ht.add("Resposta homologada","799f4a9c-0546-4263-9a25-a47fc21bf7d0");
+ht.add("Órgão responsável pela informação?","83fd8dea-70cd-4798-85c9-5f1dfb9016cb");
+ht.add("Qual tipo de demanda?","3be1563e-104f-456a-a605-887ff8dda751");
+ht.add("Justificar e informar requerente via e-SIC","a18802fd-800c-4213-9e9c-03934a3f9b1f");
+ht.add("Demanda tratada","98ee4e05-3ac0-415d-a6aa-074ab4d8be03");
+ht.add("Homologar resposta","03bb798a-f2c1-4805-9fec-52b2ae8599f5");
+ht.add("Alimentar planilha de acompanhamento e controle das demandas","7e8f5d5e-670e-4b12-bb60-ba6d30148aa9");
+ht.add("Registrar pedido e preencher formulário","bcd8fbe0-a461-4982-a4c5-04013489990b");
+ht.add("Registrar novo prazo no e-SIC","41c04691-8430-4603-985d-b47332696e0b");
+ht.add("Informação amparada pela LAI?","d4a85c8e-f017-4b70-9461-17f392d4e003");
+ht.add("Verificar se demanda já foi respondida","742121cf-980d-4d23-b9b9-1b7e1df97158");
+ht.add("Analisar demanda","d63696a0-1002-46b3-a272-344f7f5a7d2f");
+ht.add("Órgão tem a informação?","5b34ad78-08c0-4270-9116-e4c55a7594ff");
+ht.add("Demanda respondida?","8c60265d-a48b-4134-9e46-c532e358468e");
+ht.add("Indicar entidade ou órgão responsável","8eebacf8-bef2-4853-afe6-282b5b6202ca");
+ht.add("Encaminhar pedido do requerente para o canal apropriado","7a385eca-9d50-4772-b449-9278de0d4bcd");
+ht.add("Registrar resposta no SGDoc","27e74523-b855-438c-abca-ee9cb4704195");
+ht.add("Demanda entrou via e-SIC","1388c8d7-cb4e-4ffb-bb51-8dcd0187790c");
+ht.add("SIC","10a7d8c5-919e-4a0f-a81f-ba836b19a89b");
+ht.add("Grupos Focais SIC","a31825c0-37ce-47fc-99b7-5e064fc6b07e");
+ht.add("Departamento Jurídico","45091006-ca01-452a-a13d-707b2773ebcf");
+ht.add("Coordenador LAI","ef2da478-3aab-4ce5-bb6a-61f7cbf4afce");
+
+			var data = '4&#46;7 Tratar Demanda SIC|Tratar Demanda SIC|Registrar resposta no e-SIC|Tratar Recursos SIC|Justificar indisponibilidade parcial ou total da informação|3 dias antes de acabar o prazo|Registrar resposta no  SGDoc|Efetuar cadastro do requerente no e-SIC|Informação sigilosa?|Acompanhar prazo|Elemento|Primeiro acesso do requerente?|Cobrar resposta da área responsável|Há resposta padronizada?|Elaborar resposta|Solicitação de adequação de resposta|Demanda entrou via solicitação presencial|Necessidade de mais prazo?|Propor alterações|Analisar requisição de informação|Há necessidades de alterações na resposta?|Resposta homologada|Órgão responsável pela informação?|Qual tipo de demanda?|Justificar e informar requerente via e-SIC|Demanda tratada|Homologar resposta|Alimentar planilha de acompanhamento e controle das demandas|Registrar pedido e preencher formulário|Registrar novo prazo no e-SIC|Informação amparada pela LAI?|Verificar se demanda já foi respondida|Analisar demanda|Órgão tem a informação?|Demanda respondida?|Indicar entidade ou órgão responsável|Encaminhar pedido do requerente para o canal apropriado|Registrar resposta no SGDoc|Demanda entrou via e-SIC|SIC|Grupos Focais SIC|Departamento Jurídico|Coordenador LAI'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="22 Cadastrar Documento Externo.htm" title="tabs-4">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-5">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-6">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-7">2.6 Cadastrar Processo</a></li>
+<li><a href="27 Vincular Processo.htm" title="tabs-8">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-9">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-10">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-11">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-12">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-13">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-14">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-15">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-16">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-17">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-18">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="218 Classificar Documento  Processo.htm" title="tabs-19">2.18 Classificar Documento  Processo</a></li>
+<li><a href="219 Manter Caixa.htm" title="tabs-20">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-21">2.20 Desarquivar</a></li>
+<li><a href="3 Acompanhar Gestão da Informação.htm" title="tabs-22">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-23">4.1 Gerir Usuário</a></li>
+<li><a href="42 Gerir Unidade.htm" title="tabs-24">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-25">4.3 Gerir Etiqueta</a></li>
+<li><a href="44 Gerir Demandas.htm" title="tabs-26">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-27">4.6 Tratar Recursos SIC</a></li>
+<li><a href="#tabs-0" title="tabs-0">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#f61594a3-716d-46dd-aacc-50738414c78e" class="diagelem"><h2>4.7 Tratar Demanda SIC</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="f61594a3-716d-46dd-aacc-50738414c78e_doc" class="docelem" title="4&#46;7 Tratar Demanda SIC">
+<a name="f61594a3-716d-46dd-aacc-50738414c78e" id="f61594a3-716d-46dd-aacc-50738414c78e"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo de Tratar Demanda SIC</span></p><br> </p>
+
+</div>
+<div id="dcb26b5d-0b81-4f5b-940e-0803cd02d5e4_doc" class="docelem" title="Tratar Demanda SIC">
+<a name="dcb26b5d-0b81-4f5b-940e-0803cd02d5e4" id="dcb26b5d-0b81-4f5b-940e-0803cd02d5e4"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="ed516188-624a-4c56-8c54-fafbd531cd45_doc" class="docelem" title="Registrar resposta no e-SIC">
+<a name="ed516188-624a-4c56-8c54-fafbd531cd45" id="ed516188-624a-4c56-8c54-fafbd531cd45"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="6f179d70-4ac1-4e24-bc60-a1677a6a7263_doc" class="docelem" title="Tratar Recursos SIC">
+<a name="6f179d70-4ac1-4e24-bc60-a1677a6a7263" id="6f179d70-4ac1-4e24-bc60-a1677a6a7263"></a>
+<img class="icon" src="diagrams/bpmnimg/SubProcess.png" border="0" />
+
+
+
+</div>
+<div id="79721b9c-ba41-4afd-ba65-68c93f8316a6_doc" class="docelem" title="Tratar Recursos SIC">
+<a name="79721b9c-ba41-4afd-ba65-68c93f8316a6" id="79721b9c-ba41-4afd-ba65-68c93f8316a6"></a>
+<img class="icon" src="diagrams/bpmnimg/SubProcess.png" border="0" />
+
+
+
+</div>
+<div id="8a287a79-a2b3-4ce6-a40f-74559ecaac1f_doc" class="docelem" title="Justificar indisponibilidade parcial ou total da informação">
+<a name="8a287a79-a2b3-4ce6-a40f-74559ecaac1f" id="8a287a79-a2b3-4ce6-a40f-74559ecaac1f"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="f9b9b03d-83b8-4def-ba51-582c613617c7_doc" class="docelem" title="3 dias antes de acabar o prazo">
+<a name="f9b9b03d-83b8-4def-ba51-582c613617c7" id="f9b9b03d-83b8-4def-ba51-582c613617c7"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="db251bb1-c3d4-423f-84fc-c570f1de2b19_doc" class="docelem" title="Registrar resposta no  SGDoc">
+<a name="db251bb1-c3d4-423f-84fc-c570f1de2b19" id="db251bb1-c3d4-423f-84fc-c570f1de2b19"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="1c0e1680-aeef-4081-819b-b1a5c6f5a0eb_doc" class="docelem" title="Efetuar cadastro do requerente no e-SIC">
+<a name="1c0e1680-aeef-4081-819b-b1a5c6f5a0eb" id="1c0e1680-aeef-4081-819b-b1a5c6f5a0eb"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="341b3eb9-ebc2-41ab-b9ef-1d2120ad412b_doc" class="docelem" title="Informação sigilosa?">
+<a name="341b3eb9-ebc2-41ab-b9ef-1d2120ad412b" id="341b3eb9-ebc2-41ab-b9ef-1d2120ad412b"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Não</p><p>&nbsp;Sim</p>
+</div>
+<div id="558bcbd0-65c9-497f-940c-d0efdf70e396_doc" class="docelem" title="Acompanhar prazo">
+<a name="558bcbd0-65c9-497f-940c-d0efdf70e396" id="558bcbd0-65c9-497f-940c-d0efdf70e396"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="9394c10f-9deb-4e9a-9876-a31714768512_doc" class="docelem" title="Elemento">
+<a name="9394c10f-9deb-4e9a-9876-a31714768512" id="9394c10f-9deb-4e9a-9876-a31714768512"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="4533a848-1932-44c9-849c-b1ea8a59db58_doc" class="docelem" title="Elemento">
+<a name="4533a848-1932-44c9-849c-b1ea8a59db58" id="4533a848-1932-44c9-849c-b1ea8a59db58"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="9c8d58fc-af7c-40ec-90bc-afcc6b910036_doc" class="docelem" title="Elemento">
+<a name="9c8d58fc-af7c-40ec-90bc-afcc6b910036" id="9c8d58fc-af7c-40ec-90bc-afcc6b910036"></a>
+<img class="icon" src="diagrams/bpmnimg/ParallelGateway.png" border="0" />
+
+
+
+</div>
+<div id="e1e7629e-d361-4a69-a31a-8aaff6737553_doc" class="docelem" title="Primeiro acesso do requerente?">
+<a name="e1e7629e-d361-4a69-a31a-8aaff6737553" id="e1e7629e-d361-4a69-a31a-8aaff6737553"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Sim</p><p>&nbsp;Não</p>
+</div>
+<div id="21ebf510-ac6f-45db-a22e-9674346c787c_doc" class="docelem" title="Tratar Recursos SIC">
+<a name="21ebf510-ac6f-45db-a22e-9674346c787c" id="21ebf510-ac6f-45db-a22e-9674346c787c"></a>
+<img class="icon" src="diagrams/bpmnimg/SubProcess.png" border="0" />
+
+
+
+</div>
+<div id="f3b005e3-5932-4758-8420-b961a9885082_doc" class="docelem" title="Cobrar resposta da área responsável">
+<a name="f3b005e3-5932-4758-8420-b961a9885082" id="f3b005e3-5932-4758-8420-b961a9885082"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="1ee8479c-1795-4cc5-ad2f-2ec74abd81e0_doc" class="docelem" title="Há resposta padronizada?">
+<a name="1ee8479c-1795-4cc5-ad2f-2ec74abd81e0" id="1ee8479c-1795-4cc5-ad2f-2ec74abd81e0"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Sim</p><p>&nbsp;Não</p>
+</div>
+<div id="b05d103c-b69f-4caf-a57e-78358006051c_doc" class="docelem" title="Elaborar resposta">
+<a name="b05d103c-b69f-4caf-a57e-78358006051c" id="b05d103c-b69f-4caf-a57e-78358006051c"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="c6d09e37-0d94-460a-9b9e-8b0fe6d6c61d_doc" class="docelem" title="Solicitação de adequação de resposta">
+<a name="c6d09e37-0d94-460a-9b9e-8b0fe6d6c61d" id="c6d09e37-0d94-460a-9b9e-8b0fe6d6c61d"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="e905eb0c-640f-4e36-9b9d-ac4031dd8822_doc" class="docelem" title="Demanda entrou via solicitação presencial">
+<a name="e905eb0c-640f-4e36-9b9d-ac4031dd8822" id="e905eb0c-640f-4e36-9b9d-ac4031dd8822"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneStart.png" border="0" />
+
+
+
+</div>
+<div id="de064da1-b58a-4e9a-a13f-8d89b2fae68d_doc" class="docelem" title="Necessidade de mais prazo?">
+<a name="de064da1-b58a-4e9a-a13f-8d89b2fae68d" id="de064da1-b58a-4e9a-a13f-8d89b2fae68d"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Não</p><p>&nbsp;Sim</p>
+</div>
+<div id="1d326a18-b707-4ab6-af35-e1956dbb60f1_doc" class="docelem" title="Propor alterações">
+<a name="1d326a18-b707-4ab6-af35-e1956dbb60f1" id="1d326a18-b707-4ab6-af35-e1956dbb60f1"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="096a77c6-57f1-4a5c-8a10-92b5af421bb3_doc" class="docelem" title="Analisar requisição de informação">
+<a name="096a77c6-57f1-4a5c-8a10-92b5af421bb3" id="096a77c6-57f1-4a5c-8a10-92b5af421bb3"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="cb99baa2-0d67-4f7c-838a-a559a630abd5_doc" class="docelem" title="Há necessidades de alterações na resposta?">
+<a name="cb99baa2-0d67-4f7c-838a-a559a630abd5" id="cb99baa2-0d67-4f7c-838a-a559a630abd5"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Não</p><p>&nbsp;Sim</p>
+</div>
+<div id="799f4a9c-0546-4263-9a25-a47fc21bf7d0_doc" class="docelem" title="Resposta homologada">
+<a name="799f4a9c-0546-4263-9a25-a47fc21bf7d0" id="799f4a9c-0546-4263-9a25-a47fc21bf7d0"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="83fd8dea-70cd-4798-85c9-5f1dfb9016cb_doc" class="docelem" title="Órgão responsável pela informação?">
+<a name="83fd8dea-70cd-4798-85c9-5f1dfb9016cb" id="83fd8dea-70cd-4798-85c9-5f1dfb9016cb"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Não</p><p>&nbsp;Sim</p>
+</div>
+<div id="3be1563e-104f-456a-a605-887ff8dda751_doc" class="docelem" title="Qual tipo de demanda?">
+<a name="3be1563e-104f-456a-a605-887ff8dda751" id="3be1563e-104f-456a-a605-887ff8dda751"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p><p>&nbsp;Requisição de informação</p>
+</div>
+<div id="a18802fd-800c-4213-9e9c-03934a3f9b1f_doc" class="docelem" title="Justificar e informar requerente via e-SIC">
+<a name="a18802fd-800c-4213-9e9c-03934a3f9b1f" id="a18802fd-800c-4213-9e9c-03934a3f9b1f"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="98ee4e05-3ac0-415d-a6aa-074ab4d8be03_doc" class="docelem" title="Demanda tratada">
+<a name="98ee4e05-3ac0-415d-a6aa-074ab4d8be03" id="98ee4e05-3ac0-415d-a6aa-074ab4d8be03"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="03bb798a-f2c1-4805-9fec-52b2ae8599f5_doc" class="docelem" title="Homologar resposta">
+<a name="03bb798a-f2c1-4805-9fec-52b2ae8599f5" id="03bb798a-f2c1-4805-9fec-52b2ae8599f5"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="7e8f5d5e-670e-4b12-bb60-ba6d30148aa9_doc" class="docelem" title="Alimentar planilha de acompanhamento e controle das demandas">
+<a name="7e8f5d5e-670e-4b12-bb60-ba6d30148aa9" id="7e8f5d5e-670e-4b12-bb60-ba6d30148aa9"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="bcd8fbe0-a461-4982-a4c5-04013489990b_doc" class="docelem" title="Registrar pedido e preencher formulário">
+<a name="bcd8fbe0-a461-4982-a4c5-04013489990b" id="bcd8fbe0-a461-4982-a4c5-04013489990b"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="41c04691-8430-4603-985d-b47332696e0b_doc" class="docelem" title="Registrar novo prazo no e-SIC">
+<a name="41c04691-8430-4603-985d-b47332696e0b" id="41c04691-8430-4603-985d-b47332696e0b"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="d4a85c8e-f017-4b70-9461-17f392d4e003_doc" class="docelem" title="Informação amparada pela LAI?">
+<a name="d4a85c8e-f017-4b70-9461-17f392d4e003" id="d4a85c8e-f017-4b70-9461-17f392d4e003"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Não</p><p>&nbsp;Sim</p>
+</div>
+<div id="742121cf-980d-4d23-b9b9-1b7e1df97158_doc" class="docelem" title="Verificar se demanda já foi respondida">
+<a name="742121cf-980d-4d23-b9b9-1b7e1df97158" id="742121cf-980d-4d23-b9b9-1b7e1df97158"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="d63696a0-1002-46b3-a272-344f7f5a7d2f_doc" class="docelem" title="Analisar demanda">
+<a name="d63696a0-1002-46b3-a272-344f7f5a7d2f" id="d63696a0-1002-46b3-a272-344f7f5a7d2f"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="5b34ad78-08c0-4270-9116-e4c55a7594ff_doc" class="docelem" title="Órgão tem a informação?">
+<a name="5b34ad78-08c0-4270-9116-e4c55a7594ff" id="5b34ad78-08c0-4270-9116-e4c55a7594ff"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Não</p><p>&nbsp;Sim</p>
+</div>
+<div id="440dae07-5eba-4aa6-9af4-f15ba037e89b_doc" class="docelem" title="Elemento">
+<a name="440dae07-5eba-4aa6-9af4-f15ba037e89b" id="440dae07-5eba-4aa6-9af4-f15ba037e89b"></a>
+<img class="icon" src="diagrams/bpmnimg/InclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p>
+</div>
+<div id="8c60265d-a48b-4134-9e46-c532e358468e_doc" class="docelem" title="Demanda respondida?">
+<a name="8c60265d-a48b-4134-9e46-c532e358468e" id="8c60265d-a48b-4134-9e46-c532e358468e"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Sim</p><p>&nbsp;Não</p>
+</div>
+<div id="7ac643d3-66d6-4af2-89ad-17e2cd958445_doc" class="docelem" title="Registrar resposta no e-SIC">
+<a name="7ac643d3-66d6-4af2-89ad-17e2cd958445" id="7ac643d3-66d6-4af2-89ad-17e2cd958445"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="8eebacf8-bef2-4853-afe6-282b5b6202ca_doc" class="docelem" title="Indicar entidade ou órgão responsável">
+<a name="8eebacf8-bef2-4853-afe6-282b5b6202ca" id="8eebacf8-bef2-4853-afe6-282b5b6202ca"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="735dd540-a2bb-472b-9fc0-8bb4142a056f_doc" class="docelem" title="Demanda tratada">
+<a name="735dd540-a2bb-472b-9fc0-8bb4142a056f" id="735dd540-a2bb-472b-9fc0-8bb4142a056f"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="7a385eca-9d50-4772-b449-9278de0d4bcd_doc" class="docelem" title="Encaminhar pedido do requerente para o canal apropriado">
+<a name="7a385eca-9d50-4772-b449-9278de0d4bcd" id="7a385eca-9d50-4772-b449-9278de0d4bcd"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="27e74523-b855-438c-abca-ee9cb4704195_doc" class="docelem" title="Registrar resposta no SGDoc">
+<a name="27e74523-b855-438c-abca-ee9cb4704195" id="27e74523-b855-438c-abca-ee9cb4704195"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="d74e2498-386d-4a5d-ba29-933ff61cfadd_doc" class="docelem" title="Registrar resposta no SGDoc">
+<a name="d74e2498-386d-4a5d-ba29-933ff61cfadd" id="d74e2498-386d-4a5d-ba29-933ff61cfadd"></a>
+<img class="icon" src="diagrams/bpmnimg/AbstractTask.png" border="0" />
+
+
+
+</div>
+<div id="1388c8d7-cb4e-4ffb-bb51-8dcd0187790c_doc" class="docelem" title="Demanda entrou via e-SIC">
+<a name="1388c8d7-cb4e-4ffb-bb51-8dcd0187790c" id="1388c8d7-cb4e-4ffb-bb51-8dcd0187790c"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneIntermediate.png" border="0" />
+
+
+
+</div>
+<div id="10a7d8c5-919e-4a0f-a81f-ba836b19a89b_doc" class="docelem" title="SIC">
+<a name="10a7d8c5-919e-4a0f-a81f-ba836b19a89b" id="10a7d8c5-919e-4a0f-a81f-ba836b19a89b"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+<div id="a31825c0-37ce-47fc-99b7-5e064fc6b07e_doc" class="docelem" title="Grupos Focais SIC">
+<a name="a31825c0-37ce-47fc-99b7-5e064fc6b07e" id="a31825c0-37ce-47fc-99b7-5e064fc6b07e"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+<div id="45091006-ca01-452a-a13d-707b2773ebcf_doc" class="docelem" title="Departamento Jurídico">
+<a name="45091006-ca01-452a-a13d-707b2773ebcf" id="45091006-ca01-452a-a13d-707b2773ebcf"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+<div id="ef2da478-3aab-4ce5-bb6a-61f7cbf4afce_doc" class="docelem" title="Coordenador LAI">
+<a name="ef2da478-3aab-4ce5-bb6a-61f7cbf4afce" id="ef2da478-3aab-4ce5-bb6a-61f7cbf4afce"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/47 Tratar Demanda SIC.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="95,231,145,1559" title="" href="#dcb26b5d-0b81-4f5b-940e-0803cd02d5e4" />
+<area shape="rect" class="diagelem" coords="3412,1024,3502,1084" title="" href="#ed516188-624a-4c56-8c54-fafbd531cd45" />
+<area shape="rect" class="diagelem" coords="2889,1026,2979,1086" title="" href="#6f179d70-4ac1-4e24-bc60-a1677a6a7263" />
+<area shape="rect" class="diagelem" coords="1228,451,1318,511" title="" href="#79721b9c-ba41-4afd-ba65-68c93f8316a6" />
+<area shape="rect" class="diagelem" coords="1571,404,1689,473" title="" href="#8a287a79-a2b3-4ce6-a40f-74559ecaac1f" />
+<area shape="circle" class="diagelem" coords="937,737,15" title="" href="#f9b9b03d-83b8-4def-ba51-582c613617c7" />
+<area shape="rect" class="diagelem" coords="3259,1024,3349,1084" title="" href="#db251bb1-c3d4-423f-84fc-c570f1de2b19" />
+<area shape="rect" class="diagelem" coords="367,570,457,640" title="" href="#1c0e1680-aeef-4081-819b-b1a5c6f5a0eb" />
+<area shape="poly" class="diagelem" coords="1415,575,1435,555,1455,575,1435,595" title="" href="#341b3eb9-ebc2-41ab-b9ef-1d2120ad412b" />
+<area shape="rect" class="diagelem" coords="790,707,880,767" title="" href="#558bcbd0-65c9-497f-940c-d0efdf70e396" />
+<area shape="circle" class="diagelem" coords="1176,481,15" title="" href="#9394c10f-9deb-4e9a-9876-a31714768512" />
+<area shape="circle" class="diagelem" coords="1301,836,15" title="" href="#4533a848-1932-44c9-849c-b1ea8a59db58" />
+<area shape="poly" class="diagelem" coords="730,606,750,586,770,606,750,626" title="" href="#9c8d58fc-af7c-40ec-90bc-afcc6b910036" />
+<area shape="poly" class="diagelem" coords="285,606,305,586,325,606,305,626" title="" href="#e1e7629e-d361-4a69-a31a-8aaff6737553" />
+<area shape="rect" class="diagelem" coords="1454,998,1544,1058" title="" href="#21ebf510-ac6f-45db-a22e-9674346c787c" />
+<area shape="rect" class="diagelem" coords="1222,705,1312,770" title="" href="#f3b005e3-5932-4758-8420-b961a9885082" />
+<area shape="poly" class="diagelem" coords="1684,575,1704,555,1724,575,1704,595" title="" href="#1ee8479c-1795-4cc5-ad2f-2ec74abd81e0" />
+<area shape="rect" class="diagelem" coords="2506,986,2596,1046" title="" href="#b05d103c-b69f-4caf-a57e-78358006051c" />
+<area shape="circle" class="diagelem" coords="1611,1027,15" title="" href="#c6d09e37-0d94-460a-9b9e-8b0fe6d6c61d" />
+<area shape="circle" class="diagelem" coords="220,605,15" title="" href="#e905eb0c-640f-4e36-9b9d-ac4031dd8822" />
+<area shape="poly" class="diagelem" coords="1989,1016,2009,996,2029,1016,2009,1036" title="" href="#de064da1-b58a-4e9a-a13f-8d89b2fae68d" />
+<area shape="rect" class="diagelem" coords="2758,1220,2848,1280" title="" href="#1d326a18-b707-4ab6-af35-e1956dbb60f1" />
+<area shape="rect" class="diagelem" coords="1230,545,1320,605" title="" href="#096a77c6-57f1-4a5c-8a10-92b5af421bb3" />
+<area shape="poly" class="diagelem" coords="2650,1250,2670,1230,2690,1250,2670,1270" title="" href="#cb99baa2-0d67-4f7c-838a-a559a630abd5" />
+<area shape="circle" class="diagelem" coords="3120,1055,15" title="" href="#799f4a9c-0546-4263-9a25-a47fc21bf7d0" />
+<area shape="poly" class="diagelem" coords="883,571,903,551,923,571,903,591" title="" href="#83fd8dea-70cd-4798-85c9-5f1dfb9016cb" />
+<area shape="poly" class="diagelem" coords="1101,575,1121,555,1141,575,1121,595" title="" href="#3be1563e-104f-456a-a605-887ff8dda751" />
+<area shape="rect" class="diagelem" coords="2068,983,2158,1048" title="" href="#a18802fd-800c-4213-9e9c-03934a3f9b1f" />
+<area shape="circle" class="diagelem" coords="3731,1053,15" title="" href="#98ee4e05-3ac0-415d-a6aa-074ab4d8be03" />
+<area shape="rect" class="diagelem" coords="2827,1401,2917,1461" title="" href="#03bb798a-f2c1-4805-9fec-52b2ae8599f5" />
+<area shape="rect" class="diagelem" coords="3537,1022,3666,1083" title="" href="#7e8f5d5e-670e-4b12-bb60-ba6d30148aa9" />
+<area shape="rect" class="diagelem" coords="540,570,630,641" title="" href="#bcd8fbe0-a461-4982-a4c5-04013489990b" />
+<area shape="rect" class="diagelem" coords="2328,986,2418,1046" title="" href="#41c04691-8430-4603-985d-b47332696e0b" />
+<area shape="poly" class="diagelem" coords="974,571,994,551,1014,571,994,591" title="" href="#d4a85c8e-f017-4b70-9461-17f392d4e003" />
+<area shape="rect" class="diagelem" coords="1006,707,1096,767" title="" href="#742121cf-980d-4d23-b9b9-1b7e1df97158" />
+<area shape="rect" class="diagelem" coords="1837,986,1927,1046" title="" href="#d63696a0-1002-46b3-a272-344f7f5a7d2f" />
+<area shape="poly" class="diagelem" coords="1527,575,1547,555,1567,575,1547,595" title="" href="#5b34ad78-08c0-4270-9116-e4c55a7594ff" />
+<area shape="poly" class="diagelem" coords="658,606,678,586,698,606,678,626" title="" href="#440dae07-5eba-4aa6-9af4-f15ba037e89b" />
+<area shape="poly" class="diagelem" coords="1142,737,1162,717,1182,737,1162,757" title="" href="#8c60265d-a48b-4134-9e46-c532e358468e" />
+<area shape="rect" class="diagelem" coords="1789,330,1879,390" title="" href="#7ac643d3-66d6-4af2-89ad-17e2cd958445" />
+<area shape="rect" class="diagelem" coords="925,251,1012,336" title="" href="#8eebacf8-bef2-4853-afe6-282b5b6202ca" />
+<area shape="circle" class="diagelem" coords="2203,360,15" title="" href="#735dd540-a2bb-472b-9fc0-8bb4142a056f" />
+<area shape="rect" class="diagelem" coords="1042,326,1148,395" title="" href="#7a385eca-9d50-4772-b449-9278de0d4bcd" />
+<area shape="rect" class="diagelem" coords="1230,330,1320,390" title="" href="#27e74523-b855-438c-abca-ee9cb4704195" />
+<area shape="rect" class="diagelem" coords="2195,986,2285,1046" title="" href="#d74e2498-386d-4a5d-ba29-933ff61cfadd" />
+<area shape="circle" class="diagelem" coords="678,745,15" title="" href="#1388c8d7-cb4e-4ffb-bb51-8dcd0187790c" />
+<area shape="rect" class="diagelem" coords="145,231,175,902" title="" href="#10a7d8c5-919e-4a0f-a81f-ba836b19a89b" />
+<area shape="rect" class="diagelem" coords="145,902,175,1158" title="" href="#a31825c0-37ce-47fc-99b7-5e064fc6b07e" />
+<area shape="rect" class="diagelem" coords="145,1158,175,1358" title="" href="#45091006-ca01-452a-a13d-707b2773ebcf" />
+<area shape="rect" class="diagelem" coords="145,1358,175,1559" title="" href="#ef2da478-3aab-4ce5-bb6a-61f7cbf4afce" />
+<area shape="rect" coords="3723,1619,3813,1662" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>

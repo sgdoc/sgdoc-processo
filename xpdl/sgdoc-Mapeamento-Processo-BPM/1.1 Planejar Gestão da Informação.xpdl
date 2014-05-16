@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Id="528c4b5b-bae3-4a6c-a776-4d69e1ec69cd" Name="1.1 Planejar Gestão da Informação" xmlns="http://www.wfmc.org/2009/XPDL2.2">
+  <PackageHeader>
+    <XPDLVersion>2.2</XPDLVersion>
+    <Vendor>Bizagi Process Modeler.</Vendor>
+    <Created>2014-01-19T17:45:31.0408783-02:00</Created>
+    <ModificationDate>2014-05-16T09:41:53.5313822-03:00</ModificationDate>
+    <Description>1.1 Planejar Gestão da Informação</Description>
+    <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo ao planejamento da gestão da informação&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+  </PackageHeader>
+  <RedefinableHeader>
+    <Author>ICMBio e Telebras</Author>
+    <Version>1.0</Version>
+    <Countrykey>CO</Countrykey>
+  </RedefinableHeader>
+  <ExternalPackages />
+  <Participants>
+    <Participant Id="f5a3074f-d9d1-445e-aeec-34be974e44c0" Name="Área responsável pela Gestão de Informação">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Área_responsável_pela_Gestão_de_Informação" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="5ea1a7f8-9ef8-45a0-9fd6-151d9e914b07" Name="Todas as áreas">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Todas_as_áreas" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="adba3236-b20b-4809-8299-865159eafd24" Name="Protocolo">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Protocolo" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="e7c0121e-f266-406b-bf70-f277ea1cccad" Name="Administrador do Sistema">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Administrador_do_Sistema" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="c19b98ae-4dfd-4d8b-8bf4-d54f743f0cc3" Name="Arquivo">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Arquivo" />
+      </ExtendedAttributes>
+    </Participant>
+    <Participant Id="3f1f0837-2be1-4933-b7e4-aaa3ff2823d9" Name="Sistema">
+      <ParticipantType Type="RESOURCE" />
+      <Description />
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="Sistema" />
+      </ExtendedAttributes>
+    </Participant>
+  </Participants>
+  <Pools>
+    <Pool Id="f5071075-0ba6-441a-9211-fd239e7051b5" Name="Main Process" Process="0ded9c64-d52e-4bad-8072-cedfcd6a9c57" BoundaryVisible="false">
+      <Lanes />
+      <NodeGraphicsInfos>
+        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="350" Width="700" BorderColor="-16777216" FillColor="-1">
+          <Coordinates XCoordinate="0" YCoordinate="0" />
+        </NodeGraphicsInfo>
+      </NodeGraphicsInfos>
+    </Pool>
+    <Pool Id="c43f9410-fb87-4ee0-a8a5-2dec4073375d" Name="Planejar Gestão da Informação" Process="8b28a0cf-55db-428f-90a5-6115c1bb2cc8" BoundaryVisible="true">
+      <Lanes>
+        <Lane Id="85543e29-d651-4adf-ac62-94aabad88279" Name="Área responsável pela Gestão de Informação" ParentPool="c43f9410-fb87-4ee0-a8a5-2dec4073375d">
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="571" Width="3498" BorderColor="-11513776" FillColor="-1">
+              <Coordinates XCoordinate="50" YCoordinate="0" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Lane>
+        <Lane Id="534f6dc8-07e1-423b-a14b-9890b2f4e06b" Name="Responsável pela aprovação" ParentPool="c43f9410-fb87-4ee0-a8a5-2dec4073375d">
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="200" Width="3498" BorderColor="-11513776" FillColor="-1">
+              <Coordinates XCoordinate="50" YCoordinate="571" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Lane>
+      </Lanes>
+      <NodeGraphicsInfos>
+        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="771" Width="3548" BorderColor="-16777216" FillColor="-1">
+          <Coordinates XCoordinate="48" YCoordinate="233" />
+        </NodeGraphicsInfo>
+      </NodeGraphicsInfos>
+    </Pool>
+  </Pools>
+  <Associations />
+  <Artifacts />
+  <WorkflowProcesses>
+    <WorkflowProcess Id="0ded9c64-d52e-4bad-8072-cedfcd6a9c57" Name="Main Process">
+      <ProcessHeader>
+        <Created>2014-05-16T09:57:13.2188822-03:00</Created>
+        <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo ao planejamento da gestão da informação&lt;/span&gt;&lt;/p&gt;</Description>
+      </ProcessHeader>
+      <RedefinableHeader>
+        <Author />
+        <Version />
+        <Countrykey>CO</Countrykey>
+      </RedefinableHeader>
+      <ActivitySets />
+      <DataInputOutputs />
+      <ExtendedAttributes />
+    </WorkflowProcess>
+    <WorkflowProcess Id="8b28a0cf-55db-428f-90a5-6115c1bb2cc8" Name="Planejar Gestão da Informação">
+      <ProcessHeader>
+        <Created>2014-05-16T09:57:13.2188822-03:00</Created>
+        <Description />
+      </ProcessHeader>
+      <RedefinableHeader>
+        <Author />
+        <Version />
+        <Countrykey>CO</Countrykey>
+      </RedefinableHeader>
+      <ActivitySets>
+        <ActivitySet Id="cd1c16cc-126e-41ad-9d27-9f88249dce5e" Name="Acompanhar Gestão da Informação">
+          <Associations />
+          <Artifacts />
+          <Activities />
+          <Transitions />
+        </ActivitySet>
+        <ActivitySet Id="5deb1495-1c4a-41dc-b72f-e7718a092a6c" Name="Acompanhar Gestão da Informação">
+          <Associations />
+          <Artifacts />
+          <Activities />
+          <Transitions />
+        </ActivitySet>
+        <ActivitySet Id="19f330e4-774c-4424-aa25-a4c5ca963bd9" Name="Acompanhar Gestão da Informação">
+          <Associations />
+          <Artifacts />
+          <Activities />
+          <Transitions />
+        </ActivitySet>
+      </ActivitySets>
+      <DataInputOutputs />
+      <Activities>
+        <Activity Id="b4b32f53-fbff-44ee-9541-1e4438f7bbd5" Name="">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto comum&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde independente do fluxo a decisão será a mesma.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Route GatewayType="Parallel" />
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto comum&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde independente do fluxo a decisão será a mesma.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="944" YCoordinate="615" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="938465e8-b1a0-4394-802d-ec2a1d8b6013" Name="Diagnóstico situacional da Gestão da Informação">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Diagnóstico situcional&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Diagnostico levantado.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Event>
+            <IntermediateEvent Trigger="None" />
+          </Event>
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Diagnóstico situcional&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Diagnostico levantado.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-16752640" FillColor="-16732080">
+              <Coordinates XCoordinate="1185" YCoordinate="620" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="7aa20848-49b8-49a3-9f33-11ed2745309e" Name="Analisar estrutura organizacional e processos da empresa">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O projeto de implantação da Gestão da Informação tem que estar de acordo  com a estrutura organizacional e seus processos.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O projeto de implantação da Gestão da Informação tem que estar de acordo  com a estrutura organizacional e seus processos.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="80" Width="91" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="671" YCoordinate="500" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="bfc15f17-b02b-45b9-89d3-dba4b1836f17" Name="Realizar aprovação do Modelo">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Analisar e aprovar o modelo antes de dar continuidade ao processo.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Analisar e aprovar o modelo antes de dar continuidade ao processo.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="2412" YCoordinate="832" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="4cc7cdcc-b790-4570-a00f-36d49322bba9" Name="">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;deverá escolher o tipo de ação que será executada.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Route GatewayType="Parallel" />
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde &lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;deverá escolher o tipo de ação que será executada.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="1770" YCoordinate="615" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="b277700f-4bd1-4de8-9a4f-3aad21bb7160" Name="Modelo Aprovado?">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O gestor deverá escolher o tipo de ação que será executada. Caso o modelo não tenha sido aprovado, deverá voltar a reavaliar os objetivos e metas. Se for aprovado será formalizado o Modelo de Gestão da Informação.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Route MarkerVisible="true" />
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O gestor deverá escolher o tipo de ação que será executada. Caso o modelo não tenha sido aprovado, deverá voltar a reavaliar os objetivos e metas. Se for aprovado será formalizado o Modelo de Gestão da Informação.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="2553" YCoordinate="611" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="7fe06472-9db0-4d01-a0a8-20803b1d0e7a" Name="Reavaliar infraestrutura da Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Caso ocorra necessidade de adequação, reavaliar a infeaestrutura de Gestão.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Caso ocorra necessidade de adequação, reavaliar a infeaestrutura de Gestão.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="88" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="2096" YCoordinate="591" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="db678353-9e51-4f7a-9d37-fd97591500bd" Name="Plano aprovado?">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O usuário deverá escolher o tipo de ação que será executada. Caso o Plano de Gestão não tenha sido aprovado o Gestor deverá retornar as definições das ações a serem adotadas. Se aprovado terá o Plano de Gestão da Informação.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Route MarkerVisible="true" />
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O usuário deverá escolher o tipo de ação que será executada. Caso o Plano de Gestão não tenha sido aprovado o Gestor deverá retornar as definições das ações a serem adotadas. Se aprovado terá o Plano de Gestão da Informação.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="3192" YCoordinate="629" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="9223817c-2b73-44bf-9f82-d04d0915d864" Name="Reavaliar objetivos e metas da Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá reavaliar os objetivos e as metas do processo para que não se saia do objetivo ou para readequalos conforme necessidade.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá reavaliar os objetivos e as metas do processo para que não se saia do objetivo ou para readequalos conforme necessidade.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="84" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1500" YCoordinate="592.5" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="79da93b4-c71f-4a3c-a7de-d0a588243f65" Name="Consolidar Plano  de Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Deverá ser colocado em prática o plano de gestão.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Deverá ser colocado em prática o plano de gestão.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="69" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="2951" YCoordinate="706" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="1d9a3a7c-725f-4c61-bf5e-74ae6be833e5" Name="Ponto de Decisão">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá escolher o tipo de ação que será executada&lt;/span&gt;&lt;/p&gt;</Description>
+          <Route GatewayType="Parallel" />
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto de decisão&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá escolher o tipo de ação que será executada&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="550" YCoordinate="482" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="ce3bba6f-0578-49df-822b-b9116e77251d" Name="Avaliar aderência das atividades planejadas x executadas">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá fazer um levantamento e avaliação daas atividades. Atendendo ao cronograma inicial, a execução do que foi planejado.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá fazer um levantamento e avaliação daas atividades. Atendendo ao cronograma inicial, a execução do que foi planejado.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="88" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="671" YCoordinate="684.5" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="9218d688-ef47-49d9-a2a8-0d2f4b366505" Name="Reavaliar instrumentos arquivísticos">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Reavaliar e modificar conforme novas legislações os instrumentos voltados ao arquivo.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Reavaliar e modificar conforme novas legislações os instrumentos voltados ao arquivo.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1844" YCoordinate="694" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="d96640fa-f1c5-426e-8d6c-1cb55ce8dd37" Name="Reavaliar tipos de documentos arquivísticos e não-arquivísticos">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Tudo que for acervo deverá ser tratado por uma "empresa" especializada para catalogação e arquivamento, quando necessário, e as documentações ativas terão sua tratativa no decorrer da implantação da gestão. &lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Tudo que for acervo deverá ser tratado por uma "empresa" especializada para catalogação e arquivamento, quando necessário, e as documentações ativas terão sua tratativa no decorrer da implantação da gestão. &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="80" Width="93" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1849" YCoordinate="499" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="9d4d48fb-8fdf-48cb-9670-2e6f027d4292" Name="Reavaliar indicadores da Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Reavaliar os indicadores que monitoram os objetivos, metas e desempenhos de forma sistemática e detalhada, podendo reestrutura-los.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Reavaliar os indicadores que monitoram os objetivos, metas e desempenhos de forma sistemática e detalhada, podendo reestrutura-los.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="65" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1625" YCoordinate="602" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="81e2cb55-518d-4e7e-8c01-7222debdfddc" Name="Avaliar resultados">
+          <Description />
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="356" YCoordinate="656" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="a79531b7-0bf4-46af-9abd-7f272b6c363b" Name="Avaliar acervo e ativos de conteúdo da empresa">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O trabalo inicial passará pela separação de acervo e de ativos. Na avaliação da documentação será levantado pontos como tipologia de documentos utilizados pela Institução, assuntos especificos e outros.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O trabalo inicial passará pela separação de acervo e de ativos. Na avaliação da documentação será levantado pontos como tipologia de documentos utilizados pela Institução, assuntos especificos e outros.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="64" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="669" YCoordinate="603" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="63d3cf9c-9a90-4f20-9089-2095964eaa0a" Name="Analisar desvios e inconformidades">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Após avaliar a execução do planejamento inicial, será possivel verificar particularidades e adequa-las caso necessário, alem de poder observar pontos de maior dificuldade da implantação do processo.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Após avaliar a execução do planejamento inicial, será possivel verificar particularidades e adequa-las caso necessário, alem de poder observar pontos de maior dificuldade da implantação do processo.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="69" Width="111" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="808" YCoordinate="694" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="04520a2f-d68e-4197-9c96-dc0525e62a2e" Name="Consolidar Modelo de Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Manter uma documentação estruturada e consolidada, junto a um versionamento do Sistema estável para servir de modelo.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Manter uma documentação estruturada e consolidada, junto a um versionamento do Sistema estável para servir de modelo.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="67" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="2248" YCoordinate="601.5" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="2c4ac359-6e95-4475-b132-f4bcd974db9b" Name="Definir ações para implantação do Modelo de Gestão da Informação">
+          <Description />
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="97" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="2830" YCoordinate="692" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="f42ac28f-3c65-4ebd-9960-df86ec1ceb57" Name="Analisar legislações e regulamentações internas e externas vigentes">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá sempre estar atento as legislações vigentes e tambem quando necessário deverá elaborar regulamentações para uso da Instituição. &lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá sempre estar atento as legislações vigentes e tambem quando necessário deverá elaborar regulamentações para uso da Instituição. &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="81" Width="107" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="661" YCoordinate="308" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="42989e9c-131c-4c81-b738-f70044f985af" Name="Plano de Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Plano de Gestão da Informação conolidado.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Event>
+            <IntermediateEvent Trigger="None" />
+          </Event>
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Plano de Gestão da Informação conolidado.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-16752640" FillColor="-16732080">
+              <Coordinates XCoordinate="3286" YCoordinate="634" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="a8896019-c676-4d1e-8128-698907ab26eb" Name="">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto comum&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde independente do fluxo a decisão será a mesma.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Route GatewayType="Parallel" />
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Ponto comum&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde independente do fluxo a decisão será a mesma.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="2016" YCoordinate="615" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="5bcfa3c2-6e3c-4be4-9c6b-46370dd9705b" Name="Analisar capacidade atual (recursos e infraestrutura)">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá avaliar e adequar sua capacidade para implantação da gestão da informação.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá avaliar e adequar sua capacidade para implantação da gestão da informação.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="66" Width="94" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="667" YCoordinate="410" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="682f3623-bd82-4d54-a7ac-47a0ceafadf0" Name="Relatórios dos resultados da Gestão da Informação">
+          <Description />
+          <Event>
+            <IntermediateEvent Trigger="None" />
+          </Event>
+          <Documentation />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-16752640" FillColor="-16732080">
+              <Coordinates XCoordinate="283" YCoordinate="671" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="cd1c16cc-126e-41ad-9d27-9f88249dce5e" Name="Acompanhar Gestão da Informação">
+          <Description />
+          <BlockActivity ActivitySetId="cd1c16cc-126e-41ad-9d27-9f88249dce5e" />
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-13684945" FillColor="-8421505">
+              <Coordinates XCoordinate="3368" YCoordinate="619" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="d98b6a5b-e556-4fff-bed1-74dd1fa60326" Name="Realizar aprovação do Plano">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Analisar e aprovar o Plano elaborado.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Analisar e aprovar o Plano elaborado.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="3073" YCoordinate="829" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="1832c424-9fd0-41ba-a3c4-50e16e68fd56" Name="Modelo de Gestão da Informação">
+          <Description />
+          <Event>
+            <IntermediateEvent Trigger="None" />
+          </Event>
+          <Documentation />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-16752640" FillColor="-16732080">
+              <Coordinates XCoordinate="2635" YCoordinate="616" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="5deb1495-1c4a-41dc-b72f-e7718a092a6c" Name="Acompanhar Gestão da Informação">
+          <Description />
+          <BlockActivity ActivitySetId="5deb1495-1c4a-41dc-b72f-e7718a092a6c" />
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-13684945" FillColor="-8421505">
+              <Coordinates XCoordinate="151" YCoordinate="656" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="19f330e4-774c-4424-aa25-a4c5ca963bd9" Name="Acompanhar Gestão da Informação">
+          <Description />
+          <BlockActivity ActivitySetId="19f330e4-774c-4424-aa25-a4c5ca963bd9" />
+          <Performers />
+          <Documentation />
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-13684945" FillColor="-8421505">
+              <Coordinates XCoordinate="2759" YCoordinate="478" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="623fbc51-4299-4f1a-941c-8ce37cbb6f63" Name="">
+          <Description>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Evento inicial&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde independente do fluxo inicial a decisão será a mesma.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Route GatewayType="Parallel" />
+          <Documentation>&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Evento inicial&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto onde independente do fluxo inicial a decisão será a mesma.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="460" YCoordinate="482" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="9fc790e1-7755-436e-841d-88a198146300" Name="Reavaliar diretrizes e políticas de Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Reavaliar e modificar conforme estrutura da instituição, as diretrizes e policas adotadas para a Gesstão Documental.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Reavaliar e modificar conforme estrutura da instituição, as diretrizes e policas adotadas para a Gesstão Documental.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="83" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1844" YCoordinate="593.5" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="fe3ca286-f606-4f57-9fbc-e25850fe0be9" Name="">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá definir as ações para implantação do modelo aprovado.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Route GatewayType="Parallel" />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O Gestor deverá definir as ações para implantação do modelo aprovado.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="40" Width="40" BorderColor="-5855715" FillColor="-52">
+              <Coordinates XCoordinate="2700" YCoordinate="611" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="e72b9cdf-4335-4e6c-b0f4-bd803871e015" Name="Projetar visão da Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Deverá ser feita um levantamento de espectativa a respeito da Gestão.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Deverá ser feita um levantamento de espectativa a respeito da Gestão.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1251" YCoordinate="605" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="d615a693-6ee8-4c6f-8cf0-8818a9a62fb4" Name="Elaborar Diagnóstico Situacional da Gestão de Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O gestor deverá elaborar um diagnostico da situação observada&lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;O gestor deverá elaborar um diagnostico da situação observada&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="98" Width="91" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1044" YCoordinate="586" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="c7a380c8-6637-4b68-8165-d042dd79fa6d" Name="Identificar gaps na Gestão da Informação">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; Deverá analisar e identificar os GAP's como um procedimento de comparação entre as competências levantadas no decorrer do processo.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Implementation>
+            <Task />
+          </Implementation>
+          <Performers />
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; Deverá analisar e identificar os GAP's como um procedimento de comparação entre as competências levantadas no decorrer do processo.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <Loop LoopType="None" />
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="68" Width="90" BorderColor="-16553830" FillColor="-1249281">
+              <Coordinates XCoordinate="1374" YCoordinate="600.5" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="Attachment" />
+          </ExtendedAttributes>
+        </Activity>
+        <Activity Id="aee49a6d-ead2-4d40-8250-a7ccfd9f1962" Name="Plano Estratégico">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Plano Estratégico&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto inicial do fluxo.&lt;/span&gt;&lt;/p&gt;</Description>
+          <Event>
+            <IntermediateEvent Trigger="None" />
+          </Event>
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Plano Estratégico&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto inicial do fluxo.&lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6909623" FillColor="-66833">
+              <Coordinates XCoordinate="164" YCoordinate="350" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="acfdc9ed-0f61-4b31-a811-be55e82d141e" Name="Modelo de Governança Corporativo">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Modelo de Governança Corporativo&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto inicial do fluxo.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Event>
+            <IntermediateEvent Trigger="None" />
+          </Event>
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Modelo de Governança Corporativo&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto inicial do fluxo.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6909623" FillColor="-66833">
+              <Coordinates XCoordinate="164" YCoordinate="441" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+        <Activity Id="530e0e30-e1d3-4b12-aa1f-a5a48aa7fabd" Name="Legislação e Normatização Arquivística">
+          <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Legislação e Normatização Arquivística&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto inicial do fluxo.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Description>
+          <Event>
+            <IntermediateEvent Trigger="None" />
+          </Event>
+          <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:bold;font-style:normal;"&gt;Legislação e Normatização Arquivística&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Ponto inicial do fluxo.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6909623" FillColor="-66833">
+              <Coordinates XCoordinate="164" YCoordinate="532" />
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+          <ExtendedAttributes />
+        </Activity>
+      </Activities>
+      <Transitions>
+        <Transition Id="17c48a36-2c32-4df9-a14c-d7a0ca9fc7e9" From="d96640fa-f1c5-426e-8d6c-1cb55ce8dd37" To="a8896019-c676-4d1e-8128-698907ab26eb">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1942" YCoordinate="539" />
+              <Coordinates XCoordinate="1979" YCoordinate="539" />
+              <Coordinates XCoordinate="1979" YCoordinate="635" />
+              <Coordinates XCoordinate="2016" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="a053b3e6-827f-4ebe-81b4-5543fe144c5f" From="5bcfa3c2-6e3c-4be4-9c6b-46370dd9705b" To="b4b32f53-fbff-44ee-9541-1e4438f7bbd5">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="761" YCoordinate="443" />
+              <Coordinates XCoordinate="885" YCoordinate="443" />
+              <Coordinates XCoordinate="885" YCoordinate="635" />
+              <Coordinates XCoordinate="944" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="d0dc7043-72c2-4316-a23b-90667f3ca8a5" From="1d9a3a7c-725f-4c61-bf5e-74ae6be833e5" To="ce3bba6f-0578-49df-822b-b9116e77251d">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="570" YCoordinate="522" />
+              <Coordinates XCoordinate="570" YCoordinate="728" />
+              <Coordinates XCoordinate="671" YCoordinate="728" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="2d9a2dae-f472-4d48-b97c-b47ee736076b" From="79da93b4-c71f-4a3c-a7de-d0a588243f65" To="d98b6a5b-e556-4fff-bed1-74dd1fa60326">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="3041" YCoordinate="740" />
+              <Coordinates XCoordinate="3057" YCoordinate="740" />
+              <Coordinates XCoordinate="3057" YCoordinate="859" />
+              <Coordinates XCoordinate="3073" YCoordinate="859" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="a7ee2633-345f-465c-b3f7-1a5db141b03d" From="1d9a3a7c-725f-4c61-bf5e-74ae6be833e5" To="7aa20848-49b8-49a3-9f33-11ed2745309e">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="590" YCoordinate="502" />
+              <Coordinates XCoordinate="630.5" YCoordinate="502" />
+              <Coordinates XCoordinate="630.5" YCoordinate="540" />
+              <Coordinates XCoordinate="671" YCoordinate="540" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="da8771c1-2ed0-4254-a6c3-29c92f441177" From="682f3623-bd82-4d54-a7ac-47a0ceafadf0" To="81e2cb55-518d-4e7e-8c01-7222debdfddc">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="313" YCoordinate="686" />
+              <Coordinates XCoordinate="356" YCoordinate="686" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="addd163d-d66f-483d-8fe1-72a5fab9b4e0" From="04520a2f-d68e-4197-9c96-dc0525e62a2e" To="bfc15f17-b02b-45b9-89d3-dba4b1836f17">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2338" YCoordinate="634" />
+              <Coordinates XCoordinate="2375" YCoordinate="634" />
+              <Coordinates XCoordinate="2375" YCoordinate="862" />
+              <Coordinates XCoordinate="2412" YCoordinate="862" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="7bf4e246-c7da-4d18-a722-e93aef554d56" From="938465e8-b1a0-4394-802d-ec2a1d8b6013" To="e72b9cdf-4335-4e6c-b0f4-bd803871e015">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1215" YCoordinate="635" />
+              <Coordinates XCoordinate="1251" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="8bc2d096-980a-4c1d-98ec-4f91fc87e1e0" From="7fe06472-9db0-4d01-a0a8-20803b1d0e7a" To="04520a2f-d68e-4197-9c96-dc0525e62a2e">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2186" YCoordinate="635" />
+              <Coordinates XCoordinate="2248" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="ebe4e697-7885-4416-bbec-c23703bc2f9f" From="b277700f-4bd1-4de8-9a4f-3aad21bb7160" To="1832c424-9fd0-41ba-a3c4-50e16e68fd56" Name="Sim">
+          <Condition Type="CONDITION">
+            <Expression />
+          </Condition>
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2593" YCoordinate="631" />
+              <Coordinates XCoordinate="2635" YCoordinate="631" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="5421d930-2e29-4863-949e-bd86157619b2" From="c7a380c8-6637-4b68-8165-d042dd79fa6d" To="9223817c-2b73-44bf-9f82-d04d0915d864">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1464" YCoordinate="634" />
+              <Coordinates XCoordinate="1500" YCoordinate="634" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="008cee4e-23e6-476b-a837-85bd448d4023" From="1d9a3a7c-725f-4c61-bf5e-74ae6be833e5" To="a79531b7-0bf4-46af-9abd-7f272b6c363b">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="570" YCoordinate="522" />
+              <Coordinates XCoordinate="570" YCoordinate="635" />
+              <Coordinates XCoordinate="669" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="4ff42e0f-f6d0-42ce-992e-4e03b3d39832" From="63d3cf9c-9a90-4f20-9089-2095964eaa0a" To="b4b32f53-fbff-44ee-9541-1e4438f7bbd5">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="919" YCoordinate="728" />
+              <Coordinates XCoordinate="964" YCoordinate="728" />
+              <Coordinates XCoordinate="964" YCoordinate="655" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="ad19c5ef-a77c-45ed-97ac-b54ad0455c8e" From="fe3ca286-f606-4f57-9fbc-e25850fe0be9" To="19f330e4-774c-4424-aa25-a4c5ca963bd9">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2720" YCoordinate="611" />
+              <Coordinates XCoordinate="2720" YCoordinate="508" />
+              <Coordinates XCoordinate="2759" YCoordinate="508" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="d610d778-7e45-4830-ac78-7d3214698c46" From="4cc7cdcc-b790-4570-a00f-36d49322bba9" To="9218d688-ef47-49d9-a2a8-0d2f4b366505">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1790" YCoordinate="655" />
+              <Coordinates XCoordinate="1790" YCoordinate="724" />
+              <Coordinates XCoordinate="1844" YCoordinate="724" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="475f4a5a-3e27-476c-93ea-2f173dae3804" From="9218d688-ef47-49d9-a2a8-0d2f4b366505" To="a8896019-c676-4d1e-8128-698907ab26eb">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1934" YCoordinate="724" />
+              <Coordinates XCoordinate="1975" YCoordinate="724" />
+              <Coordinates XCoordinate="1975" YCoordinate="635" />
+              <Coordinates XCoordinate="2016" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="529446a0-912b-455c-b6be-ae3092e78215" From="9fc790e1-7755-436e-841d-88a198146300" To="a8896019-c676-4d1e-8128-698907ab26eb">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1934" YCoordinate="634" />
+              <Coordinates XCoordinate="1975" YCoordinate="634" />
+              <Coordinates XCoordinate="1975" YCoordinate="635" />
+              <Coordinates XCoordinate="2016" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="b69e4248-df54-4a3c-8221-b064dfbe140b" From="9d4d48fb-8fdf-48cb-9670-2e6f027d4292" To="4cc7cdcc-b790-4570-a00f-36d49322bba9">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1715" YCoordinate="634" />
+              <Coordinates XCoordinate="1742.5" YCoordinate="634" />
+              <Coordinates XCoordinate="1742.5" YCoordinate="635" />
+              <Coordinates XCoordinate="1770" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="0f91dc51-2088-4a9c-829e-abd442b41919" From="a8896019-c676-4d1e-8128-698907ab26eb" To="7fe06472-9db0-4d01-a0a8-20803b1d0e7a">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2056" YCoordinate="635" />
+              <Coordinates XCoordinate="2096" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="ed81b7c8-5a7e-4c39-adc8-5ff6877a80ad" From="4cc7cdcc-b790-4570-a00f-36d49322bba9" To="9fc790e1-7755-436e-841d-88a198146300">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1810" YCoordinate="635" />
+              <Coordinates XCoordinate="1827" YCoordinate="635" />
+              <Coordinates XCoordinate="1827" YCoordinate="634" />
+              <Coordinates XCoordinate="1844" YCoordinate="634" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="3ee0312a-6305-4baa-a558-556bd21295e8" From="42989e9c-131c-4c81-b738-f70044f985af" To="cd1c16cc-126e-41ad-9d27-9f88249dce5e">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="3316" YCoordinate="649" />
+              <Coordinates XCoordinate="3368" YCoordinate="649" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="b95dab68-761a-428a-a249-fa029bbf7358" From="81e2cb55-518d-4e7e-8c01-7222debdfddc" To="623fbc51-4299-4f1a-941c-8ce37cbb6f63">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="446" YCoordinate="686" />
+              <Coordinates XCoordinate="480" YCoordinate="686" />
+              <Coordinates XCoordinate="480" YCoordinate="522" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="4d24907f-9ae2-46e3-8bef-bb2f721c3450" From="1d9a3a7c-725f-4c61-bf5e-74ae6be833e5" To="f42ac28f-3c65-4ebd-9960-df86ec1ceb57">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="570" YCoordinate="482" />
+              <Coordinates XCoordinate="570" YCoordinate="348" />
+              <Coordinates XCoordinate="661" YCoordinate="348" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="212092dd-0381-4d30-840c-8abbaae5cc83" From="a79531b7-0bf4-46af-9abd-7f272b6c363b" To="b4b32f53-fbff-44ee-9541-1e4438f7bbd5">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="759" YCoordinate="635" />
+              <Coordinates XCoordinate="944" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="39d3f476-0803-4611-b7d6-9e01d92499fe" From="fe3ca286-f606-4f57-9fbc-e25850fe0be9" To="2c4ac359-6e95-4475-b132-f4bcd974db9b">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2720" YCoordinate="651" />
+              <Coordinates XCoordinate="2720" YCoordinate="740" />
+              <Coordinates XCoordinate="2830" YCoordinate="740" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="0a5cc46e-0d0d-4369-93ad-d01732773c09" From="d615a693-6ee8-4c6f-8cf0-8818a9a62fb4" To="938465e8-b1a0-4394-802d-ec2a1d8b6013">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1135" YCoordinate="635" />
+              <Coordinates XCoordinate="1185" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="9cad1888-8db0-4538-ab94-2cb6aa05f1f0" From="bfc15f17-b02b-45b9-89d3-dba4b1836f17" To="b277700f-4bd1-4de8-9a4f-3aad21bb7160">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2502" YCoordinate="862" />
+              <Coordinates XCoordinate="2527.5" YCoordinate="862" />
+              <Coordinates XCoordinate="2527.5" YCoordinate="631" />
+              <Coordinates XCoordinate="2553" YCoordinate="631" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="87965fc5-9483-497e-9b8a-e352a98dad4b" From="e72b9cdf-4335-4e6c-b0f4-bd803871e015" To="c7a380c8-6637-4b68-8165-d042dd79fa6d">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1341" YCoordinate="635" />
+              <Coordinates XCoordinate="1358" YCoordinate="635" />
+              <Coordinates XCoordinate="1358" YCoordinate="634" />
+              <Coordinates XCoordinate="1374" YCoordinate="634" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="e3aa9bd4-18db-4a52-900f-20d831dd5185" From="b4b32f53-fbff-44ee-9541-1e4438f7bbd5" To="d615a693-6ee8-4c6f-8cf0-8818a9a62fb4">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="984" YCoordinate="635" />
+              <Coordinates XCoordinate="1044" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="00ee7a09-353e-4d95-bdf3-af5f5fa28f3a" From="1832c424-9fd0-41ba-a3c4-50e16e68fd56" To="fe3ca286-f606-4f57-9fbc-e25850fe0be9">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2665" YCoordinate="631" />
+              <Coordinates XCoordinate="2700" YCoordinate="631" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="bcf2ec25-c445-4ca3-bc78-21bb89cc8cf7" From="2c4ac359-6e95-4475-b132-f4bcd974db9b" To="79da93b4-c71f-4a3c-a7de-d0a588243f65">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2920" YCoordinate="740" />
+              <Coordinates XCoordinate="2951" YCoordinate="740" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="bfbed169-771b-4eb9-8fb1-a7c63a3bfe5f" From="db678353-9e51-4f7a-9d37-fd97591500bd" To="42989e9c-131c-4c81-b738-f70044f985af" Name="Sim">
+          <Condition Type="CONDITION">
+            <Expression />
+          </Condition>
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="3232" YCoordinate="649" />
+              <Coordinates XCoordinate="3286" YCoordinate="649" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="6b083ba7-1080-4a1a-9980-90ed29d8d3c6" From="1d9a3a7c-725f-4c61-bf5e-74ae6be833e5" To="5bcfa3c2-6e3c-4be4-9c6b-46370dd9705b">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="590" YCoordinate="502" />
+              <Coordinates XCoordinate="628.5" YCoordinate="502" />
+              <Coordinates XCoordinate="628.5" YCoordinate="443" />
+              <Coordinates XCoordinate="667" YCoordinate="443" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="ef953218-9c4e-4f0d-ae08-db9de7031a43" From="f42ac28f-3c65-4ebd-9960-df86ec1ceb57" To="b4b32f53-fbff-44ee-9541-1e4438f7bbd5">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="768" YCoordinate="348" />
+              <Coordinates XCoordinate="964" YCoordinate="348" />
+              <Coordinates XCoordinate="964" YCoordinate="615" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="37e86b2f-de12-4cad-8e79-de5adfff773e" From="b277700f-4bd1-4de8-9a4f-3aad21bb7160" To="9223817c-2b73-44bf-9f82-d04d0915d864" Name="Não">
+          <Condition Type="CONDITION">
+            <Expression />
+          </Condition>
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="2573" YCoordinate="611" />
+              <Coordinates XCoordinate="2573" YCoordinate="579" />
+              <Coordinates XCoordinate="1545" YCoordinate="579" />
+              <Coordinates XCoordinate="1545" YCoordinate="592" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="33fe9d21-bb8c-4d9c-bfd6-9af6137ad3ee" From="7aa20848-49b8-49a3-9f33-11ed2745309e" To="b4b32f53-fbff-44ee-9541-1e4438f7bbd5">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="762" YCoordinate="540" />
+              <Coordinates XCoordinate="885" YCoordinate="540" />
+              <Coordinates XCoordinate="885" YCoordinate="635" />
+              <Coordinates XCoordinate="944" YCoordinate="635" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="95a85571-6041-4379-a65b-4c2e81a9ee2c" From="d98b6a5b-e556-4fff-bed1-74dd1fa60326" To="db678353-9e51-4f7a-9d37-fd97591500bd">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="3163" YCoordinate="859" />
+              <Coordinates XCoordinate="3177.5" YCoordinate="859" />
+              <Coordinates XCoordinate="3177.5" YCoordinate="649" />
+              <Coordinates XCoordinate="3192" YCoordinate="649" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="40e3c592-86e6-422f-b6d9-3de4c27c9d12" From="623fbc51-4299-4f1a-941c-8ce37cbb6f63" To="1d9a3a7c-725f-4c61-bf5e-74ae6be833e5">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="500" YCoordinate="502" />
+              <Coordinates XCoordinate="550" YCoordinate="502" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="684c1276-cb0b-429b-a5ee-7e51ef4d7524" From="ce3bba6f-0578-49df-822b-b9116e77251d" To="63d3cf9c-9a90-4f20-9089-2095964eaa0a">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="761" YCoordinate="728" />
+              <Coordinates XCoordinate="808" YCoordinate="728" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="435dc6f3-da4c-4fac-af86-d379b514b048" From="5deb1495-1c4a-41dc-b72f-e7718a092a6c" To="682f3623-bd82-4d54-a7ac-47a0ceafadf0">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="241" YCoordinate="686" />
+              <Coordinates XCoordinate="283" YCoordinate="686" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="b8cfa93a-425d-45e2-af05-d1dcefe8b2b6" From="4cc7cdcc-b790-4570-a00f-36d49322bba9" To="d96640fa-f1c5-426e-8d6c-1cb55ce8dd37">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1790" YCoordinate="615" />
+              <Coordinates XCoordinate="1790" YCoordinate="539" />
+              <Coordinates XCoordinate="1849" YCoordinate="539" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="0012aac9-a00d-4e78-8000-3172cb1e7ec5" From="9223817c-2b73-44bf-9f82-d04d0915d864" To="9d4d48fb-8fdf-48cb-9670-2e6f027d4292">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="1590" YCoordinate="634" />
+              <Coordinates XCoordinate="1625" YCoordinate="634" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="5072d3d4-723e-4db6-9ee6-a66fefb123cd" From="db678353-9e51-4f7a-9d37-fd97591500bd" To="2c4ac359-6e95-4475-b132-f4bcd974db9b" Name="Não">
+          <Condition Type="CONDITION">
+            <Expression />
+          </Condition>
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="3212" YCoordinate="629" />
+              <Coordinates XCoordinate="2768" YCoordinate="629" />
+              <Coordinates XCoordinate="2768" YCoordinate="721" />
+              <Coordinates XCoordinate="2830" YCoordinate="721" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="98163e65-8120-4375-94f4-1e1387977819" From="aee49a6d-ead2-4d40-8250-a7ccfd9f1962" To="623fbc51-4299-4f1a-941c-8ce37cbb6f63">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="194" YCoordinate="365" />
+              <Coordinates XCoordinate="480" YCoordinate="365" />
+              <Coordinates XCoordinate="480" YCoordinate="482" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="f64f727f-51aa-464a-841b-f45de62bc2bf" From="acfdc9ed-0f61-4b31-a811-be55e82d141e" To="623fbc51-4299-4f1a-941c-8ce37cbb6f63">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="194" YCoordinate="456" />
+              <Coordinates XCoordinate="328" YCoordinate="456" />
+              <Coordinates XCoordinate="328" YCoordinate="502" />
+              <Coordinates XCoordinate="460" YCoordinate="502" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+        <Transition Id="e866a90e-dd7f-4b64-b197-cbf70b62d1f8" From="530e0e30-e1d3-4b12-aa1f-a5a48aa7fabd" To="623fbc51-4299-4f1a-941c-8ce37cbb6f63">
+          <Condition />
+          <Description />
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+              <Coordinates XCoordinate="194" YCoordinate="547" />
+              <Coordinates XCoordinate="326" YCoordinate="547" />
+              <Coordinates XCoordinate="326" YCoordinate="502" />
+              <Coordinates XCoordinate="460" YCoordinate="502" />
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+          <ExtendedAttributes />
+        </Transition>
+      </Transitions>
+      <ExtendedAttributes />
+    </WorkflowProcess>
+  </WorkflowProcesses>
+  <ExtendedAttributes />
+</Package>
