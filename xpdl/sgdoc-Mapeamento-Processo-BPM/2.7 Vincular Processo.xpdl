@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-19T14:32:02.3733294-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:54.1251322-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:48.6095072-03:00</ModificationDate>
     <Description>2.7 Vincular Processo</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Vincular Processo&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -98,7 +98,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="082501dd-01a8-4036-8fd0-bc99d0b4f39a" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.3751322-03:00</Created>
+        <Created>2014-05-16T12:28:44.9532572-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Vincular Processo&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -112,7 +112,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="fd8cd1bc-553c-48d0-b6dd-5134078585c2" Name="Vincular processo">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.3751322-03:00</Created>
+        <Created>2014-05-16T12:28:44.9532572-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

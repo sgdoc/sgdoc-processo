@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-19T17:24:09.4216238-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:57.9063822-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:51.9532572-03:00</ModificationDate>
     <Description>4.7 Tratar Demanda SIC</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Tratar Demanda SIC&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -114,7 +114,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="e49d1de3-8a24-4a04-b16a-32ab7e6d1e5a" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.1876322-03:00</Created>
+        <Created>2014-05-16T12:28:45.7970072-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Tratar Demanda SIC&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -128,7 +128,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="03a63c59-9c5f-4c99-8246-c9d49f42f1fa" Name="Tratar Demanda SIC">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.1876322-03:00</Created>
+        <Created>2014-05-16T12:28:45.7970072-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-19T17:45:31.0408783-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:53.5313822-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:48.0313822-03:00</ModificationDate>
     <Description>1.1 Planejar Gestão da Informação</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo ao planejamento da gestão da informação&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -98,7 +98,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="0ded9c64-d52e-4bad-8072-cedfcd6a9c57" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.2188822-03:00</Created>
+        <Created>2014-05-16T12:28:44.7813822-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo ao planejamento da gestão da informação&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -112,7 +112,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="8b28a0cf-55db-428f-90a5-6115c1bb2cc8" Name="Planejar Gestão da Informação">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.2188822-03:00</Created>
+        <Created>2014-05-16T12:28:44.7813822-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

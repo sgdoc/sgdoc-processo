@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-09T14:48:50.0060766-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:55.3595072-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:49.9688822-03:00</ModificationDate>
     <Description>2.2 Cadastrar Documento Externo</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo ao cadastramento de documento externo&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -90,7 +90,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="dfc9e593-ce8e-4c6a-b402-5bdbda60bdba" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.6876322-03:00</Created>
+        <Created>2014-05-16T12:28:45.2813822-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo ao cadastramento de documento externo&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -104,7 +104,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="ec5fde57-d2ba-4d31-b511-9ffec19d2f1e" Name="Process 1">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.6876322-03:00</Created>
+        <Created>2014-05-16T12:28:45.2813822-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>
@@ -269,8 +269,12 @@
             <InputSet />
             <InputSet />
             <InputSet />
+            <InputSet />
+            <InputSet />
           </InputSets>
           <OutputSets>
+            <OutputSet />
+            <OutputSet />
             <OutputSet />
             <OutputSet />
             <OutputSet />

@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-14T16:52:09.9881482-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:54.9376322-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:49.5626322-03:00</ModificationDate>
     <Description>2.17 Tramitar Externamente DocumentoProcesso</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Tramitar Externamente Documento Processo&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -98,7 +98,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="d5c89c6b-17d7-47ff-afbd-a4c3b720d80a" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.5782572-03:00</Created>
+        <Created>2014-05-16T12:28:45.1720072-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Tramitar Externamente Documento Processo&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -112,7 +112,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="5c17e64a-ceaf-4050-a782-f2d7df0c7dd6" Name="Tramitar externamente documento/ processo">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.5782572-03:00</Created>
+        <Created>2014-05-16T12:28:45.1720072-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Desmembrar é quando são retiradas peças do processo para formar um novo processo ou ser adicionado em um novo processo.&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -462,8 +462,12 @@
             <InputSet />
             <InputSet />
             <InputSet />
+            <InputSet />
+            <InputSet />
           </InputSets>
           <OutputSets>
+            <OutputSet />
+            <OutputSet />
             <OutputSet />
             <OutputSet />
             <OutputSet />
@@ -646,8 +650,12 @@
             <InputSet />
             <InputSet />
             <InputSet />
+            <InputSet />
+            <InputSet />
           </InputSets>
           <OutputSets>
+            <OutputSet />
+            <OutputSet />
             <OutputSet />
             <OutputSet />
             <OutputSet />

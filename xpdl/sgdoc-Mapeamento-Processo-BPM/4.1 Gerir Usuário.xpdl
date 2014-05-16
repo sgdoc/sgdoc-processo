@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-19T16:42:40.3472465-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:55.7657572-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:50.3751322-03:00</ModificationDate>
     <Description>4.1 Gerir Usuário</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Gerir usuário&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -109,7 +109,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="fd6653d0-901f-4b58-9e67-af64da57eb82" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.7813822-03:00</Created>
+        <Created>2014-05-16T12:28:45.3751322-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Gerir usuário&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -123,7 +123,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="56c3c4bb-7723-4972-9180-19bd9bf270af" Name="Gerir usuário">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.7813822-03:00</Created>
+        <Created>2014-05-16T12:28:45.3751322-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

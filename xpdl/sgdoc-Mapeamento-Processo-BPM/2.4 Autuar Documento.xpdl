@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-13T15:45:31.5844044-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:55.5157572-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:50.1251322-03:00</ModificationDate>
     <Description>2.4 Autuar Documento</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo a autuação de Documento&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -90,7 +90,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="746fc859-6b60-4c5f-a11e-05409491c013" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.7345072-03:00</Created>
+        <Created>2014-05-16T12:28:45.3126322-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo a autuação de documento&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -104,7 +104,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="ee9464c8-c4a7-4e71-aa77-50b9907cf3de" Name="Autuar Documento">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.7345072-03:00</Created>
+        <Created>2014-05-16T12:28:45.3126322-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

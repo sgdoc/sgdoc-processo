@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-23T15:39:39.7180378-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:56.9063822-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:51.5782572-03:00</ModificationDate>
     <Description>1. Cadeia de Valor</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;"&gt;Processo:&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"&gt; 1. Cadeia de Valor&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;"&gt;Atividade&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"&gt;: -&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;"&gt;Descrição&lt;/span&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"&gt;: Processo relativo a cadeia de valor do ciclo de gestão documental atual do ICMBio.&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -130,7 +130,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="292276fb-411d-4db7-a0c5-ab054448e2ff" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.0782572-03:00</Created>
+        <Created>2014-05-16T12:28:45.6876322-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Este artefato é o mapeamento do Ciclo de Gestão Documental realizado atualmente no ICMBio.&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>

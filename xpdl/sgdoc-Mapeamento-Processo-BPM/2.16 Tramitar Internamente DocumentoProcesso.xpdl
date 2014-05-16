@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-20T09:51:09.8098451-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:58.2188822-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:53.0626322-03:00</ModificationDate>
     <Description>2.16 Tramitar Internamente DocumentoProcesso</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Tramitar Internamente Documento Processo&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -98,7 +98,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="c8f72466-617b-4aa1-ba15-bb4c31b576d8" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.2657572-03:00</Created>
+        <Created>2014-05-16T12:28:46.3907572-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Tramitar Internamente Documento Processo&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -112,7 +112,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="778ae887-e13b-4e02-b8fa-e8d336fbdeeb" Name="Tramitar Internamente Documento Processo">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.2657572-03:00</Created>
+        <Created>2014-05-16T12:28:46.3907572-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

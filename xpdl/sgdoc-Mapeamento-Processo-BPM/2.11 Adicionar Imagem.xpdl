@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-13T13:54:20.9280783-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:58.0157572-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:52.1407572-03:00</ModificationDate>
     <Description>2.11 Adicionar Imagem</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Adicionar Imagem&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -90,7 +90,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="56159fae-0b8f-4817-8ca7-36317c096699" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.2188822-03:00</Created>
+        <Created>2014-05-16T12:28:45.8282572-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Adicionar Imagem&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -104,7 +104,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="60c44e89-ff63-4ca1-8adb-e3a0bee85403" Name="Adicionar imagem">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.2188822-03:00</Created>
+        <Created>2014-05-16T12:28:45.8282572-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

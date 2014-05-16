@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-14T14:57:08.84922-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:55.9688822-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:50.5782572-03:00</ModificationDate>
     <Description>2.9 Adicionar Peça</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Adicionar Peça&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -90,7 +90,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="5068f43c-ee9d-46f3-b95e-16747c456d27" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.8438822-03:00</Created>
+        <Created>2014-05-16T12:28:45.4376322-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Adicionar Peça&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -104,7 +104,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="3c3c6087-a8bf-46f4-9e85-1f3ebb18828f" Name="Adicionar peça">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.8438822-03:00</Created>
+        <Created>2014-05-16T12:28:45.4376322-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

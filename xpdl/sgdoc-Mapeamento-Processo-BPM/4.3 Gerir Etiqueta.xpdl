@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-19T16:57:21.5063288-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:52.9845072-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:47.4845072-03:00</ModificationDate>
     <Description>4.3 Gerir Etiqueta</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Gerir Etiqueta&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -110,7 +110,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="d0d7d8cc-7fb5-4fc0-89d3-f9e4a4a0ba28" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.0938822-03:00</Created>
+        <Created>2014-05-16T12:28:44.6407572-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Gerir Etiqueta&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -124,7 +124,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="9c4e8698-ab06-4e23-997d-2d4ed5b550fe" Name="Gerir Etiqueta">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.0938822-03:00</Created>
+        <Created>2014-05-16T12:28:44.6407572-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

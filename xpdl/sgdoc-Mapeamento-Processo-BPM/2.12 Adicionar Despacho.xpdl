@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-14T16:41:50.6176595-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:54.7970072-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:49.3751322-03:00</ModificationDate>
     <Description>2.12 Adicionar Despacho</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Adicionar Despacho&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -90,7 +90,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="079075f8-4415-4f21-adc6-df28dfb0756d" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.5470072-03:00</Created>
+        <Created>2014-05-16T12:28:45.1251322-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo de Adicionar Despacho&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -104,7 +104,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="34bbfc1d-d980-4f3a-81aa-63947b04b36d" Name="Adicionar Despacho">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.5470072-03:00</Created>
+        <Created>2014-05-16T12:28:45.1251322-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

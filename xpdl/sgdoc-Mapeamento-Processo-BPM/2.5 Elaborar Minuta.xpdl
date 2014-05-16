@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-03-26T11:26:29.292586-03:00</Created>
-    <ModificationDate>2014-05-16T09:41:56.6876322-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:51.3438822-03:00</ModificationDate>
     <Description>2.5 Elaborar Minuta</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Elaboração de minutas&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -98,7 +98,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="79963f86-a6cf-497f-a7be-7b30c6e8a925" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.0313822-03:00</Created>
+        <Created>2014-05-16T12:28:45.6251322-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>
@@ -112,7 +112,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="9a1dde51-ee98-4dc0-a63b-bc76ce39b7ac" Name="Elaborar Minuta">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.0313822-03:00</Created>
+        <Created>2014-05-16T12:28:45.6251322-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-03-26T11:28:06.1542712-03:00</Created>
-    <ModificationDate>2014-05-16T09:41:56.7970072-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:51.4688822-03:00</ModificationDate>
     <Description>4.5 Gerir Modelos de Minuta</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Gestão do Modelo de Minuta&lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -90,7 +90,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="07f08a01-02b1-4ef1-9d26-2e5e5e172d87" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.0470072-03:00</Created>
+        <Created>2014-05-16T12:28:45.6720072-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>
@@ -104,7 +104,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="d6bb4006-175e-481a-a041-b5fc8cea5a03" Name="Process 1">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:14.0470072-03:00</Created>
+        <Created>2014-05-16T12:28:45.6720072-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>

@@ -4,7 +4,7 @@
     <XPDLVersion>2.2</XPDLVersion>
     <Vendor>Bizagi Process Modeler.</Vendor>
     <Created>2014-01-13T11:04:20.1750187-02:00</Created>
-    <ModificationDate>2014-05-16T09:41:53.1720072-03:00</ModificationDate>
+    <ModificationDate>2014-05-16T12:14:47.6720072-03:00</ModificationDate>
     <Description>2.1 Cadastrar Documento Interno</Description>
     <Documentation>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;"&gt;Processo relativo ao cadastramento de documento interno.&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt; &lt;/span&gt;&lt;/p&gt;</Documentation>
   </PackageHeader>
@@ -90,7 +90,7 @@
   <WorkflowProcesses>
     <WorkflowProcess Id="3e58cd05-321f-4859-9161-7c92b5f259e9" Name="Main Process">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.1407572-03:00</Created>
+        <Created>2014-05-16T12:28:44.6876322-03:00</Created>
         <Description>&lt;p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"&gt;&lt;span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;"&gt;Processo relativo a atividade de Cadastrar Documento Interno&lt;/span&gt;&lt;/p&gt;</Description>
       </ProcessHeader>
       <RedefinableHeader>
@@ -104,7 +104,7 @@
     </WorkflowProcess>
     <WorkflowProcess Id="604be443-8731-42e4-a858-d1bc758c26c2" Name="Criação de Documento Interno">
       <ProcessHeader>
-        <Created>2014-05-16T09:57:13.1407572-03:00</Created>
+        <Created>2014-05-16T12:28:44.6876322-03:00</Created>
         <Description />
       </ProcessHeader>
       <RedefinableHeader>
