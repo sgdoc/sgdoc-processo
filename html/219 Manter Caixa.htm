@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=100" />
+	<title>2.19 Manter Caixa</title>
+	<link type="text/css" href="css/ui-darkness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+	<link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link media="screen" type="text/css" href="css/main.css" rel="stylesheet" />
+	<!--[if IE 7]>
+	<link media="screen" type="text/css" href="css/main_ie7.css" rel="stylesheet" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/ui.tabs.paging.js"></script>
+	<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+	<script type="text/javascript" src="js/jquery.watermarkinput.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<!--<script type="text/javascript" src="js/shiftzoom.js"></script>-->
+	<script type="text/javascript" src="js/jquery.hashtable-1.1.js"></script>
+	<script type="text/javascript">
+		/* Textbox Watermark plugin */
+		$(function($) {
+			$("#q").Watermark('Pesquisar');
+		});
+
+		/* Shiftzoom plugin */
+		//if (document.images && document.createElement && document.getElementById) {
+		//	document.writeln('<style type="text/css">');
+		//	document.writeln('	img.shiftzoom { visibility: hidden; }');
+		//	document.writeln('<\/style>');
+		//}
+
+		$(document).ready(function() { 
+
+			/* Tabs plugin */
+			$("#tabs").tabs({
+				selected: 19
+				, select: function(event, ui) {
+					var url = $.data(ui.tab, 'load.tabs');
+					if (url) {
+						location.href = url;
+						return false;
+					}
+					return true;
+				}
+			});
+
+			$("#tabs").tabs('paging');
+
+			/* Autocomplete plugin */
+			var ht = new jQuery.Hashtable();
+			ht.add("2&#46;19 Manter Caixa","e7393349-dbd1-4f65-a11c-bd280bc1549e");
+ht.add("Manter Caixa","79e9e579-e424-465f-8821-75658b476acb");
+ht.add("Atividade?","9463d162-c213-4be5-a84d-de6f92903c34");
+ht.add("Arquivar fisicamente","bcad4cc0-eab1-441b-9cea-b0cb631831ea");
+ht.add("Inserir documento à caixa","d704a1df-121a-42b6-bf20-53b60166ca0c");
+ht.add("Retirar documento da caixa","40594d88-b1e3-4443-8c52-78f508db81d6");
+ht.add("Listar documentos","9d64beed-cc61-4dc0-99ba-6637d4d3f417");
+ht.add("Elemento","f8efbf67-4cfb-4f27-8063-c74a6140cbc0");
+ht.add("Finalizar caixa","38ea0135-2df6-4a32-b0fe-203cbc6ec333");
+ht.add("Separar fisicamente por direitoria, ano e classe&#46;","307e96e3-537d-483c-8458-c32b7246f3d3");
+ht.add("Há caixa com espaço disponível?","15db9b16-110b-47c5-8bbe-71d33068c8e1");
+ht.add("Adicionar caixa","9f154566-e984-4ad1-9608-eff0c3de067a");
+ht.add("Listar Caixas","174de7df-25c1-4135-b063-8965e8177da0");
+ht.add("Verifica caixa","89cabc91-5c0f-4985-b447-1d4d164433e9");
+ht.add("Confeccionar espelho da caixa","b69c9d42-5229-495e-9e3c-b8fe1d35c4bf");
+ht.add("Necessidade de gerenciar caixas","961322e1-c65a-42ae-be10-e8422d7bc35a");
+ht.add("Arquivo Central","1bb16616-fe0f-41dd-8e23-4cdb425369be");
+
+			var data = '2&#46;19 Manter Caixa|Manter Caixa|Atividade?|Arquivar fisicamente|Inserir documento à caixa|Retirar documento da caixa|Listar documentos|Elemento|Finalizar caixa|Separar fisicamente por direitoria, ano e classe&#46;|Há caixa com espaço disponível?|Adicionar caixa|Listar Caixas|Verifica caixa|Confeccionar espelho da caixa|Necessidade de gerenciar caixas|Arquivo Central'.split('|');
+			$("#q").autocomplete(data, { matchContains: true});
+			$('#q').result(function(event, data, formatted) {
+				var val = ht.get(formatted.toString());
+				var anchor = '#' + val;
+				var dia = anchor + '_doc';
+				$(dia).dialog('open');
+			});
+
+			/* Show/hide Pan & Zoom */
+			//$('#diagramimagepan').hide();
+
+			//$('#pan').click(function() {
+			//	$(this).toggleClass("down");
+
+			//	if ($(this).hasClass("down")) {
+			//		$('#diagramimage').hide();
+			//		$('#diagramimagepan').show('slow');
+			//		$(this).text('Visão Normal');
+			//	} else {
+			//		$('#diagramimagepan').hide();
+			//		$('#diagramimage').show('slow');
+			//		$(this).text('Visão Pan & Zoom');
+			//	}
+			//});
+			
+			/* Dialog plugin */
+			var minWidth = 610;
+			if ($(".docelem img").hasClass("imageForm")) {
+				var width = $(".docelem .imageForm").width();
+			} else {
+				var width = minWidth;
+			};
+			$('.docelem').dialog({ 
+				autoOpen: false, 
+				width: (width + 30),
+				height: 480, 
+				modal: true,
+				show: 'slide'
+			});
+			$('.docelem').dialog('option', 'minWidth', 640);
+			
+			$('.diagelem').click(function() {
+				var t = $(this).attr('href');
+				t = t.replace('#', '');
+				var dia = $(this).attr('href') + '_doc';
+				
+				$(dia).dialog('open');
+			});
+
+			/* Map Highlight plugin */
+			$(function() {
+				$('.map').maphilight();
+			});
+
+            // Set height diagramimage
+            if($.browser.msie){                         
+                $("#diagram-image").height($("#diagramimage").height());               
+            }
+		});
+	</script>
+	
+   
+
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/BeauSansRegular.js"></script>    
+    <!--<script type="text/javascript">
+	    // <![CDATA[
+	    Cufon.replace('h1');
+	    Cufon.replace('h2');
+	    Cufon.replace('h3');
+	    //Cufon.replace('h4');
+	    Cufon.replace('.ui-dialog-title');
+	    Cufon.replace('.layout-type a', {
+	        hover: true
+	    });
+	    Cufon.replace('.BizAgi li a', {
+	        hover: true
+	    });
+
+	    Cufon.replace('.tabs a', {
+	        hover: true
+	    });
+	    Cufon.replace('#topnav a', {
+	        hover: true
+	    });
+
+	    //]]>
+	</script>-->
+</head>
+<body>
+
+	<div id="contentwrapper">
+		<div class="BizAgi"><ul><li><a href="http://www.bizagi.com" target="_blank">Visite bizagi.com</a></li></ul></div>
+		<div id="header">
+			<h1>
+				Processos- SGDOC 27.03</h1>
+		</div>
+		<div id="tabs">
+			<ul class="tabs">
+				<li><a href="1 Cadeia de Valor.htm" title="tabs-1">1. Cadeia de Valor</a></li>
+<li><a href="11 Planejar Gestão da Informação.htm" title="tabs-2">1.1 Planejar Gestão da Informação</a></li>
+<li><a href="21 Cadastrar Documento Interno.htm" title="tabs-3">2.1 Cadastrar Documento Interno</a></li>
+<li><a href="22 Cadastrar Documento Externo.htm" title="tabs-4">2.2 Cadastrar Documento Externo</a></li>
+<li><a href="23 Vincular Documento.htm" title="tabs-5">2.3 Vincular Documento</a></li>
+<li><a href="24 Autuar Documento.htm" title="tabs-6">2.4 Autuar Documento</a></li>
+<li><a href="26 Cadastrar Processo.htm" title="tabs-7">2.6 Cadastrar Processo</a></li>
+<li><a href="27 Vincular Processo.htm" title="tabs-8">2.7 Vincular Processo</a></li>
+<li><a href="28 DesentranharDesmembrar.htm" title="tabs-9">2.8 DesentranharDesmembrar</a></li>
+<li><a href="29 Adicionar Peça.htm" title="tabs-10">2.9 Adicionar Peça</a></li>
+<li><a href="210 Gerir Volume.htm" title="tabs-11">2.10 Gerir Volume</a></li>
+<li><a href="211 Adicionar Imagem.htm" title="tabs-12">2.11 Adicionar Imagem</a></li>
+<li><a href="212 Adicionar Despacho.htm" title="tabs-13">2.12 Adicionar Despacho</a></li>
+<li><a href="213 Adicionar Comentário.htm" title="tabs-14">2.13 Adicionar Comentário</a></li>
+<li><a href="214 Gerir Prazos.htm" title="tabs-15">2.14 Gerir Prazos</a></li>
+<li><a href="215 Monitorar.htm" title="tabs-16">2.15 Monitorar</a></li>
+<li><a href="216 Tramitar Internamente DocumentoProcesso.htm" title="tabs-17">2.16 Tramitar Internamente DocumentoProcesso</a></li>
+<li><a href="217 Tramitar Externamente DocumentoProcesso.htm" title="tabs-18">2.17 Tramitar Externamente DocumentoProcesso</a></li>
+<li><a href="218 Classificar Documento  Processo.htm" title="tabs-19">2.18 Classificar Documento  Processo</a></li>
+<li><a href="#tabs-0" title="tabs-0">2.19 Manter Caixa</a></li>
+<li><a href="220 Desarquivar.htm" title="tabs-20">2.20 Desarquivar</a></li>
+<li><a href="3 Acompanhar Gestão da Informação.htm" title="tabs-21">3 Acompanhar Gestão da Informação</a></li>
+<li><a href="41 Gerir Usuário.htm" title="tabs-22">4.1 Gerir Usuário</a></li>
+<li><a href="42 Gerir Unidade.htm" title="tabs-23">4.2 Gerir Unidade</a></li>
+<li><a href="43 Gerir Etiqueta.htm" title="tabs-24">4.3 Gerir Etiqueta</a></li>
+<li><a href="44 Gerir Demandas.htm" title="tabs-25">4.4 Gerir Demandas</a></li>
+<li><a href="46 Tratar Recursos SIC.htm" title="tabs-26">4.6 Tratar Recursos SIC</a></li>
+<li><a href="47 Tratar Demanda SIC.htm" title="tabs-27">4.7 Tratar Demanda SIC</a></li>
+<li><a href="48 Gerir Modelos de Minuta.htm" title="tabs-28">4.8 Gerir Modelos de Minuta</a></li>
+
+			</ul>
+			<div id="content">
+				<div id="tabs-0">
+					<div class="layout-type">
+						<ul id="topnav">
+							<li class="home"><a href="default.htm">Principal</a></li>
+						</ul>
+						<ul>
+							<li><span class="search"><input id="q" name="q" type="text" style="color:#3A3A3A"/></span></li>
+						</ul>
+					</div>
+					<div>
+						<!--|#bpm_back_to_parent#|--> <a href="#e7393349-dbd1-4f65-a11c-bd280bc1549e" class="diagelem"><h2>2.19 Manter Caixa</h2></a>
+					</div>
+					<div id="diagram-image">
+						<div id="diagramimage" align="center">
+							<div id="documentation" style="visibility: hidden;">
+							<div id="e7393349-dbd1-4f65-a11c-bd280bc1549e_doc" class="docelem" title="2&#46;19 Manter Caixa">
+<a name="e7393349-dbd1-4f65-a11c-bd280bc1549e" id="e7393349-dbd1-4f65-a11c-bd280bc1549e"></a>
+
+<h4>Versão</h4><p>1.0</p><h4>Autor</h4><p>ICMBio e Telebras</p>
+<h4>Descrição</h4><p><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Segoe UI;font-size:8pt;font-weight:normal;font-style:normal;">Processo de Manter Caixa</span></p><br> </p>
+
+</div>
+<div id="79e9e579-e424-465f-8821-75658b476acb_doc" class="docelem" title="Manter Caixa">
+<a name="79e9e579-e424-465f-8821-75658b476acb" id="79e9e579-e424-465f-8821-75658b476acb"></a>
+<img class="icon" src="diagrams/bpmnimg/Participant.png" border="0" />
+
+
+
+</div>
+<div id="9463d162-c213-4be5-a84d-de6f92903c34_doc" class="docelem" title="Atividade?">
+<a name="9463d162-c213-4be5-a84d-de6f92903c34" id="9463d162-c213-4be5-a84d-de6f92903c34"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Finalizar</p><p>&nbsp;Remover</p><p>&nbsp;Inserir</p>
+</div>
+<div id="bcad4cc0-eab1-441b-9cea-b0cb631831ea_doc" class="docelem" title="Arquivar fisicamente">
+<a name="bcad4cc0-eab1-441b-9cea-b0cb631831ea" id="bcad4cc0-eab1-441b-9cea-b0cb631831ea"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="d704a1df-121a-42b6-bf20-53b60166ca0c_doc" class="docelem" title="Inserir documento à caixa">
+<a name="d704a1df-121a-42b6-bf20-53b60166ca0c" id="d704a1df-121a-42b6-bf20-53b60166ca0c"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="40594d88-b1e3-4443-8c52-78f508db81d6_doc" class="docelem" title="Retirar documento da caixa">
+<a name="40594d88-b1e3-4443-8c52-78f508db81d6" id="40594d88-b1e3-4443-8c52-78f508db81d6"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="9d64beed-cc61-4dc0-99ba-6637d4d3f417_doc" class="docelem" title="Listar documentos">
+<a name="9d64beed-cc61-4dc0-99ba-6637d4d3f417" id="9d64beed-cc61-4dc0-99ba-6637d4d3f417"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="f8efbf67-4cfb-4f27-8063-c74a6140cbc0_doc" class="docelem" title="Elemento">
+<a name="f8efbf67-4cfb-4f27-8063-c74a6140cbc0" id="f8efbf67-4cfb-4f27-8063-c74a6140cbc0"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Portão</p>
+</div>
+<div id="e13eb9ea-015c-43f5-b59a-1691642cca4b_doc" class="docelem" title="Elemento">
+<a name="e13eb9ea-015c-43f5-b59a-1691642cca4b" id="e13eb9ea-015c-43f5-b59a-1691642cca4b"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneEnd.png" border="0" />
+
+
+
+</div>
+<div id="38ea0135-2df6-4a32-b0fe-203cbc6ec333_doc" class="docelem" title="Finalizar caixa">
+<a name="38ea0135-2df6-4a32-b0fe-203cbc6ec333" id="38ea0135-2df6-4a32-b0fe-203cbc6ec333"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="307e96e3-537d-483c-8458-c32b7246f3d3_doc" class="docelem" title="Separar fisicamente por direitoria, ano e classe&#46;">
+<a name="307e96e3-537d-483c-8458-c32b7246f3d3" id="307e96e3-537d-483c-8458-c32b7246f3d3"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="15db9b16-110b-47c5-8bbe-71d33068c8e1_doc" class="docelem" title="Há caixa com espaço disponível?">
+<a name="15db9b16-110b-47c5-8bbe-71d33068c8e1" id="15db9b16-110b-47c5-8bbe-71d33068c8e1"></a>
+<img class="icon" src="diagrams/bpmnimg/ExclusiveGateway.png" border="0" />
+
+
+<h4>Portões</h4><p>&nbsp;Sim</p><p>&nbsp;Não</p>
+</div>
+<div id="9f154566-e984-4ad1-9608-eff0c3de067a_doc" class="docelem" title="Adicionar caixa">
+<a name="9f154566-e984-4ad1-9608-eff0c3de067a" id="9f154566-e984-4ad1-9608-eff0c3de067a"></a>
+<img class="icon" src="diagrams/bpmnimg/UserTask.png" border="0" />
+
+
+
+</div>
+<div id="174de7df-25c1-4135-b063-8965e8177da0_doc" class="docelem" title="Listar Caixas">
+<a name="174de7df-25c1-4135-b063-8965e8177da0" id="174de7df-25c1-4135-b063-8965e8177da0"></a>
+<img class="icon" src="diagrams/bpmnimg/ServiceTask.png" border="0" />
+
+<h4>Implementação</h4><p>Serviço Web <br> </p>
+
+</div>
+<div id="89cabc91-5c0f-4985-b447-1d4d164433e9_doc" class="docelem" title="Verifica caixa">
+<a name="89cabc91-5c0f-4985-b447-1d4d164433e9" id="89cabc91-5c0f-4985-b447-1d4d164433e9"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="b69c9d42-5229-495e-9e3c-b8fe1d35c4bf_doc" class="docelem" title="Confeccionar espelho da caixa">
+<a name="b69c9d42-5229-495e-9e3c-b8fe1d35c4bf" id="b69c9d42-5229-495e-9e3c-b8fe1d35c4bf"></a>
+<img class="icon" src="diagrams/bpmnimg/ManualTask.png" border="0" />
+
+
+
+</div>
+<div id="961322e1-c65a-42ae-be10-e8422d7bc35a_doc" class="docelem" title="Necessidade de gerenciar caixas">
+<a name="961322e1-c65a-42ae-be10-e8422d7bc35a" id="961322e1-c65a-42ae-be10-e8422d7bc35a"></a>
+<img class="icon" src="diagrams/bpmnimg/NoneStart.png" border="0" />
+
+
+
+</div>
+<div id="1bb16616-fe0f-41dd-8e23-4cdb425369be_doc" class="docelem" title="Arquivo Central">
+<a name="1bb16616-fe0f-41dd-8e23-4cdb425369be" id="1bb16616-fe0f-41dd-8e23-4cdb425369be"></a>
+<img class="icon" src="diagrams/bpmnimg/Lane.png" border="0" />
+
+
+
+</div>
+
+							</div>
+							<img src="diagrams/219 Manter Caixa.png" border="0" usemap="#map" class="map" />
+							<map name="map">
+								<area shape="rect" class="diagelem" coords="168,212,218,634" title="" href="#79e9e579-e424-465f-8821-75658b476acb" />
+<area shape="poly" class="diagelem" coords="491,464,511,444,531,464,511,484" title="" href="#9463d162-c213-4be5-a84d-de6f92903c34" />
+<area shape="rect" class="diagelem" coords="1096,312,1186,372" title="" href="#bcad4cc0-eab1-441b-9cea-b0cb631831ea" />
+<area shape="rect" class="diagelem" coords="967,312,1057,372" title="" href="#d704a1df-121a-42b6-bf20-53b60166ca0c" />
+<area shape="rect" class="diagelem" coords="699,434,789,494" title="" href="#40594d88-b1e3-4443-8c52-78f508db81d6" />
+<area shape="rect" class="diagelem" coords="572,434,662,494" title="" href="#9d64beed-cc61-4dc0-99ba-6637d4d3f417" />
+<area shape="poly" class="diagelem" coords="827,464,847,444,867,464,847,484" title="" href="#f8efbf67-4cfb-4f27-8063-c74a6140cbc0" />
+<area shape="circle" class="diagelem" coords="1276,464,15" title="" href="#e13eb9ea-015c-43f5-b59a-1691642cca4b" />
+<area shape="rect" class="diagelem" coords="575,546,665,606" title="" href="#38ea0135-2df6-4a32-b0fe-203cbc6ec333" />
+<area shape="rect" class="diagelem" coords="572,302,663,382" title="" href="#307e96e3-537d-483c-8458-c32b7246f3d3" />
+<area shape="poly" class="diagelem" coords="849,342,869,322,889,342,869,362" title="" href="#15db9b16-110b-47c5-8bbe-71d33068c8e1" />
+<area shape="rect" class="diagelem" coords="823,222,913,282" title="" href="#9f154566-e984-4ad1-9608-eff0c3de067a" />
+<area shape="rect" class="diagelem" coords="343,434,433,494" title="Serviço Web
+" href="#174de7df-25c1-4135-b063-8965e8177da0" />
+<area shape="rect" class="diagelem" coords="700,312,790,372" title="" href="#89cabc91-5c0f-4985-b447-1d4d164433e9" />
+<area shape="rect" class="diagelem" coords="1231,312,1321,372" title="" href="#b69c9d42-5229-495e-9e3c-b8fe1d35c4bf" />
+<area shape="circle" class="diagelem" coords="289,464,15" title="" href="#961322e1-c65a-42ae-be10-e8422d7bc35a" />
+<area shape="rect" class="diagelem" coords="218,212,248,634" title="" href="#1bb16616-fe0f-41dd-8e23-4cdb425369be" />
+<area shape="rect" coords="1273,693,5,1363,736,5" href="http://www.bizagi.com" title="Visit Bizagi.com" target="_blank" />
+
+							</map>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer"><div class="modelerLogo"></div></div>
+		</div>
+	</div>
+</body>
+</html>
